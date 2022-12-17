@@ -1,0 +1,19 @@
+#animation_Heading{
+    margin: auto;
+
+}
+
+#animation{
+    position: relative;
+    animation-name: animation;
+    animation-duration: 4s;
+    animation-iteration-count: 10;
+}
+  
+@keyframes animation {
+    0%   { left:-1000px; top:0px;}
+    25%  {left:200px; top:0px;}
+    50%  {left:-200px; top:0px;}
+    75%  {left:0px; top:0px;}
+    100% { left:0px; top:0px;}
+} 

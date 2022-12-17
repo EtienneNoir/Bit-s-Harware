@@ -1,0 +1,39 @@
+
+header{
+
+    margin-top: 3rem; /* Creating space outside the element */
+
+}
+
+#title{
+
+    text-align: center;
+    color: whitesmoke;
+
+}
+
+
+
+#nav ul{
+    list-style: none; /* Getting rid of the list item */
+    display: flex; /* converting the elements inside the ul component into boxes that are arranged horizontally */
+    align-items: baseline;/* The flex box items are arranged vertically */ 
+    
+}
+
+#nav li{
+    
+    margin: auto; /* Creating space around the li elements which are now boxes and then put them at the center*/  
+}
+
+#nav a{
+
+    text-decoration: none; /* getting rid of any decoration added to the text such as the underline   */
+    color: whitesmoke;
+
+}
+
+#nav a:hover,
+#nav a:active {
+    color: #818181;
+}

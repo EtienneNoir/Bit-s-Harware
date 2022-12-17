@@ -1,0 +1,10 @@
+
+
+#main table {
+    margin: auto;
+}
+#main td{
+    border-style: solid;
+    border-color:rgb(5, 68, 104);
+    border-width: thin;
+}

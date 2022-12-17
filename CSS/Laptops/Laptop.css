@@ -1,0 +1,59 @@
+/* The following code is used to create a swinging type anuimation */
+.animationClose {
+    animation: swinging ease-in-out 1s infinite alternate;
+    transform-origin: center -20px;
+    float:left;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+}
+.animationClose img {
+    border: 5px solid #f8f8f8;
+    display: block;
+}
+.animationClose:after{
+    top: -10px; left: 50%;
+    z-index: 0;
+    transform: rotate(45deg);
+}
+
+.animationClose:before{
+    position: absolute;
+    z-index: 5;
+    background: #000;
+}
+
+@keyframes swinging {
+    0% { transform: rotate(3deg); }
+    100% { transform: rotate(-3deg); }
+}
+
+/* Animation ends here */
+
+
+
+#sideContent a{
+    font-size: 20px;
+}
+
+#sideContent{
+
+    margin-top: 80px;
+    border-radius: 15px;
+    border-style:solid;
+    border-color: blueviolet;
+    background-color:#000;
+    height: 600px;
+    width: 13%;
+    border-width: thin;
+    opacity:0.8;
+    
+}
+
+#main {
+    margin-top: -650px;
+    
+
+}
+
+#main table {
+    margin-right: 320px;
+}

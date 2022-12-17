@@ -1,0 +1,14 @@
+
+
+footer{
+    width: fit-content; /* To make it more move-able */
+    margin: auto;
+    color: whitesmoke;
+    text-align: center;
+    border-style: solid;
+    border-color:rgb(5, 68, 104);
+    border-width: thin;
+    border-radius: 15px;
+    width: 350px;
+    
+}
