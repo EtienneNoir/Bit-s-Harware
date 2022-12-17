@@ -71,7 +71,7 @@
                      
                 echo "<td>";
                 echo "<a href=\"$href\" title=\"$description\" class=\"tool\">";
-                echo "<img sr\" $image\" alt=\"$alt\" width=\"450\" height=\"380\">";
+                echo "<img src\"$image\" alt=\"$alt\" width=\"450\" height=\"380\">";
                 echo "</a>";
                 echo "</td>";
         
