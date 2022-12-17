@@ -14,7 +14,11 @@
         $db = "bqb6bmikgqu0mnc0iiyq";
         $conn = new mysqli($dbhost, $dbuser, $dbpass,$db) or die("Failed to connect to database". $conn -> error);
 
-      
+      // Check connection
+        if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
+        }
+        echo "Connected successfully";
     ?>
 </body>
 </html>
