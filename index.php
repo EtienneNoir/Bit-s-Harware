@@ -8,10 +8,13 @@
 </head>
 <body>
     <?php
-        include 'config.php'; // importing config page, to use its properties
-        OpenConnection(); // calling the function and storing its return value
+        $dbhost = "bqb6bmikgqu0mnc0iiyq-mysql.services.clever-cloud.com";
+        $dbuser = "uwge0zlmihcmhulr";
+        $dbpass = "2WVoKwXz4jFu57oNdrZn";
+        $db = "bqb6bmikgqu0mnc0iiyq";
+        $conn = new mysqli($dbhost, $dbuser, $dbpass,$db) or die("Failed to connect to database". $conn -> error);
 
-    
+      
     ?>
 </body>
 </html>
