@@ -8,7 +8,10 @@
 </head>
 <body>
     <?php
-    echo "Hello World !";
+        include 'config.php'; // importing config page, to use its properties
+        $connect = OpenConnection(); // calling the function and storing its return value
+
+        echo $connect; 
     ?>
 </body>
 </html>
