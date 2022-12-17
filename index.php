@@ -15,10 +15,15 @@
 
     
 
-        $query = "INSERT INTO Category(Category_Name, Category_Image, Category_Description)
-        VALUES ('Laptops', 'Images/Lap.jpg', 'Search Laptops')";
+        $query = "SELECT * FROM Category";  
 
         $results = mysqli_query($connect, $query) or die("Unable to retrieve data!");// Execute query using specified connection 
+
+        $records = mysqli_fetch_array($results);// Turn result into an array 
+
+        $names = $records["Category_Image"]; // Using global variable Post to access data sent via Post method
+
+        echo "<img src='$names' alt=\"Laptop\"/>";
     
     
     ?>
