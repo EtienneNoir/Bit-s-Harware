@@ -7,7 +7,8 @@
         $dbuser = "uwge0zlmihcmhulr";
         $dbpass = "2WVoKwXz4jFu57oNdrZn";
         $db = "bqb6bmikgqu0mnc0iiyq";
-        $conn = new mysqli($dbhost, $dbuser, $dbpass,$db) or die("Failed to connect to database". $conn -> error);
+        $conn = new mysqli($dbhost, $dbuser, $dbpass,$db) or die("Failed to connect to database". $conn -> error); //Attempting to Connect to the database with the specified credentials or return the die message in the form of an error 
+
         
         return $conn;
     }
