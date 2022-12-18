@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/Index/Navigation/nav&Title.css">
+    <link rel="stylesheet" href="CSS/Index/TableMain.css">
+    <link rel="stylesheet" href="CSS/Index/Footer.css">
+    <link rel="stylesheet" href="CSS/Animation.css">
     <title>Document</title>
 
 </head>
@@ -58,7 +62,7 @@
             while ($records = mysqli_fetch_array($results)) {
 
                 if ($index <= 3){
-                    
+
                     $names = $records["Category_id"]; // Using global variable Post to access data sent via Post method
                     $image = $records["Category_Image"];
                     $name =  $records["Category_Name"];
