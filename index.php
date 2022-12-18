@@ -54,31 +54,34 @@
 
             $results = mysqli_query($connect, $query) or die("Unable to retrieve data!");// Execute query using specified connection 
 
-            $records = mysqli_fetch_array($results);// Turn result into an array 
 
-            $id = $records["Category_id"]; // Using global variable Post to access data sent via Post method
-            $image = $records["Category_Image"];
-            $name =  $records["Category_Name"];
-            $description = $records["Category_Description"];
-            $alt = $records["Alt"];
-            $href = $records["href"];
+            echo "<ul>";
 
-            echo "<table>";
-            $index = 0;
-            echo "<tr>"; // Creating the first row of the table
-           // while ($records = mysqli_fetch_array($results)) {
-                echo $recrods[1];
-              //  echo "<td>";
-             //   echo "<a href=\"$href\" title=\"$description\" class=\"tool\">";
-             //   echo "<img src=\"$image\" alt=\"$alt\" width=\"450\" height=\"380\">";
-             //   echo "</a>";
-             //   echo "</td>";
-        
+                while ($records = mysqli_fetch_array($results)) { // Turn result into an array
 
-          //  }
-            echo "</tr>";
-    
-            echo "</table>";
+                    $id = $records["Category_id"]; // Using global variable Post to access data sent via Post method
+                    $image = $records["Category_Image"];
+                    $name =  $records["Category_Name"];
+                    $description = $records["Category_Description"];
+                    $alt = $records["Alt"];
+                    $href = $records["href"];
+
+                    echo "<li>
+
+                            <div class=\"main\"> 
+                            
+                            
+                                <a href=\"$href\" title=\"$description\" class=\"tool\"> <img src=\"$image\" alt=\"$alt\" width=\"450\" height=\"380\">  </a>
+                            
+                            
+                            </div>
+
+                    </li>";
+                }
+
+
+            echo "<ul>";
+
         ?>
     </div>
  
