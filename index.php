@@ -54,8 +54,6 @@
 
             $results = mysqli_query($connect, $query) or die("Unable to retrieve data!");// Execute query using specified connection 
 
-            $records = mysqli_fetch_array($results);
-
             echo "<table>";
            
             echo "<tr>"; // Creating the first row of the table
@@ -101,8 +99,8 @@
 
             echo "<tr>"; // Creating the second row of the table that will hold its four items 
 
-           //s $count = 0 ; 
-            while ($records) {
+            $count = 0 ; 
+            while ($records = mysqli_fetch_array($results)) {
 
                // if ($count > 3){ // Thus only print this once $count is bigger than 3 which is an indication that the categories that we dont want to be reprinted have been traversed 
 
@@ -124,6 +122,8 @@
                //   $count = $count + 1; // Everytime we don't execute the code in the if statement this is incremented to make sure we eventually print out everything
                // }
             }
+
+            echo "<p> Awe </p>";
 
             echo "</tr>";
             
