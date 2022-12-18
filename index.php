@@ -118,7 +118,7 @@
                 } else {
                 */
                     echo "<p> Awe </p>";
-                    $count = $count + 1; // Everytime we don't execute the code in the if statement this is incremented to make sure we eventually print out everything
+                  //  $count = $count + 1; // Everytime we don't execute the code in the if statement this is incremented to make sure we eventually print out everything
                // }
            // }
 
