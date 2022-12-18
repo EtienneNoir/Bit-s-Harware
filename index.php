@@ -4,10 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS/Index/Navigation/nav&Title.css">
-    <link rel="stylesheet" href="CSS/Index/TableMain.css">
-    <link rel="stylesheet" href="CSS/Index/Footer.css">
-    <link rel="stylesheet" href="CSS/Animation.css">
     <title>Document</title>
 
 </head>
@@ -54,35 +50,34 @@
 
             $results = mysqli_query($connect, $query) or die("Unable to retrieve data!");// Execute query using specified connection 
 
+            echo "<table>";
+            $index = 0;
+            echo "<tr>"; // Creating the first row of the table
+            while ($index <= 3){
+                while ($records = mysqli_fetch_array($results)) {
 
-            echo "<ul>";
-
-                while ($records = mysqli_fetch_array($results)) { // Turn result into an array
-
-                    $id = $records["Category_id"]; // Using global variable Post to access data sent via Post method
+                    $names = $records["Category_id"]; // Using global variable Post to access data sent via Post method
                     $image = $records["Category_Image"];
                     $name =  $records["Category_Name"];
                     $description = $records["Category_Description"];
                     $alt = $records["Alt"];
                     $href = $records["href"];
+                        
+                    echo "<td>";
+                    echo "<a href=\"#\" title=\"\" class=\"tool\">";
+                    echo "<img sr\"\" alt=\"\" width=\"450\" height=\"380\">";
+                    echo "</a>";
+                    echo "</td>";
 
-                    echo "<li>
+                    $index = $index + 1;
 
-                            <div class=\"main\"> 
-                            
-                            
-                                <a href=\"$href\" title=\"$description\" class=\"tool\"> <img src=\"$image\" alt=\"$alt\" width=\"450\" height=\"380\">  </a>
-                            
-                            
-                            </div>
+                    }
 
-                    </li>";
                 }
-
-
-            echo "<ul>";
-
+    
+            echo "</table>";
         ?>
+        
     </div>
  
     <footer style="background-image:url(Images/Background.jpg) ;">
