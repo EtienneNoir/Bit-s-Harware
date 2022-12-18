@@ -55,7 +55,7 @@
 
             $results = mysqli_query($connect, $query) or die("Unable to retrieve data!");// Execute query using specified connection 
 
-            $results1 = mysqli_query($connect, $query) or die("Unable to retrieve data!");// Execute query using specified connection 
+            $results1 = mysqli_query($connect, $query) or die("Unable to retrieve data!");// Another query that stores the same result to be used by another while loop 
 
             echo "<table>";
            
@@ -130,6 +130,7 @@
             }
 
             
+            
 
             echo "</tr>";
             
@@ -138,6 +139,8 @@
 
     
             echo "</table>";
+
+            CloseConnection($connect); // Closing the connection 
         ?>
         
     </div>
