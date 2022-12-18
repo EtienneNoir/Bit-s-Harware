@@ -66,16 +66,16 @@
             echo "<table>";
             $index = 0;
             echo "<tr>"; // Creating the first row of the table
-            while ($records = mysqli_fetch_array($results)) {
+           // while ($records = mysqli_fetch_array($results)) {
                 echo $recrods[1];
-                echo "<td>";
-                echo "<a href=\"$href\" title=\"$description\" class=\"tool\">";
-                echo "<img src=\"$image\" alt=\"$alt\" width=\"450\" height=\"380\">";
-                echo "</a>";
-                echo "</td>";
+              //  echo "<td>";
+             //   echo "<a href=\"$href\" title=\"$description\" class=\"tool\">";
+             //   echo "<img src=\"$image\" alt=\"$alt\" width=\"450\" height=\"380\">";
+             //   echo "</a>";
+             //   echo "</td>";
         
 
-            }
+          //  }
             echo "</tr>";
     
             echo "</table>";
