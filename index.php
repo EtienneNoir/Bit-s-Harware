@@ -97,7 +97,7 @@
 
             echo "<tr>"; // Creating the second row of the table that will hold its four items 
 
-            $count = 0 ; 
+            /*$count = 0 ; 
             while ($records = mysqli_fetch_array($results)) {
 
                 if ($count > 3){ // Thus only print this once $count is bigger than 3 which is an indication that the categories that we dont want to be reprinted have been traversed 
@@ -116,11 +116,11 @@
                     echo "</td>";
 
                 } else {
-
+                */
                     echo "<p> Awe </p>";
                     $count = $count + 1; // Everytime we don't execute the code in the if statement this is incremented to make sure we eventually print out everything
-                }
-            }
+               // }
+           // }
 
             echo "</tr>";
             
