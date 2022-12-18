@@ -54,6 +54,7 @@
 
             $results = mysqli_query($connect, $query) or die("Unable to retrieve data!");// Execute query using specified connection 
 
+            $records1 = mysqli_fetch_array($results);
             echo "<table>";
            
             echo "<tr>"; // Creating the first row of the table
@@ -66,6 +67,13 @@
                 * This is done to have one row of four items so that another code can be put together to output another row
             
             */
+
+            $names = $records1["Category_id"]; // Using global variable Post to access data sent via Post method
+            $image = $records1["Category_Image"];
+            $name =  $records1["Category_Name"];
+            $description = $records1["Category_Description"];
+            $alt = $records1["Alt"];
+            $href = $records1["href"];
         
             $index = 0; 
 
@@ -117,8 +125,12 @@
 
                 } else {
                 */
-                    echo "<p> Awe </p>";
-                  //  $count = $count + 1; // Everytime we don't execute the code in the if statement this is incremented to make sure we eventually print out everything
+                echo "<td>";
+                echo "<a href=\"$href\" title=\"$description\" class=\"tool\">";
+                echo "<img src=\"$image\" alt=\"$alt\" width=\"450\" height=\"380\">";
+                echo "</a>";
+                echo "</td>";
+                  //s  $count = $count + 1; // Everytime we don't execute the code in the if statement this is incremented to make sure we eventually print out everything
                // }
            // }
 
