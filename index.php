@@ -51,11 +51,14 @@
             $results = mysqli_query($connect, $query) or die("Unable to retrieve data!");// Execute query using specified connection 
 
             echo "<table>";
-            $index = 0;
+           
             echo "<tr>"; // Creating the first row of the table
-            while ($index <= 3){
-                while ($records = mysqli_fetch_array($results)) {
+        
+            $index = 0;
+            while ($records = mysqli_fetch_array($results)) {
 
+                if ($index <= 3){
+                    
                     $names = $records["Category_id"]; // Using global variable Post to access data sent via Post method
                     $image = $records["Category_Image"];
                     $name =  $records["Category_Name"];
@@ -71,9 +74,11 @@
 
                     $index = $index + 1;
 
-                    }
-
                 }
+
+            }
+
+            echo "</tr>"; // Creating the first row of the table
     
             echo "</table>";
         ?>
