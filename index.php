@@ -54,7 +54,6 @@
 
             $results = mysqli_query($connect, $query) or die("Unable to retrieve data!");// Execute query using specified connection 
 
-            $records1 = mysqli_fetch_array($results);
             echo "<table>";
            
             echo "<tr>"; // Creating the first row of the table
@@ -68,12 +67,7 @@
             
             */
 
-            $names = $records1["Category_id"]; // Using global variable Post to access data sent via Post method
-            $image = $records1["Category_Image"];
-            $name =  $records1["Category_Name"];
-            $description = $records1["Category_Description"];
-            $alt = $records1["Alt"];
-            $href = $records1["href"];
+        
         
             $index = 0; 
 
@@ -105,17 +99,17 @@
 
             echo "<tr>"; // Creating the second row of the table that will hold its four items 
 
-            /*$count = 0 ; 
-            while ($records = mysqli_fetch_array($results)) {
+            $count = 0 ; 
+            while ($records1 = mysqli_fetch_array($results)) {
 
                 if ($count > 3){ // Thus only print this once $count is bigger than 3 which is an indication that the categories that we dont want to be reprinted have been traversed 
 
-                    $names = $records["Category_id"]; // Using global variable Post to access data sent via Post method
-                    $image = $records["Category_Image"];
-                    $name =  $records["Category_Name"];
-                    $description = $records["Category_Description"];
-                    $alt = $records["Alt"];
-                    $href = $records["href"];
+                    $names = $records1["Category_id"]; // Using global variable Post to access data sent via Post method
+                    $image = $records1["Category_Image"];
+                    $name =  $records1["Category_Name"];
+                    $description = $records1["Category_Description"];
+                    $alt = $records1["Alt"];
+                    $href = $records1["href"];
                         
                     echo "<td>";
                     echo "<a href=\"$href\" title=\"$description\" class=\"tool\">";
@@ -124,15 +118,10 @@
                     echo "</td>";
 
                 } else {
-                */
-                echo "<td>";
-                echo "<a href=\"$href\" title=\"$description\" class=\"tool\">";
-                echo "<img src=\"$image\" alt=\"$alt\" width=\"450\" height=\"380\">";
-                echo "</a>";
-                echo "</td>";
-                  //s  $count = $count + 1; // Everytime we don't execute the code in the if statement this is incremented to make sure we eventually print out everything
-               // }
-           // }
+                
+                  $count = $count + 1; // Everytime we don't execute the code in the if statement this is incremented to make sure we eventually print out everything
+                }
+            }
 
             echo "</tr>";
             
