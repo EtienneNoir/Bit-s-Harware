@@ -99,7 +99,7 @@
 
             echo "<tr>"; // Creating the second row of the table that will hold its four items 
 
-            $count = 0 ; 
+           //s $count = 0 ; 
             while ($records = mysqli_fetch_array($results)) {
 
                // if ($count > 3){ // Thus only print this once $count is bigger than 3 which is an indication that the categories that we dont want to be reprinted have been traversed 
