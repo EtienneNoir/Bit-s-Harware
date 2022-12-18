@@ -57,8 +57,18 @@
             echo "<table>";
            
             echo "<tr>"; // Creating the first row of the table
+
+            /* 
+            
+                * What the following code does : 
+                * While there are still records or rows in the array execute the inner loop 
+                * In the inner loop execute the code in the if statements only three times and increments the $index variable to ensure of this
+                * This is done to have one row of four items so that another code can be put together to output another row
+            
+            */
         
-            $index = 0;
+            $index = 0; 
+
             while ($records = mysqli_fetch_array($results)) {
 
                 if ($index <= 3){
@@ -83,6 +93,39 @@
             }
 
             echo "</tr>"; // Creating the first row of the table
+
+
+            echo "<tr>"; // Creating the second row of the table that will hold its four items 
+
+            $count = 0 ; 
+            while ($records = mysqli_fetch_array($results)) {
+
+                if ($count > 3){ // Thus only print this once $count is bigger than 3 which is an indication that the categories that we dont want to be reprinted have been traversed 
+
+                    $names = $records["Category_id"]; // Using global variable Post to access data sent via Post method
+                    $image = $records["Category_Image"];
+                    $name =  $records["Category_Name"];
+                    $description = $records["Category_Description"];
+                    $alt = $records["Alt"];
+                    $href = $records["href"];
+                        
+                    echo "<td>";
+                    echo "<a href=\"$href\" title=\"$description\" class=\"tool\">";
+                    echo "<img src=\"$image\" alt=\"$alt\" width=\"450\" height=\"380\">";
+                    echo "</a>";
+                    echo "</td>";
+
+                    $index = $index + 1;
+
+                }
+
+            }
+
+            echo "</tr>";
+            
+            
+
+
     
             echo "</table>";
         ?>
