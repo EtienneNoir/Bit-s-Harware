@@ -102,7 +102,7 @@
             $count = 0 ; 
             while ($records1 = mysqli_fetch_array($results)) {
 
-                if ($count > 3){ // Thus only print this once $count is bigger than 3 which is an indication that the categories that we dont want to be reprinted have been traversed 
+                if ($count < 3){ // Thus only print this once $count is bigger than 3 which is an indication that the categories that we dont want to be reprinted have been traversed 
 
                     $names = $records1["Category_id"]; // Using global variable Post to access data sent via Post method
                     $image = $records1["Category_Image"];
