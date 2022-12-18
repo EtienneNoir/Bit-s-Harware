@@ -71,8 +71,8 @@
                     $href = $records["href"];
                         
                     echo "<td>";
-                    echo "<a href=\"#\" title=\"\" class=\"tool\">";
-                    echo "<img sr\"\" alt=\"\" width=\"450\" height=\"380\">";
+                    echo "<a href=\"$href\" title=\"$description\" class=\"tool\">";
+                    echo "<img sr\"$image\" alt=\"$alt\" width=\"450\" height=\"380\">";
                     echo "</a>";
                     echo "</td>";
 
