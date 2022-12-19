@@ -34,3 +34,14 @@
   
 
 }
+
+
+
+
+#Add {
+    background-color: transparent;
+    color: #800040;
+    padding : 0.5rem 1.5rem; /* Height and Width */
+    margin-right: 100px; /* Space around the element, to make sure that there's space inbetween the buttons */
+    cursor: pointer;
+  }

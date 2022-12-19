@@ -179,7 +179,7 @@
 
         <div> Price </div>
 
-        <button>Add to price , Thus must be a link </button>
+        <div id="add"> Add to price , Thus must be a link </div>>
 
     </div>
 
