@@ -169,7 +169,7 @@
 
     <!--  The following are the elements that will only be visible once a product is selected or clicked -->
 
-    <div id="main">
+    <div id="mainDrop">
 
         <div id="close"> x </div>;
 
@@ -219,7 +219,7 @@
 
     function myFunction(){
 
-        document.getElementById("main").style.display = "block";
+        document.getElementById("mainDrop").style.display = "block";
         document.getElementById("backdrop").style.display = "block";   
 
     }
