@@ -169,7 +169,7 @@
 
     <!--  The following are the elements that will only be visible once a product is selected or clicked -->
 
-    <div id="main"> 
+    <div id="popMessage"> 
 
         <div id="close"> x </div> 
         
