@@ -171,7 +171,7 @@
 
     <div id="mainDrop">
 
-        <div id="close"> x </div>;
+        <div id="close"> x </div>
 
         <img src="" alt="">
 
