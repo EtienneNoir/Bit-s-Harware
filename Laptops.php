@@ -102,7 +102,7 @@
             while ($records = mysqli_fetch_array($results)) {
 
                 if ($index <= 2){
-                    $names = $records["Product_id"]; // Using global variable Post to access data sent via Post method
+                    $id = $records["Product_id"]; // Using global variable Post to access data sent via Post method
                     $image = $records["Product_Image"];
                     $name =  $records["Product_Name"];
                     $description = $records["description"];
@@ -113,7 +113,7 @@
                         
                     echo "<td>";
                     echo "<a href=\"$href\">";
-                    echo "<img src=\"$image\"  title=\"$description\" alt=\"$alt\" width=\"450\" height=\"380\" onclick=\"myFunction()\">";
+                    echo "<img src=\"$image\"  title=\"$description\" alt=\"$alt\" width=\"450\" height=\"380\" onclick=\"myFunction($image,$price, $description, $alt, $name)\">";
                     echo "</a>";
                     echo "</td>";
 
@@ -169,20 +169,42 @@
 
     <!--  The following are the elements that will only be visible once a product is selected or clicked -->
 
-    <div id="mainDrop">
+    <div id="main"> 
 
-        <div id="close"> x </div>
+        <div id="close"> x </div> 
+        
+        <div id="image"> 
 
-        <img src="" alt="">
+            <img src="" alt=""  width="450" height="380"/>
 
-        <div> Description </div>
+        </div>
 
-        <div> Price </div>
 
-        <div id="add"> Add to price , Thus must be a link </div>
+        <div id="content">
+
+            <h3 id="h3"> </h3> 
+
+            <h4> Key Features: </h4>
+            <ul>
+                <li>Apple M1 Pro 10-Core Chip </li>
+                <li>16GB Unified RAM | 512GB SSD</li>
+                <li>16.2 3456 x 2234 Liquid Retina XDR Screen</li>
+                <li>16-Core GPU | 16-Core Neural Engine"</li>
+            </ul>
+
+            <h4 id="price">  </h4>
+
+        </div>
+
+
+        <div>
+            
+            <button id="btn"> Add Item to Cart </button>  
+        
+        </div>
+
 
     </div>
-
     
 
 
@@ -217,10 +239,14 @@
        
 
 
-    function myFunction(){
+    function myFunction(image,price, description, alt , name){
 
         document.getElementById("mainDrop").style.display = "block";
         document.getElementById("backdrop").style.display = "block";   
+        document.getElementById("image").src = image;
+        document.getElementById("image").alt = alt;
+        document.getElementById("price").innerHTML = price;
+        document.getElementById("h3").innerHTML = name;
 
     }
     </script>
