@@ -1,0 +1,36 @@
+#backdrop {
+    position: fixed; /* Thus this element always stays in the same place even if the page is scrolled */
+    z-index: 1; /* This element has a greater stack number thus will always be infront of an element with a lower stack order */
+    background-color: rgba(0, 0, 0, 0.75);
+    width: 100%;
+    height: 100vh;  /* vh is the maximum possible viewport height */
+    top: 0; /* Distance from the margin */
+    left: 0; /* Distance from the left */
+    display: none;
+}
+
+#main{
+    color:aliceblue;
+    border-style: solid;
+   
+    text-align: center;
+    background-color:blueviolet;
+    margin: auto;
+    /* The code below is to center the element at the page */
+    position: fixed; /* This item will remain in the same place even when the page is scorlled*/
+    top: 50%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -200px;
+    height: 200px;
+    width: 400px;
+    
+    /* To hide the element until it is selected */
+
+ 
+    display: none; /* The element is completely removed */
+
+    z-index: 10;
+  
+
+}
