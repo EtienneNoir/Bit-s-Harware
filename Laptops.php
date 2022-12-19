@@ -175,7 +175,7 @@
         
         <div id="image"> 
 
-            <img src="" alt=""  width="450" height="380"/>
+            <img id="images" src="" alt=""  width="450" height="380"/>
 
         </div>
 
@@ -243,7 +243,7 @@
 
         document.getElementById("popMessage").style.display = "block";
         document.getElementById("backdrop").style.display = "block";   
-        document.getElementById("image").src = image;
+        document.getElementById("images").src = image;
   
 
     }
