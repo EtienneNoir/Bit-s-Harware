@@ -1,3 +1,57 @@
+
+#main{
+    color:rgb(1, 41, 64);
+    border-style: solid;
+
+    text-align: center;
+    
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    background-color: white;
+
+
+    /* The code below is to center the element at the page */
+
+
+    height: fit-content;
+
+    zoom: 86%;
+
+
+    width: fit-content;
+    
+    /* To hide the element until it is selected */
+
+
+    display: none; /* The element is completely removed */
+
+    z-index: 10;
+
+
+
+    position: fixed; /* Where should an element be on the screen even when you scroll in the browser */
+    top: 20vh;
+    left: calc(50% - 15rem); /* This is to make sure that it is always in the middle */
+
+    top: 5vh;
+
+
+    opacity: 0.8;
+
+
+
+
+
+}
+
+#close{
+    
+    text-align: right;
+    margin-right: 10px;
+
+
+}
+
 #backdrop {
     position: fixed; /* Thus this element always stays in the same place even if the page is scrolled */
     z-index: 1; /* This element has a greater stack number thus will always be infront of an element with a lower stack order */
@@ -9,39 +63,38 @@
     display: none;
 }
 
-#mainDrop{
-    color:aliceblue;
-    border-style: solid;
-   
-    text-align: center;
+#btn {
+
+    font: inherit; /* In other words inherit the value for this attribute from its parent element */
+    padding : 0.5rem 1.5rem; /* Height and Width */
+    cursor: pointer;
+    border-radius: 4px;
     background-color:blueviolet;
-    margin: auto;
-    /* The code below is to center the element at the page */
-    position: fixed; /* This item will remain in the same place even when the page is scorlled*/
-    top: 50%;
-    left: 50%;
-    margin-top: -100px;
-    margin-left: -200px;
-    height: 200px;
-    width: 400px;
+    color: white; /* Text color */
+    border: 1 px solid blueviolet;
     
-    /* To hide the element until it is selected */
-
- 
-    display: none; /* The element is completely removed */
-
-    z-index: 10;
-  
 
 }
 
+#btn:hover{
+    background-color: rgb(157, 61, 247);
+    
+    }
+/* Styling the card*/
 
 
+#content {
+    text-align: center;
+    padding: 1rem;
+}
 
-#add {
-    background-color: transparent;
-    color: #800040;
-    padding : 0.5rem 1.5rem; /* Height and Width */
-    margin-right: 100px; /* Space around the element, to make sure that there's space inbetween the buttons */
-    cursor: pointer;
-  }
+.content h3 {
+    font-size: 1.25rem;
+    color: #2c292b;
+}
+
+#image {
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    background-color: white;
+}
