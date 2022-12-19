@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="CSS/Index/Footer.css">
     <link rel="stylesheet" href="CSS/Animation.css">
     <link rel="stylesheet" href="CSS/Laptops/Laptop.css">
+    <link rel="stylesheet" href="CSS/Laptops/Backdrop.css">
     <link rel="icon" type="png" href="Images/favicon.png">
     <title>Document</title>
 </head>
