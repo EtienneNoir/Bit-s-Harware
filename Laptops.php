@@ -112,7 +112,7 @@
                         
                     echo "<td>";
                     echo "<a href=\"$href\">";
-                    echo "<img src=\"$image\"  title=\"$description\" alt=\"$alt\" width=\"450\" height=\"380\">";
+                    echo "<img src=\"$image\"  title=\"$description\" alt=\"$alt\" width=\"450\" height=\"380\" onclick=\"myFunction()\">";
                     echo "</a>";
                     echo "</td>";
 
@@ -157,9 +157,37 @@
 
             CloseConnection($connect); // Closing the connection 
 
+
+
+            
+
+
+
         ?>
     </div>
- 
+
+    <!--  The following are the elements that will only be visible once a product is selected or clicked -->
+
+    <div id="main">
+
+        <div id="close"> x </div>;
+
+        <img src="" alt="">
+
+        <div> Description </div>
+
+        <div> Price </div>
+
+        <button>Add to price , Thus must be a link </button>
+
+    </div>
+
+    
+
+
+    <div id="backdrop"> </div> <!-- // The element that will blur out the background -->
+
+    <!--  -->
     <footer style="background-image:url(Images/Background.jpg) ;">
         <h4 style="font-family:Serif; " > &copy;  Copyright <strong> Bit's Hardwares</strong> </h4>
         <p > <h5>All Rights Reserved </h5></p>
@@ -186,6 +214,14 @@
        
       }
        
+
+
+    function myFunction(){
+
+        document.getElementById("main").style.display = "block";
+        document.getElementById("backdrop").style.display = "block";   
+
+    }
     </script>
 
 </body>
