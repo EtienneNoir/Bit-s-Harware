@@ -12,6 +12,8 @@
     border-style: solid;
     border-color: rgb(1, 41, 64);
 
+    border-width: thin;
+
 
     /* The code below is to center the element at the page */
 
@@ -99,7 +101,7 @@
 }
 
 #image {
-    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 2px 2px 1px  rgb(1, 41, 64);
     border-radius: 6px;
-    background-color: white;
+    background-color: rgb(1, 41, 64);
 }
