@@ -113,7 +113,7 @@
                         
                     echo "<td>";
                     echo "<a href=\"$href\">";
-                    echo "<img src=\"$image\" alt=\"$alt\" width=\"450\" height=\"380\" onclick=\"myFunction('$image' , '$price')\">";
+                    echo "<img src=\"$image\" alt=\"$alt\" width=\"450\" height=\"380\" onclick=\"myFunction('$image' , '$price' , \"Awwuygrweir\")\">";
                     echo "</a>";
                     echo "</td>";
 
@@ -237,11 +237,12 @@
        
 
 
-    function myFunction(image , price ){
+    function myFunction(image , price , description ){
 
         document.getElementById("popMessage").style.display = "block";
         document.getElementById("backdrop").style.display = "block";   
         document.getElementById("images").src = image;
+        document.getElementById("about").innerHTML = description;
         document.getElementById("price").innerHTML = "R "+ price;
     
 
