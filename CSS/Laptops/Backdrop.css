@@ -61,7 +61,7 @@
 #backdrop {
     position: fixed; /* Thus this element always stays in the same place even if the page is scrolled */
     z-index: 1; /* This element has a greater stack number thus will always be infront of an element with a lower stack order */
-    background-color: rgba(0, 0, 0, 0.993);
+    background-color: rgba(0, 0, 0, 0.973);
     width: 100%;
     height: 100%;  /* vh is the maximum possible viewport height */
     top: 0; /* Distance from the margin */
