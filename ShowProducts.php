@@ -189,7 +189,7 @@
 
             </p>
 
-            <h4> Price: </h4>
+           
             <h4 id="price">  </h4>
 
         </div>
@@ -242,7 +242,7 @@
         document.getElementById("popMessage").style.display = "block";
         document.getElementById("backdrop").style.display = "block";   
         document.getElementById("images").src = image;
-        document.getElementById("price").innerHTML = price;
+        document.getElementById("price").innerHTML = "R "+ price;
     
 
 
