@@ -171,7 +171,7 @@
 
     <div id="popMessage"> 
 
-        <div id="close"> x </div> 
+        <div id="close" onclick="close()"> x </div> 
         
         <div id="image"> 
 
@@ -208,7 +208,7 @@
     
 
 
-    <div id="backdrop"  onclick="Close()"> </div> <!-- // The element that will blur out the background -->
+    <div id="backdrop" onclick="close()"> </div> <!-- // The element that will blur out the background -->
 
     <!--  -->
     <footer style="background-image:url(Images/Background.jpg) ;">
