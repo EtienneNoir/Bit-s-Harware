@@ -113,7 +113,7 @@
                         
                     echo "<td>";
                     echo "<a href=\"$href\">";
-                    echo "<img src=\"$image\"  title=\"$description\" alt=\"$alt\" width=\"450\" height=\"380\" onclick=\"myFunction('$image')\">";
+                    echo "<img src=\"$image\" alt=\"$alt\" width=\"450\" height=\"380\" onclick=\"myFunction('$image' , '$description')\">";
                     echo "</a>";
                     echo "</td>";
 
@@ -185,12 +185,9 @@
             <h3 id="h3"> </h3> 
 
             <h4> Key Features: </h4>
-            <ul>
-                <li>Apple M1 Pro 10-Core Chip </li>
-                <li>16GB Unified RAM | 512GB SSD</li>
-                <li>16.2 3456 x 2234 Liquid Retina XDR Screen</li>
-                <li>16-Core GPU | 16-Core Neural Engine"</li>
-            </ul>
+            <p id="about">
+
+            </p>
 
             <h4 id="price">  </h4>
 
@@ -239,11 +236,12 @@
        
 
 
-    function myFunction(image){
+    function myFunction(image , text){
 
         document.getElementById("popMessage").style.display = "block";
         document.getElementById("backdrop").style.display = "block";   
         document.getElementById("images").src = image;
+        document.getElementById("about").innerHTML = text;
 
 
     }
