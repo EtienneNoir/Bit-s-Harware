@@ -8,7 +8,9 @@
     
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 6px;
-    background-color:rgb(1, 41, 64);;
+    background-color:black;
+    border-style: solid;
+    border-color: rgb(1, 41, 64);
 
 
     /* The code below is to center the element at the page */
