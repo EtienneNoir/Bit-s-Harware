@@ -73,9 +73,12 @@
 
             $connect = OpenConnection(); // calling the function to connect to the database and storing its return value
 
-            $query = "SELECT * FROM Product";
 
-            $results = mysqli_query($connect, $query) or die("Unable to retrieve data!");// Execute query using specified connection 
+            $id = $_REQUEST['id'];//  taking the value referenced by id which is found in the url segment
+
+            $query = "SELECT * FROM Product WHERE Category_id = '$id'"; // Retrieving all the product based on the selected category which is an image on the front page    
+
+            $results = mysqli_query($connect, $query) or die("Unable to retrieve data!");// Execute query using specified connection);
 
             $results1 = mysqli_query($connect, $query) or die("Unable to retrieve data!");// Another query that stores the same result to be used by another while loop 
 
