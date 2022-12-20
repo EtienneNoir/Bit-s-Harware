@@ -68,6 +68,7 @@
     left: 0; /* Distance from the left */
     cursor: pointer;
     display: none;
+    opacity: 0.5;
 }
 
 #btn {
