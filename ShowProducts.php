@@ -113,7 +113,7 @@
                         
                     echo "<td>";
                     echo "<a href=\"$href\">";
-                    echo "<img src=\"$image\" alt=\"$alt\" width=\"450\" height=\"380\" onclick=\"myFunction('$image' , '$description')\">";
+                    echo "<img src=\"$image\" alt=\"$alt\" width=\"450\" height=\"380\" onclick=\"myFunction('$image' ',' '$description')\">";
                     echo "</a>";
                     echo "</td>";
 
