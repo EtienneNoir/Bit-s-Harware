@@ -105,5 +105,9 @@
 
     border-radius: 6px;
     border-style: solid;
-    border-bottom-color: rgb(1, 41, 64);;
+    border-bottom-color: rgb(1, 41, 64);
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-width: thin;
 }
