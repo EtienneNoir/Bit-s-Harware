@@ -189,6 +189,7 @@
 
             </p>
 
+            <h4> Price: </h4>
             <h4 id="price">  </h4>
 
         </div>
