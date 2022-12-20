@@ -169,7 +169,7 @@
 
     <!--  The following are the elements that will only be visible once a product is selected or clicked -->
 
-    <div id="popMessage" style="background-image:url(Images/Background.jpg) ;"> 
+    <div id="popMessage" style="background-color: black;"> 
 
         <div id="close"> x </div> 
         
