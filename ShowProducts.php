@@ -143,7 +143,7 @@
                         
                     echo "<td>";
                     echo "<a href=\"$href\">";
-                    echo "<img src=\"$image\"  title=\"$description\" alt=\"$alt\" width=\"450\" height=\"380\" >";
+                    echo "<img src=\"$image\"  title=\"$description\" alt=\"$alt\" width=\"450\" height=\"380\" onclick=\"myFunction('$image' , '$price' , '$description')\">";
                     echo "</a>";
                     echo "</td>";
 
@@ -169,7 +169,7 @@
 
     <!--  The following are the elements that will only be visible once a product is selected or clicked -->
 
-    <div id="popMessage" style="background-color: black;"> 
+    <div id="popMessages"> 
 
         <div id="close"> x </div> 
         
