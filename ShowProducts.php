@@ -241,6 +241,7 @@
         document.getElementById("popMessage").style.display = "block";
         document.getElementById("backdrop").style.display = "block";   
         document.getElementById("images").src = image;
+        document.getElementById("about").innerHTML = image;
     
 
 
