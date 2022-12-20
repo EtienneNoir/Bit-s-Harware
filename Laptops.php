@@ -171,7 +171,7 @@
 
     <div id="popMessage"> 
 
-        <div id="close">  </div> 
+        <div id="close"> x </div> 
         
         <div id="image"> 
 
