@@ -86,7 +86,7 @@
                     $href = $records["href"];
                         
                     echo "<td>";
-                    echo "<a href=\"ShowProducts.php?id=\"$id\"\" title=\"$id\" class=\"tool\">";
+                    echo "<a href=\"ShowProducts.php?id=$id\" title=\"$description\" class=\"tool\">";
                     echo "<img src=\"$image\" alt=\"$alt\" width=\"450\" height=\"380\">";
                     echo "</a>";
                     echo "</td>";
@@ -115,7 +115,7 @@
                     $href = $records["href"];
 
                     echo "<td>";
-                    echo "<a href=\"ShowProducts.php?id=\"$id\"\" title=\"$id\" class=\"tool\">";
+                    echo "<a href=\"ShowProducts.php?id=$id\" title=\"$description\" class=\"tool\">";
                     echo "<img src=\"$image\" alt=\"$alt\" width=\"450\" height=\"380\">";
                     echo "</a>";
                     echo "</td>";
