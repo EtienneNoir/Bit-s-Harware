@@ -78,7 +78,7 @@
 
                 if ($index <= 3){
 
-                    $names = $records["Category_id"]; // Using global variable Post to access data sent via Post method
+                    $id = $records["Category_id"]; // Using global variable Post to access data sent via Post method
                     $image = $records["Category_Image"];
                     $name =  $records["Category_Name"];
                     $description = $records["Category_Description"];
@@ -86,7 +86,7 @@
                     $href = $records["href"];
                         
                     echo "<td>";
-                    echo "<a href=\"$href\" title=\"$description\" class=\"tool\">";
+                    echo "<a href=\"ShowProducts.php?id=\"$id\"\" title=\"$description\" class=\"tool\">";
                     echo "<img src=\"$image\" alt=\"$alt\" width=\"450\" height=\"380\">";
                     echo "</a>";
                     echo "</td>";
