@@ -242,7 +242,7 @@
         document.getElementById("popMessage").style.display = "block";
         document.getElementById("backdrop").style.display = "block";   
         document.getElementById("images").src = image;
-        document.getElementById("about").innerHTML = description;
+        document.getElementById("about").innerHTML = 'description';
         document.getElementById("price").innerHTML = "R "+ price;
     
 
