@@ -208,7 +208,7 @@
     
 
 
-    <div id="backdrop"> </div> <!-- // The element that will blur out the background -->
+    <div id="backdrop"  onclick="Close()"> </div> <!-- // The element that will blur out the background -->
 
     <!--  -->
     <footer style="background-image:url(Images/Background.jpg) ;">
@@ -246,6 +246,12 @@
         document.getElementById("images").src = image;
 
 
+    }
+
+
+    function close(){
+        document.getElementById("popMessage").style.display = "none";
+        document.getElementById("backdrop").style.display = "none"; 
     }
     </script>
 
