@@ -1,3 +1,12 @@
+<?php // To keep track of the user as the traverse through the pages
+
+    // Start the session
+    session_start(); // This is to keep track of a user
+    $_SESSION["User"] = " "; // Defining an empty user, which denotes a user that has not logged in
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
