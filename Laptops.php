@@ -171,7 +171,7 @@
 
     <div id="popMessage"> 
 
-        <div id="close" onclick="close()"> x </div> 
+        <div id="close"> x </div> 
         
         <div id="image"> 
 
@@ -208,7 +208,7 @@
     
 
 
-    <div id="backdrop" onclick="close()"> </div> <!-- // The element that will blur out the background -->
+    <div id="backdrop" > </div> <!-- // The element that will blur out the background -->
 
     <!--  -->
     <footer style="background-image:url(Images/Background.jpg) ;">
@@ -253,6 +253,11 @@
         document.getElementById("popMessage").style.display = "none";
         document.getElementById("backdrop").style.display = "none"; 
     }
+
+
+
+    document.getElementById("backdrop").addEventListener("click", close);// Function should be defined before this addEventListener, this is used instead of onclick because onclick does not appear to be working at run-tim
+    document.getElementById("popMessage").addEventListener("click", close);
     </script>
 
 </body>
