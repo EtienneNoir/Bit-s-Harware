@@ -2,8 +2,7 @@
 
     // Start the session
     session_start(); // This is to keep track of a user
-    $_SESSION["User"] = " "; // Defining an empty user, which denotes a user that has not logged in
-
+  
 
 ?>
 
@@ -23,7 +22,7 @@
 </head>
 
 
-<body style="background-image:url(Images/Background.jpg) ;">
+<body style="background-image:url(Images/Background.jpg) ; border-style: solid;">
     <h2 id="title"> <img src="Images/favicon.png" alt="Image of CPU" id="animation"> <Strong> Bit's Hardwares </Strong> </h2>
 
     <header>
