@@ -30,7 +30,7 @@
                 </li>
 
                 <li>
-                    <a href="javascript:void(0)" > about </a> 
+                    <a href="About.html" > about </a> 
                 </li>
 
                 <li>
