@@ -34,11 +34,11 @@
                 </li>
 
                 <li>
-                    <a href="About.html" > Profile </a> 
+                    <a href="javascript:void(0)" > Profile </a> 
                 </li>
 
                 <li>
-                    <a href="javascript:void(0)" > about </a> 
+                    <a href="About.html" > about </a> 
                 </li>
 
                 <li>
