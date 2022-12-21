@@ -1,6 +1,7 @@
 
 #main table {
     margin: auto;
+    position: fixed;
 }
 #main td{
     border-style: solid;
