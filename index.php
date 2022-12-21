@@ -45,7 +45,7 @@
 
     </header>
 
-    <div id="main" style="margin-bottom: 50px;">
+    <div id="main">
         <?php
             include 'config.php'; // importing config page, to use its properties
 
