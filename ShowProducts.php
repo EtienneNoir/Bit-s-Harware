@@ -16,7 +16,7 @@
     <link rel="icon" type="png" href="Images/favicon.png">
     <title>Document</title>
 </head>
-<body style="background-image:url(Images/Background.jpg) ;">
+<body style="background-image:url(Images/Background.jpg); width: fit-content; margin:auto;">
     <h2 id="title"> <img src="Images/favicon.png" alt="Image of CPU" id="animation"> <Strong> Bit's Hardwares </Strong> </h2>
 
     <header> 
@@ -111,11 +111,11 @@
                     $description = $records["description"];
                     $price = $records['Price'];
                     $alt = $records["alt"];
-                    $href = $records["href"];
+                 
 
                         
                     echo "<td>";
-                    echo "<a href=\"$href\">";
+                    echo "<a >";
                     echo "<img src=\"$image\" alt=\"$alt\" width=\"450\" height=\"380\" onclick=\"myFunction('$image' , '$price' , '$description')\">";
                     echo "</a>";
                     echo "</td>";
@@ -141,11 +141,11 @@
                     $description = $records["description"];
                     $price = $records['Price'];
                     $alt = $records["alt"];
-                    $href = $records["href"];
+               
 
                         
                     echo "<td>";
-                    echo "<a href=\"$href\">";
+                    echo "<a >";
                     echo "<img src=\"$image\" alt=\"$alt\" width=\"450\" height=\"380\" onclick=\"myFunction('$image' , '$price' , '$description')\">";
                     echo "</a>";
                     echo "</td>";
@@ -200,7 +200,7 @@
 
         <div>
             
-            <button id="btn"> Add Item to Cart </button>  
+            <button id="btn" onclick="checkLogin()"> Add Item to Cart </button>  
         
         </div>
 
@@ -259,7 +259,10 @@
     }
 
 
+    function checkLogin(){
 
+        
+    }
     document.getElementById("backdrop").addEventListener("click", close);// Function should be defined before this addEventListener, this is used instead of onclick because onclick does not appear to be working at run-tim
     document.getElementById("close").addEventListener("click", close);
     </script>
