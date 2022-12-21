@@ -55,7 +55,7 @@
 
     
 
-    <div id="sideContent" style="position:fixed" >
+    <div id="sideContent" >
         <ul><a id="a" class="f" href="javascript:void(0)" onclick="closeSide()" ><img src="Images/close.png" alt="Image of Close Sign" class="animationClose" width="100" height="100"> </a><br><br><br><br><br><br>
             <a id="a" href="#"> <img src="Images/Ram1.png"  class="animationClose" alt="Image of Ram" width="100" height="100"> </a><br><br><br>
             <a id="a" href="#"> <img src="Images/Towers1.png"  class="animationClose" alt="Image of a Tower" width="100" height="100"> </a><br><br><br>
