@@ -1,0 +1,139 @@
+.About{ /* Defining a div for the about content */
+
+    border-style: solid;
+    border-color: rgb(5, 68, 104);
+    border-width: thin;
+    background: black;
+    opacity: 0.9;
+    width: 60vh;
+    margin: auto;
+    color: white;
+    overflow: hidden;/* To prevent the items from overflowing */
+ 
+    
+
+    
+}
+
+#fit {
+
+    border-style: solid;
+    border-color: blueviolet;
+    width: fit-content;
+
+
+}
+
+
+.OuterEtienne{
+    
+   
+    text-align: center;
+    font-size: large;
+
+}
+
+.OuterContainer, .ticker{
+    height: 30px;
+    line-height: 30px;
+    background-color: #000;
+    width: 60vh;
+
+}
+
+/* Container*/
+.OuterContainer {
+    overflow: hidden; /* HIDE SCROLL BAR
+    * the overflow: hidden is used to hide the scroll bar , thus making it impossible to scroll inside the page
+
+    * This is the outer container , it will remain unchanged on the screen, think of it as position: fixed.
+    */
+    background: #eee;/* Colour of background */
+
+}
+/* Ticker 
+
+* The ticker represents the individual items that will be displayed on on the ticker 
+* Here the items are specified to be aligned in the center
+*/
+.ticker { 
+
+text-align: center; 
+
+}
+
+/* 
+
+* The InnerContainer is the most inside
+container
+
+
+
+
+
+*/
+.InnerContainer {
+
+    position: relative;
+/* Position: Relative allows the div to -  be adjusted away from its normal position
+
+* Thus making the div more modifiable 
+
+* In other words it allows you to place an element any where desired
+
+*/
+
+}
+@keyframes tickerTape {
+    0% { bottom: 0; } /* FIRST ITEM */
+    30% { bottom: 30px; } /* SECOND ITEM */
+    60% { bottom: 60px; } /* THIRD ITEM */
+    90% { bottom: 90px; } /* FORTH ITEM */
+    100% { bottom: 0; } /* BACK TO FIRST */
+}
+
+.InnerContainer {
+    animation-name:tickerTape;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(1, 0, .5, 0); /* This is used to specify the speed that the animation is moving in*/
+}
+
+.InnerContainer:hover {
+    /* The animation-play-state      
+
+    * It is used to specify what happens to the animation, in this case the animation is paused when user hover over it.
+
+    */
+
+    animation-play-state: paused; 
+}
+
+#EB{
+
+
+    cursor: pointer;
+    
+   
+ 
+}
+
+#p{
+   
+    border-style:solid;
+    border-color:  rgb(5, 68, 104);
+    margin: auto;
+    border-width: thin;
+    width: fit-content;
+    margin-top: 50px;
+    
+
+}
+
+#main { /* To give the image that black border after the blue */
+    border-style: solid;
+    overflow: hidden;
+    width: fit-content;
+    margin: auto;
+    margin-bottom: 50px;
+}
