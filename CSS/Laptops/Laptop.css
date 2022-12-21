@@ -42,7 +42,7 @@
     border-color: blueviolet;
     background-color:#000;
     height: 600px;
-    width: fit-content;
+    width: 13%;
     border-width: thin;
     opacity:0.8;
 
@@ -55,5 +55,5 @@
 }
 
 #main table {
-    margin-right: 320px;
+    margin-right: 360px;
 }
