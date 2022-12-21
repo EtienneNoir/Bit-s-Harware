@@ -16,14 +16,13 @@
     <link rel="stylesheet" href="CSS/Index/TableMain.css">
     <link rel="stylesheet" href="CSS/Index/Footer.css">
     <link rel="stylesheet" href="CSS/Animation.css">
-    <link rel="stylesheet" href="CSS/Body.css">
     <link rel="icon" type="png" href="Images/favicon.png">
     <title>Bit's Hardwares</title>
 
 </head>
 
 
-<body >
+<body style="background-image:url(Images/Background.jpg) ; width: fit-content; margin:auto;">
     <h2 id="title"> <img src="Images/favicon.png" alt="Image of CPU" id="animation"> <Strong> Bit's Hardwares </Strong> </h2>
 
     <header>
