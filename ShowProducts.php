@@ -16,7 +16,7 @@
     <link rel="icon" type="png" href="Images/favicon.png">
     <title>Document</title>
 </head>
-<body style="background-image:url(Images/Background.jpg); width: fit-content; margin:auto;">
+<body style="background-image:url(Images/Background.jpg);">
     <h2 id="title"> <img src="Images/favicon.png" alt="Image of CPU" id="animation"> <Strong> Bit's Hardwares </Strong> </h2>
 
     <header> 
