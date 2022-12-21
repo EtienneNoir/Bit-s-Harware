@@ -16,7 +16,7 @@
     <link rel="icon" type="png" href="Images/favicon.png">
     <title>Document</title>
 </head>
-<body style="background-image:url(Images/Background.jpg); border-style: solid; border-color:blueviolet; width: fit-content;">
+<body style="background-image:url(Images/Background.jpg); border-style: solid; border-color:blueviolet; width: fit-content; margin:auto">
     <h2 id="title"> <img src="Images/favicon.png" alt="Image of CPU" id="animation"> <Strong> Bit's Hardwares </Strong> </h2>
 
     <header> 
@@ -55,7 +55,7 @@
 
     
 
-    <div id="sideContent" >
+    <div id="sideContent" style="position:fixed" >
         <ul><a id="a" class="f" href="javascript:void(0)" onclick="closeSide()" ><img src="Images/close.png" alt="Image of Close Sign" class="animationClose" width="100" height="100"> </a><br><br><br><br><br><br>
             <a id="a" href="#"> <img src="Images/Ram1.png"  class="animationClose" alt="Image of Ram" width="100" height="100"> </a><br><br><br>
             <a id="a" href="#"> <img src="Images/Towers1.png"  class="animationClose" alt="Image of a Tower" width="100" height="100"> </a><br><br><br>
