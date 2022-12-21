@@ -42,14 +42,14 @@
     border-color: blueviolet;
     background-color:#000;
     height: 600px;
-    width: 13%;
+    width: fit-content;
     border-width: thin;
     opacity:0.8;
 
 }
 
 #main {
-    margin-left: 100px;
+    margin-left: 300px;
     
 
 }
