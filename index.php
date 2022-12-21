@@ -22,7 +22,7 @@
 </head>
 
 
-<body style="background-image:url(Images/Background.jpg) ; border-style: solid; border-color: blueviolet; width: fit-content;">
+<body style="background-image:url(Images/Background.jpg) ; border-style: solid; border-color: blueviolet; width: fit-content; margin:auto;">
     <h2 id="title"> <img src="Images/favicon.png" alt="Image of CPU" id="animation"> <Strong> Bit's Hardwares </Strong> </h2>
 
     <header>
