@@ -1,11 +1,3 @@
-<?php // To keep track of the user as the traverse through the pages
-
-    // Start the session
-    session_start(); // This is to keep track of a user
-  
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -53,7 +45,7 @@
 
     </header>
 
-    <div id="main">
+    <div id="main" style="margin-bottom: 50px;">
         <?php
             include 'config.php'; // importing config page, to use its properties
 
