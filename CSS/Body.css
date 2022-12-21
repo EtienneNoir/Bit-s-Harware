@@ -1,5 +1,0 @@
-body {
-    width: fit-content;/* To ensure that the elements are not all over the place*/
-    margin:auto; /* The body and its content must be in the middle of the page */
-    background-image:url(../Images/Background.jpg); /*Adding abackground Image */
-}
