@@ -25,6 +25,7 @@ header{
 #nav li{
     
     margin: auto; /* Creating space around the li elements which are now boxes and then put them at the center*/  
+    position: fixed;
 }
 
 #nav a{
