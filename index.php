@@ -26,7 +26,7 @@
                 </li>
 
                 <li>
-                    <a href="javascript:void(0)" > Profile </a> 
+                    <a href="Profile.html" > Profile </a> 
                 </li>
 
                 <li>
@@ -123,20 +123,10 @@
                 }
                 
                 $count = $count + 1; // Everytime we don't execute the code in the if statement this is incremented to make sure we eventually print out everything
-          
-
-        
-
             }
 
-            
-            
 
             echo "</tr>";
-            
-            
-
-
     
             echo "</table>";
 

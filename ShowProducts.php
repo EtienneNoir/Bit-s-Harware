@@ -218,54 +218,7 @@
         <p > for more information click the following link: <a href="information.html" onMouseOver="this.style.color='#818181'" onMouseOut="this.style.color='#fc8129'" style="color: #fc8129;font-family: Monospace">click</a></p>
     </footer>
 
-    <script>
-        function openSide() {
-
-        document.getElementById("sideContent").style.visibility = "visible";
-      
-
-       
-        
-      
-        }
-
-        function closeSide() {
-    
-        document.getElementById("sideContent").style.visibility = "hidden";
-   
-  
-        
-       
-      }
-       
-
-
-    function myFunction(image , price , description ){
-
-        document.getElementById("popMessage").style.display = "block";
-        document.getElementById("backdrop").style.display = "block";   
-        document.getElementById("images").src = image;
-        document.getElementById("about").innerHTML = description;
-        document.getElementById("price").innerHTML = "R "+ price;
-    
-
-
-    }
-
-
-    function close(){
-        document.getElementById("popMessage").style.display = "none";
-        document.getElementById("backdrop").style.display = "none"; 
-    }
-
-
-    function checkLogin(){
-
-        
-    }
-    document.getElementById("backdrop").addEventListener("click", close);// Function should be defined before this addEventListener, this is used instead of onclick because onclick does not appear to be working at run-tim
-    document.getElementById("close").addEventListener("click", close);
-    </script>
+    <script type="text/javascript" src="JavaScript/ShowProduct/ShowProduct.js"></script>
 
 </body>
 </html>
