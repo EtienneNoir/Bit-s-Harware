@@ -30,5 +30,11 @@ function close(){
     document.getElementById("backdrop").style.display = "none"; 
 }
 
+
+function checkLogin(){
+
+    window.location.href="Profile.html";
+
+}
 document.getElementById("backdrop").addEventListener("click", close);// Function should be defined before this addEventListener, this is used instead of onclick because onclick does not appear to be working at run-tim
 document.getElementById("close").addEventListener("click", close);
