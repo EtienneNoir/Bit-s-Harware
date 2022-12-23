@@ -120,8 +120,7 @@ container
 
 #p{
    
-    border-style:solid;
-    border-color:  rgb(5, 68, 104);
+
     margin: auto;
     border-width: thin;
     width: fit-content;
@@ -131,7 +130,7 @@ container
 }
 
 #main { /* To give the image that black border after the blue */
-    border-style: solid;
+
     overflow: hidden;
     width: fit-content;
     margin: auto;
