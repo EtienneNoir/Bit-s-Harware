@@ -8,7 +8,13 @@
 
         $connect = OpenConnection(); // calling the function to connect to the database and storing its return value
     
-        
+        if(isset($_POST["Register"])){
+
+
+            echo "Hello World!";
+
+        }
+
     
 
 
