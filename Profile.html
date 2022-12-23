@@ -42,46 +42,75 @@
 
     </header>
 
-    <div class="Image_content2" id="main2" >
-        <form action="Validate_form.php" id="fomSign" name="newAccountform" method="post" > 
+    <div id="main2" >
+      <form action="Validate_form.php" id="fomSign" name="newAccountform" method="post"> 
+        <table> <!-- Used to make sure that all the content are aligned -->
+          <h2 style="font-family: Monospace font-size=large"><img src="Images/248961.png" alt="Image of gear" id="load2" class="Icons"> Register </h2>
+          <div>
+            <tr><!-- First row-->
+              <td><input type="text" class="field" id="Uname" name="Unam"placeholder="First Name" autofocus required></td>
+            </tr>
+            
+             <img src="Images/user.png" alt="Image of User"  class="Icons"> 
+        </div>
+
+        <tr>
+          <td><input type="text" class="field" id="Laname" name="Lanam" class="Icons1" placeholder="Last Name" required></td>
+        </tr>
+
+        <tr>
+          <td><input type="email" class="field" id="Email" name="E" class="Icon1s" placeholder="Email" required></td>
+        </tr>
+
+        <tr>
+          <td><input type="tel" class="field" id="Tele" name="T" class="Icon1s" placeholder="Phone Number" required></td>
+        </tr>
+
+        <tr>
+          <td><input type="text" class="field" id="Add" name="Address" class="Icons1" placeholder="Address" required></td>
+        </tr>
+
+        <tr>
+          <td> <input type="password" class="field" id="ps" name="p" class="Icons1" placeholder="Password" required> </td>
+        </tr>
+        
+        <tr>
+          <td> <input type="submit" value="Create Account" id="SignUp" > </td>
+        </tr>
+        </table>
+        
+        <span> Already Have an Account? </span> <a class="button" id="Log" style="color: #fc8129;" onclick="LogIn()">Log In</a>
+      </form>
+    </div>
+      <!--Java Script will be used to show this when the sign in button is selecetd if the user already has an account -->
+   
+
+
+      <div id="LogIn"  >
+        <form action="Validate_form.php" id="fomSign2" name="OldAccount" method="post"> <!-- Post method, used to post things on the database -->
           <table> <!-- Used to make sure that all the content are aligned -->
-            <h2 style="font-family: Monospace font-size=large"><img src="Images/248961.png" alt="Image of gear" id="load" class="Icons"> Sign Up </h2>
+            <h2 style="font-family: Monospace font-size=large"><img src="Images/248961.png" alt="Image of gear" id="load" class="Icons" > Log In </h2>
             <div>
-              <tr><!-- First row-->
-                <td><input type="text" class="field" id="Uname" name="Unam"placeholder="User Name"></td>
-              </tr>
               
                <img src="Images/user.png" alt="Image of User"  class="Icons"> 
           </div>
-  
+
           <tr>
-            <td><input type="text" class="field" id="Laname" name="Lanam" class="Icons1" placeholder="Last Name"></td>
+            <td><input autofocus type="email" class="field" id="Email" name="E" class="Icon1s" placeholder="Email" autofocus required ></td>
           </tr>
 
           <tr>
-            <td><input type="email" class="field" id="Email" name="E" class="Icon1s" placeholder="Email"></td>
-          </tr>
-
-          <tr>
-            <td><input type="tel" class="field" id="Tele" name="T" class="Icon1s" placeholder="Phone Number"></td>
-          </tr>
-
-          <tr>
-            <td><input type="text" class="field" id="Add" name="Address" class="Icons1" placeholder="Address"></td>
-          </tr>
-
-          <tr>
-            <td> <input type="password" class="field" id="ps" name="p" class="Icons1" placeholder="Password"> </td>
+            <td> <input type="password" class="field" id="ps" name="p" class="Icons1" placeholder="Password" required> </td>
           </tr>
           
           <tr>
-            <td> <input type="submit" value="Create Account" id="SignUp" > </td>
+            <td> <input type="submit" value="Log In" id="SignUp" > </td>
           </tr>
           </table>
-          
-          <span> Already Have an Account? </span> <a href="New Account.html" class="button" style="color: #fc8129;" >sign In</a>
+
+          <span> Don't have an Account ? </span> <a class="button" id="Log" style="color: #fc8129;" onclick="Register()">Register</a>
         </form>
-      </div><br><br><br>
+      </div><br>
 
       <!--- The following code will be initially nullified and only displayed when the user click the Sign In button , it will replace the above code once displayed-->
     
