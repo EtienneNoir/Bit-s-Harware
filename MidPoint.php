@@ -8,10 +8,11 @@
 
         $connect = OpenConnection(); // calling the function to connect to the database and storing its return value
     
-        if(isset($_POST["Register"])){
+        if(isset($_REQUEST["Register"])){
 
-
-            echo "Hello World!";
+            $name = $_POST['Unam'];
+            
+            echo $name;
 
         }
         else{
