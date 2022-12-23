@@ -161,12 +161,6 @@
 
             CloseConnection($connect); // Closing the connection 
 
-
-
-            
-
-
-
         ?>
     </div>
 
