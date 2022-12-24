@@ -202,7 +202,7 @@
                     $_SESSION["Sur"] = $Lname;
                     $_SESSION["email"] = $email;
 
-                    header("Location: index2.php");// then lead to the main page with the $userName attached.
+                    header("Location: /Subscribed/index2.php");// then lead to the main page with the $userName attached.
                     
 
                 }
@@ -275,6 +275,8 @@
                 $_SESSION["First"] = $name;
                 $_SESSION["Sur"] = $Lname;
                 $_SESSION["email"] = $wmail;
+
+                header("Location: /Subscribed/index2.php");
 
             }
 
