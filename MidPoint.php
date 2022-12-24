@@ -86,8 +86,6 @@
 
                         if ($email == $record['Customer_email']) {
 
-                            echo '<script>alert("Email already contained in database, please try again")</script>';
-
                             echo "div id=\"main2\" >
                                 <form action=\"MidPoint.php\" id=\"fomSign\" name=\"newAccountform\" method=\"post\"> 
                                     <table> <!-- Used to make sure that all the content are aligned -->
@@ -127,11 +125,53 @@
                                     
                                     <span> Already Have an Account? </span> <a class=\"button\" id=\"Log\" style=\"color: #fc8129;\" onclick=\"LogIn()\">Log In</a>
                                 </form>
-                                </div> </body>";
-                                
-   
-                            break;
-                
+                                </div>";
+
+
+                            echo "<!--Java Script will be used to show this when the sign in button is selecetd if the user already has an account -->
+
+                                    <div id=\LogIn\  >
+                                        <form action=\MidPoint.php\ id=\fomSign2\ name=\OldAccount\ method=\post\> <!-- Post method, used to post things on the database -->
+                                        <table> <!-- Used to make sure that all the content are aligned -->
+                                            <h2 style=\font-family: Monospace font-size=large\><img src=\Images/248961.png\ alt=\Image of gear\ id=\load\ class=\Icons\ > Log In </h2>
+                                            <div>
+                                            
+                                            <img src=\Images/user.png\ alt=\Image of User\  class=\Icons\> 
+                                        </div>
+
+                                        <tr>
+                                            <td><input autofocus type=\email\ class=\field\ id=\Email\ name=\E\ class=\Icon1s\ placeholder=\Email\ autofocus required ></td>
+                                        </tr>
+
+                                        <tr>
+                                            <td> <input type=\password\ class=\field\ id=\ps\ name=\p\ class=\Icons1\ placeholder=\Password\ required> </td>
+                                        </tr>
+                                        
+                                        <tr>
+                                            <td> <input type=\submit\ value=\Log In\ id=\SignUp\ > </td>
+                                        </tr>
+                                        </table>
+
+                                        <span> Don't have an Account ? </span> <a class=\button\ id=\Log\ style=\color: #fc8129;\ onclick=\Register()\>Register</a>
+                                        </form>
+                                    </div><br>
+
+                                    <!--- The following code will be initially nullified and only displayed when the user click the Sign In button , it will replace the above code once displayed-->
+                                    
+                                    <footer style=\background-image:url(Images/Background.jpg) ;\>
+                                        <h4 style=\font-family:Serif; \ > &copy;  Copyright <strong> Bit's Hardwares</strong> </h4>
+                                        <p > <h5>All Rights Reserved </h5></p>
+                                        <p > for more information click the following link: <a href=\information.html\ onMouseOver=\this.style.color='#818181'\ onMouseOut=\this.style.color='#fc8129'\ style=\color: #fc8129;font-family: Monospace\>click</a></p>
+                                    </footer>
+
+                                    
+                                    <script type=\text/javascript\ src=\JavaScript/Profile/Sign.js\></script>
+
+                                </body>
+                                </html>";
+                                echo '<script>alert("Email already contained in database, please try again")</script>';
+                                break;
+                        
                         }else if ( $pass == $record['Password']){
 
                             $carry = "Please insert a different Password";
