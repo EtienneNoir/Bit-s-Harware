@@ -13,8 +13,68 @@
     <title>Bit's Hardwares</title>
 
 </head>
+<?php // Need to do a write documentation for this project 
+
+/* This page verifies the User's Log in , successful log in will create a session to all the subscribed pages */
+    
+    include 'config.php'; // importing config page, to use its properties
+
+    $connect = OpenConnection(); // calling the function to connect to the database and storing its return value
+
+    if (isset($_REQUEST["SignUp"])) {
+
+        $password = $_POST['p'];
+
+        $email = $_POST['E'];
+
+        $query = "SELECT * FROM Customers WHERE Customer_email = '$email' AND Password = '$password'"; // Return all records where all the specified conditions are met 
+    
+        $result = mysqli_query($connect, $query) or die("Unable to connect to database!"); // Execute query then return the result
+    
+        $Allrecords = mysqli_num_rows($result); // is used to return the number of rows returned from the database based on the query
+    
+        if ($Allrecords == 0) { //an implication that the user passed on the wrong credentials or the user is simply not in the database
+    
+            echo "<div id=\"LogIn\">
+            <form style=\"height: 460px\" action=\"MidPoint.php\" id=\"fomSign2\" name=\"OldAccount\" method=\"post\"> <!-- Post method, used to post things on the database -->
+            <table> <!-- Used to make sure that all the content are aligned -->
+                <h2 style=\"font-family: Monospace font-size=large\"><img src=\"Images/248961.png\" alt=\"Image of gear\" id=\"load\" class=\"Icons\" > Log In </h2>
+                <div>
+                
+                <img src=\"Images/user.png\" alt=\"Image of User\"  class=\"Icons\"> 
+                <p style=\"color:red\"> Customer not found, please enter the correct credentials </p>
+            </div>
+
+            <tr>
+                <td><input autofocus type=\"email\" class=\"field\" id=\"Email\" name=\"E\" class=\"Icon1s\" placeholder=\"Email\" autofocus required ></td>
+            </tr>
+
+            <tr>
+                <td> <input type=\"password\" class=\"field\" id=\"ps\" name=\"p\" class=\"Icons1\" placeholder=\"Password\" required> </td>
+            </tr>
+            
+            <tr>
+                <td> <input type=\"submit\" value=\"Log In\" id=\"SignUp\" name=\"SignUp\"> </td>
+            </tr>
+            </table>
+
+            <span> Don't have an Account ? </span> <a class=\"button\" id=\"Log\" style=\"color: #fc8129;\" onclick=\"Register()\">Register</a>
+            </form>
+        </div><br>";
 
 
+        }
+
+        else{
+
+            echo "good";
+            
+        }
+    
+        
+    }
+
+?>
 <body style="background-image:url(Images/Background.jpg) ; margin:auto; width: fit-content;">
     <h2 id="title"> <img src="Images/favicon.png" alt="Image of CPU" id="animation"> <Strong> Bit's Hardwares </Strong> </h2>
 
