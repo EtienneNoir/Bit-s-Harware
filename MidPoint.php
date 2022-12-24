@@ -248,17 +248,14 @@
                 </div><br>";
 
 
-            } else {
+            } else { // an implication that the right Customer record was found thus a session can be created that will be passed on 
 
                 echo "Try again";
+                CloseConnection($connect); // Closing the connection 
+
             }
 
-        } else {
-
-            echo "Interesting!";
-
         }
-
     ?>
     
    
