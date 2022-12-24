@@ -253,6 +253,10 @@
                 echo "Try again";
             }
 
+        } else {
+
+            echo "Interesting!";
+
         }
 
     ?>
