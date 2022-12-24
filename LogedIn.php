@@ -84,7 +84,7 @@
             </tr>
             </table>
 
-            <span> Don't have an Account ? </span> <a class=\"button\" id=\"Log\" style=\"color: #fc8129;\" onclick=\"Register()\">Register</a>
+            <span> Don't have an Account ? </span> <a href=\"Profile.html\" class=\"button\" id=\"Log\" style=\"color: #fc8129;\" \">Register</a>
             </form>
         </div><br>";
 
@@ -126,9 +126,9 @@
 
           <span> Don't have an Account ? </span> <a href=\"Profile.html\" class=\"button\" id=\"Log\" style=\"color: #fc8129;\">Register</a>
         </form>
-      </div><br>
+      </div><br>";
 
-      <!--- The following code will be initially nullified and only displayed when the user click the Sign In button , it will replace the above code once displayed-->";
+      
     }
 ?>
     <footer style="background-image:url(Images/Background.jpg) ;">
