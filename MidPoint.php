@@ -206,7 +206,7 @@
         } 
         
         // When the other form is submitted 
-        else if (isset($_REQUEST["SignUp"]) || isset($_REQUEST["SignUps"])) {
+        else if (isset($_REQUEST["SignUp"])) {
 
             $password = $_POST['p'];
 
@@ -258,7 +258,7 @@
         } 
         else {
 
-            echo 'Charge!';
+            echo isset($_REQUEST["SignUp"]);
         
         }
     ?>
