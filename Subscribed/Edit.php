@@ -52,17 +52,17 @@ session_start();
     $phone = $_SESSION["phone"];
     $address = $_SESSION["tel"];
     $pass = $_SESSION["pass"] ;
-    
+
      echo "<div id=\"main2\" >
      <form action=\"Profile.php\" id=\"fomSign\" name=\"newAccountform\" method=\"post\"> 
        <table> <!-- Used to make sure that all the content are aligned -->
-         <h2 style=\"font-family: Monospace font-size=large\"><img src=\"Images/248961.png\" alt=\"Image of gear\" id=\"load2\" class=\"Icons\"> Register </h2>
+         <h2 style=\"font-family: Monospace font-size=large\"><img src=\"../Images/248961.png\" alt=\"Image of gear\" id=\"load2\" class=\"Icons\"> Edit </h2>
          <div>
            <tr><!-- First row-->
              <td><input type=\"text\" class=\"field\" id=\"Uname\" name=\"Unam\"placeholder=\"First Name\" autofocus value=\"$name\" required></td>
            </tr>
            
-           <img src=\"Images/user.png\" alt=\"Image of User\"  class=\"Icons\"> 
+           <img src=\"Images/user.png\" alt=\"../Image of User\"  class=\"Icons\"> 
        </div>
 
        <tr>
@@ -86,7 +86,7 @@ session_start();
        </tr>
        
        <tr>
-         <td> <input type=\"submit\" value=\"Create Account\" id=\"SignUp\" name=\"Register\"> </td>
+         <td> <input type=\"submit\" value=\"Edit\" id=\"SignUp\" name=\"Edit\"> </td>
        </tr>
        </table>
        
