@@ -196,13 +196,7 @@
             
                     CloseConnection($connect); // Closing the connection 
 
-                    session_start();
-
-                    $_SESSION["First"] = $name;
-                    $_SESSION["Sur"] = $Lname;
-                    $_SESSION["email"] = $email;
-
-                    header("Location: /Subscribed/index2.php");// then lead to the main page with the $userName attached.
+                    echo "Successfully inserted data";// Create a session and lead the customer to a subscribed version of the Website
                     
 
                 }
@@ -220,13 +214,11 @@
 
             $query = "SELECT * FROM Customers WHERE Customer_email = '$email' AND Password = '$password'"; // Return all records where all the specified conditions are met 
 
-            $result3 = mysqli_query($connect, $query) or die("Unable to connect to database!"); // Execute query then return the result
-
-            $record = mysqli_fetch_array($result3);
+            $result = mysqli_query($connect, $query) or die("Unable to connect to database!"); // Execute query then return the result
         
-            $Allrecords2 = mysqli_num_rows($result3); // is used to return the number of rows returned from the database based on the query
+            $Allrecords = mysqli_num_rows($result); // is used to return the number of rows returned from the database based on the query
 
-            if ($Allrecords2 == 0) { //an implication that the user passed on the wrong credentials or the user is simply not in the database
+            if ($Allrecords == 0) { //an implication that the user passed on the wrong credentials or the user is simply not in the database
 
                 echo "<div id=\"LogIn\" style=\"display:block;\"  >
                     <form style=\"height: 460px\" action=\"MidPoint.php\" id=\"fomSign2\" name=\"OldAccount\" method=\"post\"> <!-- Post method, used to post things on the database -->
@@ -258,25 +250,8 @@
 
             } else { // an implication that the right Customer record was found thus a session can be created that will be passed on 
 
-                $name = $record['First_Name'];
-
-                $email = $record['Customer_email'];
-
-                $Lname = $record['Last_Name'];
-
-
-
-
-                // Start the session
-                session_start();
-            
+                echo "Try again";
                 CloseConnection($connect); // Closing the connection 
-
-                $_SESSION["First"] = $name;
-                $_SESSION["Sur"] = $Lname;
-                $_SESSION["email"] = $wmail;
-
-                header("Location: /Subscribed/index2.php");
 
             }
 
