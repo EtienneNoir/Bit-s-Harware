@@ -19,7 +19,7 @@ session_start();
 
 
 <body style="background-image:url(../Images/Background.jpg) ; margin:auto; width: fit-content;">
-    <h2 id="title"> <img src="Images/favicon.png" alt="Image of CPU" id="animation"> <Strong> Bit's Hardwares </Strong> </h2>
+    <h2 id="title"> <img src="../Images/favicon.png" alt="Image of CPU" id="animation"> <Strong> Bit's Hardwares </Strong> </h2>
 
     <header>
 
