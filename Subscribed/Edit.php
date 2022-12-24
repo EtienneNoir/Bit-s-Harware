@@ -53,7 +53,7 @@ session_start();
     $address = $_SESSION["tel"];
     $pass = $_SESSION["pass"] ;
 
-    if (isset($_REQUEST["Register"])) {
+    if (isset($_REQUEST["Edit"])) {
 
         echo $_POST['Unam'];
     }
