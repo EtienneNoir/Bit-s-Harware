@@ -205,9 +205,50 @@
 
         } 
         
+        // When the other form is submitted 
         else if (isset($_REQUEST["SignUp"])) {
 
-            echo "Testing";
+            $password = $_POST['p'];
+
+            $email = $_POST['E'];
+
+            $query = "SELECT * FROM Customers WHERE Customer_email = '$email' AND Password = '$password'"; // Return all records where all the specified conditions are met 
+
+            $result = mysqli_query($connect, $query) or die("Unable to connect to database!"); // Execute query then return the result
+        
+            $Allrecords = mysqli_num_rows($result); // is used to return the number of rows returned from the database based on the query
+
+            if ($Allrecords == 0) { //an implication that the user passed on the wrong credentials or the user is simply not in the database
+
+                echo "<div id=\"LogIn\"  >
+                    <form action=\"MidPoint.php\" id=\"fomSign2\" name=\"OldAccount\" method=\"post\"> <!-- Post method, used to post things on the database -->
+                    <table> <!-- Used to make sure that all the content are aligned -->
+                        <h2 style=\"font-family: Monospace font-size=large\"><img src=\"Images/248961.png\" alt=\"Image of gear\" id=\"load\" class=\"Icons\" > Log In </h2>
+                        <div>
+                        
+                        <img src=\"Images/user.png\" alt=\"Image of User\"  class=\"Icons\"> 
+                        <p style=\"color:red\"> Customer not found, please enter the correct credentials </p>
+                    </div>
+
+                    <tr>
+                        <td><input autofocus type=\"email\" class=\"field\" id=\"Email\" name=\"E\" class=\"Icon1s\" placeholder=\"Email\" autofocus required ></td>
+                    </tr>
+
+                    <tr>
+                        <td> <input type=\"password\" class=\"field\" id=\"ps\" name=\"p\" class=\"Icons1\" placeholder=\"Password\" required> </td>
+                    </tr>
+                    
+                    <tr>
+                        <td> <input type=\"submit\" value=\"Log In\" id=\"SignUp\" name=\"SignUp\"> </td>
+                    </tr>
+                    </table>
+
+                    <span> Don't have an Account ? </span> <a class=\"button\" id=\"Log\" style=\"color: #fc8129;\" onclick=\"Register()\">Register</a>
+                    </form>
+                </div><br>";
+
+
+            }
 
         }
 
