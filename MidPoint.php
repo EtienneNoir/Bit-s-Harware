@@ -31,10 +31,10 @@
             $Option1Query = "INSERT INTO Customers (Customer_email, First_Name, Last_Name, Password, Address, phone)
                         VALUES ('$email','$name','$Lname','$pass','$address','$phone')";
 
-            $Option1Results =  mysqli_query($connect, $Option1Query) or die("Unable to connect to database!"); // Execute query then return the result
+            $Option1Results =  mysqli_query($connect, $Option1Query) or die("Unable to connect to databasew!"); // Execute query then return the result
 
             echo "Successfully inserted data";
-            
+
         }
 
         }
