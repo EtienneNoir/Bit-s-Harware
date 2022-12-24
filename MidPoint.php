@@ -83,7 +83,7 @@
                         
                         echo $carry;
                         echo "<div id=\"main2\" >
-                            <form action=\"MidPoint.php\" id=\"fomSign\" name=\"newAccountform\" method=\"post\"> 
+                            <form style=\"height:850px\"action=\"MidPoint.php\" id=\"fomSign\" name=\"newAccountform\" method=\"post\"> 
                                 <table> <!-- Used to make sure that all the content are aligned -->
                                 <h2 style=\"font-family: Monospace font-size=large\"><img src=\"Images/248961.png\" alt=\"Image of gear\" id=\"load2\" class=\"Icons\"> Register </h2>
                                 <div>
