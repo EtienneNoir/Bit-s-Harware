@@ -77,6 +77,7 @@
           $_SESSION["email"] = $email;
           $_SESSION["phone"] = $phone;
           $_SESSION["tel"] = $address;
+          $_SESSION["pass"] = $pass;
           header("Location: /Subscribed/index2.php");
 
                // Create a session and lead the customer to a subscribed version of the Website
@@ -203,6 +204,7 @@
               $_SESSION["email"] = $email;
               $_SESSION["phone"] = $phone;
               $_SESSION["tel"] = $address;
+              $_SESSION["pass"] = $pass;
               
               header("Location: /Subscribed/index2.php");
 

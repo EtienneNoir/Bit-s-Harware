@@ -100,6 +100,8 @@
             $address = $record['Address'];
             $phone = $record['phone'];
             $email = $record['Customer_email'];
+            $phone = $record['phone'];
+            $pass = $record['Password'];
 
             session_start();// Create a session and lead the customer to a subscribed version of the Website
 
@@ -108,6 +110,7 @@
             $_SESSION["email"] = $email;
             $_SESSION["phone"] = $phone;
             $_SESSION["tel"] = $address;
+            $_SESSION["pass"] = $pass;
 
            header("Location: /Subscribed/index2.php");
 
