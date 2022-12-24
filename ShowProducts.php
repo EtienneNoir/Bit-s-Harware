@@ -34,7 +34,7 @@
                 </li>
 
                 <li>
-                    <a href="Profile.html" > Profile </a> 
+                    <a href="Profile.php" > Profile </a> 
                 </li>
 
                 <li>

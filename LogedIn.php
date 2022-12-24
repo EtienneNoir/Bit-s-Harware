@@ -84,7 +84,7 @@
             </tr>
             </table>
 
-            <span> Don't have an Account ? </span> <a href=\"Profile.html\" class=\"button\" id=\"Log\" style=\"color: #fc8129;\" \">Register</a>
+            <span> Don't have an Account ? </span> <a href=\"Profile.php\" class=\"button\" id=\"Log\" style=\"color: #fc8129;\" \">Register</a>
             </form>
         </div><br>";
 
@@ -93,7 +93,7 @@
 
         else{
 
-            echo "good";
+            echo "good";// Create a session for this that will link to the subscribed page
 
         }
 
@@ -124,7 +124,7 @@
           </tr>
           </table>
 
-          <span> Don't have an Account ? </span> <a href=\"Profile.html\" class=\"button\" id=\"Log\" style=\"color: #fc8129;\">Register</a>
+          <span> Don't have an Account ? </span> <a href=\"Profile.php\" class=\"button\" id=\"Log\" style=\"color: #fc8129;\">Register</a>
         </form>
       </div><br>";
 
