@@ -73,7 +73,9 @@
 
                 $Option1Results = mysqli_query($connect, $Option1Query) or die("Unable to connect to databasew!"); // Execute query then return the result
         
-                echo "Successfully inserted data";
+                CloseConnection($connect); // Closing the connection 
+
+                echo "Successfully inserted data"; // Create a session and lead the customer to a subscribed version of the Website
 
             } else { // Now to make sure to let the customer know if their credentials are already in the database 
         
@@ -192,11 +194,20 @@
 
                     $Option1Results = mysqli_query($connect, $Option1Query) or die("Unable to connect to databasew!"); // Execute query then return the result
             
-                    echo "Successfully inserted data";
+                    CloseConnection($connect); // Closing the connection 
+
+                    echo "Successfully inserted data";// Create a session and lead the customer to a subscribed version of the Website
+                    
 
                 }
 
             }
+
+        } 
+        
+        else if (isset($_REQUEST["SignUp"])) {
+
+            echo "Testing";
 
         }
 
@@ -223,7 +234,7 @@
           </tr>
           
           <tr>
-            <td> <input type="submit" value="Log In" id="SignUp" > </td>
+            <td> <input type="submit" value="Log In" id="SignUp" name="SignUp"> </td>
           </tr>
           </table>
 
