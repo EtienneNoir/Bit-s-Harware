@@ -29,7 +29,7 @@ session_start();
                 </li>
 
                 <li>
-                    <a href="Profile.html" > <?php echo $_SESSION["User_Name"]; ?> <img src="../Images/user.png" alt="Image of User"  class="Icons"> </a> 
+                    <a href="Edit.php" > <?php echo $_SESSION["User_Name"]; ?> <img src="../Images/user.png" alt="Image of User"  class="Icons"> </a> 
                 </li>
 
                 <li>
