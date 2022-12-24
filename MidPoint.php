@@ -308,7 +308,7 @@
       <!--Java Script will be used to show this when the sign in button is selecetd if the user already has an account -->
    
 
-      <div id="LogIn"  >
+      <div id="LogIn"  style="display:none">
         <form action="MidPoint.php" id="fomSign2" name="OldAccount" method="post"> <!-- Post method, used to post things on the database -->
           <table> <!-- Used to make sure that all the content are aligned -->
             <h2 style="font-family: Monospace font-size=large"><img src="Images/248961.png" alt="Image of gear" id="load" class="Icons" > Log In </h2>
