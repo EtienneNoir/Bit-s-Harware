@@ -109,7 +109,7 @@
             $_SESSION["phone"] = $phone;
             $_SESSION["tel"] = $address;
 
-           header("Location: /Subscribed/index2.php.php");
+           header("Location: /Subscribed/index2.php");
 
         }
 

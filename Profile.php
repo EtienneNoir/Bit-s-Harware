@@ -77,6 +77,8 @@
           $_SESSION["email"] = $email;
           $_SESSION["phone"] = $phone;
           $_SESSION["tel"] = $address;
+          header("Location: /Subscribed/index2.php");
+
                // Create a session and lead the customer to a subscribed version of the Website
 
       } else { // Now to make sure to let the customer know if their credentials are already in the database 
@@ -202,7 +204,7 @@
               $_SESSION["phone"] = $phone;
               $_SESSION["tel"] = $address;
               
-              header("Location: /Subscribed/index2.php.php");
+              header("Location: /Subscribed/index2.php");
 
           }
 
