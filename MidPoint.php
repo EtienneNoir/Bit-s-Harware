@@ -17,7 +17,7 @@
             $name = $_POST['Address'];
             $name = $_POST['p'];
 
-            $query1 = "SELECT * FROM Customers WHERE"; 
+            $query1 = "SELECT * FROM Customers"; 
 
             $result = mysqli_query($connect, $query1) or die("Unable to connect to database!"); // Execute query then return the result
 
