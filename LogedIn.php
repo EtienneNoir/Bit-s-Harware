@@ -13,6 +13,32 @@
     <title>Bit's Hardwares</title>
 
 </head>
+<body style="background-image:url(Images/Background.jpg) ; margin:auto; width: fit-content;">
+    <h2 id="title"> <img src="Images/favicon.png" alt="Image of CPU" id="animation"> <Strong> Bit's Hardwares </Strong> </h2>
+
+    <header>
+
+        <nav id="nav">
+            <ul>
+                <li>
+                    <a href="index.php" > Home </a> 
+                </li>
+
+                <li>
+                    <a href="About.html" > About </a> 
+                </li>
+
+                <li>
+                    <a href="javascript:void(0)"  > Your cart </a> 
+                </li>
+
+                <li>
+                    <a href="javascript:void(0)"  > Search </a> 
+                </li>
+            </ul>
+        </nav>
+
+    </header>
 <?php // Need to do a write documentation for this project 
 
 /* This page verifies the User's Log in , successful log in will create a session to all the subscribed pages */
@@ -70,66 +96,41 @@
             echo "good";
 
         }
-    
-        
-    }
 
-?>
-<body style="background-image:url(Images/Background.jpg) ; margin:auto; width: fit-content;">
-    <h2 id="title"> <img src="Images/favicon.png" alt="Image of CPU" id="animation"> <Strong> Bit's Hardwares </Strong> </h2>
 
-    <header>
+    } else {//Show this if the form was not submitted , thus show an unsubmitted form
 
-        <nav id="nav">
-            <ul>
-                <li>
-                    <a href="index.php" > Home </a> 
-                </li>
 
-                <li>
-                    <a href="About.html" > About </a> 
-                </li>
 
-                <li>
-                    <a href="javascript:void(0)"  > Your cart </a> 
-                </li>
-
-                <li>
-                    <a href="javascript:void(0)"  > Search </a> 
-                </li>
-            </ul>
-        </nav>
-
-    </header>
-
-    <div id="LogIn"  >
-        <form action="LogedIn.php" id="fomSign2" name="OldAccount" method="post"> <!-- Post method, used to post things on the database -->
+    echo "<div id=\"LogIn\"  >
+        <form action=\"LogedIn.php\" id=\"fomSign2\" name=\"OldAccount\" method=\"post\"> <!-- Post method, used to post things on the database -->
           <table> <!-- Used to make sure that all the content are aligned -->
-            <h2 style="font-family: Monospace font-size=large"><img src="Images/248961.png" alt="Image of gear" id="load" class="Icons" > Log In </h2>
+            <h2 style=\"font-family: Monospace font-size=large\"><img src=\"Images/248961.png\" alt=\"Image of gear\" id=\"load\" class=\"Icons\" > Log In </h2>
             <div>
               
-               <img src="Images/user.png" alt="Image of User"  class="Icons"> 
+               <img src=\"Images/user.png\" alt=\"Image of User\"  class=\"Icons\"> 
           </div>
 
           <tr>
-            <td><input autofocus type="email" class="field" id="Email" name="E" class="Icon1s" placeholder="Email" autofocus required ></td>
+            <td><input autofocus type=\"email\" class=\"field\" id=\"Email\" name=\"E\" class=\"Icon1s\" placeholder=\"Email\" autofocus required ></td>
           </tr>
 
           <tr>
-            <td> <input type="password" class="field" id="ps" name="p" class="Icons1" placeholder="Password" required> </td>
+            <td> <input type=\"password\" class=\"field\" id=\"ps\" name=\"p\" class=\"Icons1\" placeholder=\"Password\" required> </td>
           </tr>
           
           <tr>
-            <td> <input type="submit" value="Log In" id="SignUp" name="SignUp"> </td>
+            <td> <input type=\"submit\" value=\"Log In\" id=\"SignUp\" name=\"SignUp\"> </td>
           </tr>
           </table>
 
-          <span> Don't have an Account ? </span> <a href="Profile.html" class="button" id="Log" style="color: #fc8129;">Register</a>
+          <span> Don't have an Account ? </span> <a href=\"Profile.html\" class=\"button\" id=\"Log\" style=\"color: #fc8129;\">Register</a>
         </form>
       </div><br>
 
-      <!--- The following code will be initially nullified and only displayed when the user click the Sign In button , it will replace the above code once displayed-->
-    
+      <!--- The following code will be initially nullified and only displayed when the user click the Sign In button , it will replace the above code once displayed-->";
+    }
+?>
     <footer style="background-image:url(Images/Background.jpg) ;">
         <h4 style="font-family:Serif; " > &copy;  Copyright <strong> Bit's Hardwares</strong> </h4>
         <p > <h5>All Rights Reserved </h5></p>
