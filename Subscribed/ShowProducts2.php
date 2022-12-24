@@ -41,7 +41,7 @@ session_start();
                 </li>
 
                 <li>
-                    <a href="About.html" > about </a> 
+                    <a href="About.php" > about </a> 
                 </li>
 
                 <li>
