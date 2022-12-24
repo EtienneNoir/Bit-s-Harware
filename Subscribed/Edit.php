@@ -56,13 +56,13 @@ session_start();
      echo "<div id=\"main2\" >
      <form action=\"Profile.php\" id=\"fomSign\" name=\"newAccountform\" method=\"post\"> 
        <table> <!-- Used to make sure that all the content are aligned -->
-         <h2 style=\"font-family: Monospace font-size=large\"><img src=\"../Images/248961.png\" alt=\"Image of gear\" id=\"load2\" class=\"Icons\"> Edit </h2>
+         <h2 style=\"font-family: Monospace font-size=large\"><img src=\"../Images/248961.png\" alt=\"Image of gear\" id=\"load2\" class=\"Icons\"> $name </h2>
          <div>
            <tr><!-- First row-->
              <td><input type=\"text\" class=\"field\" id=\"Uname\" name=\"Unam\"placeholder=\"First Name\" autofocus value=\"$name\" required></td>
            </tr>
            
-           <img src=\"Images/user.png\" alt=\"../Image of User\"  class=\"Icons\"> 
+           <img src=\"../Images/user.png\" alt=\"Image of User\"  class=\"Icons\"> 
        </div>
 
        <tr>
