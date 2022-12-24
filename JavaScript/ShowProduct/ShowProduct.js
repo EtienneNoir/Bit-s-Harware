@@ -33,7 +33,7 @@ function close(){
 
 function checkLogin(){
 
-    window.location.href="Profile.html"; // Implication that you have to be logged in to add a product to the cart
+    window.location.href="Profile.php"; // Implication that you have to be logged in to add a product to the cart
 
 }
 document.getElementById("backdrop").addEventListener("click", close);// Function should be defined before this addEventListener, this is used instead of onclick because onclick does not appear to be working at run-tim

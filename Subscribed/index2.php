@@ -10,8 +10,8 @@ session_start();
     <link rel="stylesheet" href="../CSS/Index/Navigation/nav&Title.css">
     <link rel="stylesheet" href="../CSS/Index/TableMain.css">
     <link rel="stylesheet" href="../CSS/Index/Footer.css">
-    <link rel="stylesheet" href="../CSSAnimation.css">
-    <link rel="icon" type="png" href="Images/favicon.png">
+    <link rel="stylesheet" href="../CSS/Animation.css">
+    <link rel="icon" type="png" href="../Images/favicon.png">
     <title>Bit's Hardwares</title>
 
 </head>
