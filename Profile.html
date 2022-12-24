@@ -79,40 +79,9 @@
         </tr>
         </table>
         
-        <span> Already Have an Account? </span> <a class="button" id="Log" style="color: #fc8129;" onclick="LogIn()">Log In</a>
+        <span> Already Have an Account? </span> <a  href="LogedIn.php" class="button" id="Log" style="color: #fc8129;" onclick="LogIn()">Log In</a>
       </form>
-    </div>
-      <!--Java Script will be used to show this when the sign in button is selecetd if the user already has an account -->
-   
-
-
-      <div id="LogIn"  >
-        <form action="MidPoint.php" id="fomSign2" name="OldAccount" method="post"> <!-- Post method, used to post things on the database -->
-          <table> <!-- Used to make sure that all the content are aligned -->
-            <h2 style="font-family: Monospace font-size=large"><img src="Images/248961.png" alt="Image of gear" id="load" class="Icons" > Log In </h2>
-            <div>
-              
-               <img src="Images/user.png" alt="Image of User"  class="Icons"> 
-          </div>
-
-          <tr>
-            <td><input autofocus type="email" class="field" id="Email" name="E" class="Icon1s" placeholder="Email" autofocus required ></td>
-          </tr>
-
-          <tr>
-            <td> <input type="password" class="field" id="ps" name="p" class="Icons1" placeholder="Password" required> </td>
-          </tr>
-          
-          <tr>
-            <td> <input type="submit" value="Log In" id="SignUp" > </td>
-          </tr>
-          </table>
-
-          <span> Don't have an Account ? </span> <a class="button" id="Log" style="color: #fc8129;" onclick="Register()">Register</a>
-        </form>
-      </div><br>
-
-      <!--- The following code will be initially nullified and only displayed when the user click the Sign In button , it will replace the above code once displayed-->
+    </div><br>
     
     <footer style="background-image:url(Images/Background.jpg) ;">
         <h4 style="font-family:Serif; " > &copy;  Copyright <strong> Bit's Hardwares</strong> </h4>
