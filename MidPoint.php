@@ -64,6 +64,7 @@
             $result = mysqli_query($connect, $query1) or die("Unable to connect to database!"); // Execute query then return the result
         
             $Allrecords = mysqli_num_rows($result); // is used to return the number of rows returned from the data base based on the query
+            
         
             if ($Allrecords == 0) {
 
@@ -124,6 +125,7 @@
                             </form>
                             </div>
                             <!--Java Script will be used to show this when the sign in button is selecetd if the user already has an account -->";
+                            CloseConnection($connect); // Closing the connection 
                         break;
 
                     } else if ($pass == $record['Password']) { // If an equivalent password is found then show an error 
@@ -170,15 +172,29 @@
                         </form>
                         </div>
                         <!--Java Script will be used to show this when the sign in button is selecetd if the user already has an account -->";
+                        CloseConnection($connect); // Closing the connection 
                         break;
 
                     }
 
+                    else{
+
+                        $Allrecords --; // so everytime a search is done with a single record, this is decremented, is a denotation of the records being traversed
+                    }
+
+
+                }// This can 
+
+                if ($Allrecords == 0) { // once the values have been compared to the values in all the records and no error is generated execute the following code can be executed, an implication that the user can be added
+        
+                    $Option1Query = "INSERT INTO Customers (Customer_email, First_Name, Last_Name, Password, Address, phone)
+                            VALUES ('$email','$name','$Lname','$pass','$address','$phone')";
+
+                    $Option1Results = mysqli_query($connect, $Option1Query) or die("Unable to connect to databasew!"); // Execute query then return the result
+            
+                    echo "Successfully inserted data";
 
                 }
-
-               
-
 
             }
 
