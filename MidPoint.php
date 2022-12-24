@@ -258,7 +258,7 @@
         } 
         else {
 
-            echo isset($_REQUEST["SignUp"]);
+            echo isset($_REQUEST["SignUp"]). "qweqe";
         
         }
     ?>
