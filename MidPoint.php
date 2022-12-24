@@ -41,30 +41,7 @@
         </nav>
 
     </header>
-    <?php // Need to do a write documentation for this project 
-
-    /* This page verifies the User's Log in , successful log in will create a session to all the subscribed pages */
-        
-    include 'config.php'; // importing config page, to use its properties
-
-    $connect = OpenConnection(); // calling the function to connect to the database and storing its return value
-
-    if(isset($_REQUEST["Register"])){
-
-        $name = $_POST['Unam'];
-        $Lname = $_POST['Lanam'];
-        $email = $_POST['E'];
-        $phone = $_POST['T'];
-        $address = $_POST['Address'];
-        $pass = $_POST['p'];
-
-        $query1 = "SELECT * FROM Customers"; // Return all records
-
-        $result = mysqli_query($connect, $query1) or die("Unable to connect to database!"); // Execute query then return the result
-
-        $Allrecords = mysqli_num_rows($result); // is used to return the number of rows returned from the data base based on the query
-
-    ?>
+    
         
     <div id="main2" >
       <form action="MidPoint.php" id="fomSign" name="newAccountform" method="post"> 
