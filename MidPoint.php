@@ -11,11 +11,11 @@
         if(isset($_REQUEST["Register"])){
 
             $name = $_POST['Unam'];
-            $name = $_POST['Lanam'];
-            $name = $_POST['E'];
-            $name = $_POST['T'];
-            $name = $_POST['Address'];
-            $name = $_POST['p'];
+            $Lname = $_POST['Lanam'];
+            $email = $_POST['E'];
+            $phone = $_POST['T'];
+            $address = $_POST['Address'];
+            $pass = $_POST['p'];
 
             $query1 = "SELECT * FROM Customers"; 
 
@@ -23,9 +23,18 @@
 
             $Allrecords = mysqli_num_rows($result); // is used to return the number of rows returned from the data base based on the query
 
+       
+ 
+     
         if ($Allrecords == 0) {
 
-            echo "Nothing to check current credentials with, this is indicating that this is the first customer";
+            $Option1Query = "INSERT INTO Customers (Customer_email, First_Name, Last_Name, Password, Address, phone)
+                        VALUES ('$email','$name','$Lname','$pass','$address','$phone')";
+
+            $Option1Results =  mysqli_query($connect, $Option1Query) or die("Unable to connect to database!"); // Execute query then return the result
+
+            echo "Successfully inserted data";
+            
         }
 
         }
