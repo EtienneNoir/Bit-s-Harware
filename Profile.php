@@ -45,7 +45,7 @@
     include 'config.php'; // importing config page, to use its properties
 
     $connect = OpenConnection(); // calling the function to connect to the database and storing its return value
-    
+
     if (isset($_REQUEST["Register"])) { // Execute the following if the form has been submitted 
 
       $name = $_POST['Unam'];
@@ -71,7 +71,13 @@
   
           CloseConnection($connect); // Closing the connection 
 
-          echo "Successfully inserted data"; // Create a session and lead the customer to a subscribed version of the Website
+          session_start();// Create a session and lead the customer to a subscribed version of the Website
+          $_SESSION["User_Name"] = $name;
+          $_SESSION["User_Name"] = $Lname;
+          $_SESSION["User_Name"] = $email;
+          $_SESSION["User_Name"] = $phone;
+          $_SESSION["User_Name"] = $address;
+               // Create a session and lead the customer to a subscribed version of the Website
 
       } else { // Now to make sure to let the customer know if their credentials are already in the database 
   
@@ -79,8 +85,6 @@
 
               if ($email == $record['Customer_email']) {
 
-                  
-                  echo $carry;
                   echo "<div id=\"main2\" >
                       <form style=\"height:850px\"action=\"Profile.php\" id=\"fomSign\" name=\"newAccountform\" method=\"post\"> 
                           <table> <!-- Used to make sure that all the content are aligned -->
@@ -191,9 +195,14 @@
               $Option1Results = mysqli_query($connect, $Option1Query) or die("Unable to connect to databasew!"); // Execute query then return the result
       
               CloseConnection($connect); // Closing the connection 
-
-              echo "Successfully inserted data";// Create a session and lead the customer to a subscribed version of the Website
+              session_start();// Create a session and lead the customer to a subscribed version of the Website
+              $_SESSION["User_Name"] = $name;
+              $_SESSION["User_Name"] = $Lname;
+              $_SESSION["User_Name"] = $email;
+              $_SESSION["User_Name"] = $phone;
+              $_SESSION["User_Name"] = $address;
               
+              header("Location: /Subscribed/index2.php.php");
 
           }
 

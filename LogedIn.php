@@ -54,8 +54,10 @@
         $email = $_POST['E'];
 
         $query = "SELECT * FROM Customers WHERE Customer_email = '$email' AND Password = '$password'"; // Return all records where all the specified conditions are met 
-    
+
         $result = mysqli_query($connect, $query) or die("Unable to connect to database!"); // Execute query then return the result
+
+        $record = mysqli_fetch_array($result);
     
         $Allrecords = mysqli_num_rows($result); // is used to return the number of rows returned from the database based on the query
     
@@ -93,7 +95,21 @@
 
         else{
 
-            echo "good";// Create a session for this that will link to the subscribed page
+            $name = $record['First_Name'];
+            $Lname = $record['Last_Name'];
+            $address = $record['Address'];
+            $phone = $record['phone'];
+            $email = $record['Customer_email'];
+
+            session_start();// Create a session and lead the customer to a subscribed version of the Website
+
+            $_SESSION["User_Name"] = $name;
+            $_SESSION["User_Name"] = $Lname;
+            $_SESSION["User_Name"] = $email;
+            $_SESSION["User_Name"] = $phone;
+            $_SESSION["User_Name"] = $address;
+
+           header("Location: /Subscribed/index2.php.php");
 
         }
 

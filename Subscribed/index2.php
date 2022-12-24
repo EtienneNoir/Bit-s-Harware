@@ -7,17 +7,17 @@ session_start();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS/Index/Navigation/nav&Title.css">
-    <link rel="stylesheet" href="CSS/Index/TableMain.css">
-    <link rel="stylesheet" href="CSS/Index/Footer.css">
-    <link rel="stylesheet" href="CSS/Animation.css">
+    <link rel="stylesheet" href="../CSS/Index/Navigation/nav&Title.css">
+    <link rel="stylesheet" href="../CSS/Index/TableMain.css">
+    <link rel="stylesheet" href="../CSS/Index/Footer.css">
+    <link rel="stylesheet" href="../CSSAnimation.css">
     <link rel="icon" type="png" href="Images/favicon.png">
     <title>Bit's Hardwares</title>
 
 </head>
 
 
-<body style="background-image:url(Images/Background.jpg) ; width: fit-content; margin:auto;">
+<body style="background-image:url(../Images/Background.jpg) ; width: fit-content; margin:auto;">
     <h2 id="title"> <img src="Images/favicon.png" alt="Image of CPU" id="animation"> <Strong> Bit's Hardwares </Strong> </h2>
 
     <header>
@@ -29,11 +29,11 @@ session_start();
                 </li>
 
                 <li>
-                    <a href="Profile.html" ><?php echo $_SESSION["First"]; ?>Profile </a> 
+                    <a href="Profile.html" > <?php echo $_SESSION["First"]; ?> <img src="Images/user.png" alt="Image of User"  class="Icons"> </a> 
                 </li>
 
                 <li>
-                    <a href="About.html" > about </a> 
+                    <a href="../About.html" > about </a> 
                 </li>
 
                 <li>
@@ -89,7 +89,7 @@ session_start();
                     $href = $records["href"];
                         
                     echo "<td>";
-                    echo "<a href=\"ShowProducts.php?id=$id\" title=\"$description\" class=\"tool\">";
+                    echo "<a href=\"../ShowProducts.php?id=$id\" title=\"$description\" class=\"tool\">";
                     echo "<img src=\"$image\" alt=\"$alt\" width=\"450\" height=\"380\">";
                     echo "</a>";
                     echo "</td>";
@@ -118,7 +118,7 @@ session_start();
                     $href = $records["href"];
 
                     echo "<td>";
-                    echo "<a href=\"ShowProducts.php?id=$id\" title=\"$description\" class=\"tool\">";
+                    echo "<a href=\"../ShowProducts.php?id=$id\" title=\"$description\" class=\"tool\">";
                     echo "<img src=\"$image\" alt=\"$alt\" width=\"450\" height=\"380\">";
                     echo "</a>";
                     echo "</td>";
@@ -138,7 +138,7 @@ session_start();
         
     </div>
  
-    <footer style="background-image:url(Images/Background.jpg) ;">
+    <footer style="background-image:url(../Images/Background.jpg) ;">
         <h4 style="font-family:Serif; " > &copy;  Copyright <strong> Bit's Hardwares</strong> </h4>
         <p > <h5>All Rights Reserved </h5></p>
         <p > for more information click the following link: <a href="information.html" onMouseOver="this.style.color='#818181'" onMouseOut="this.style.color='#fc8129'" style="color: #fc8129;font-family: Monospace">click</a></p>
