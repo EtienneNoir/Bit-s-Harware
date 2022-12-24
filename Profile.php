@@ -42,6 +42,10 @@
 
     </header>
     <?php
+    include 'config.php'; // importing config page, to use its properties
+
+    $connect = OpenConnection(); // calling the function to connect to the database and storing its return value
+    
     if (isset($_REQUEST["Register"])) { // Execute the following if the form has been submitted 
 
       $name = $_POST['Unam'];
