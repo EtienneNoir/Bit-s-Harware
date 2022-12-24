@@ -89,6 +89,7 @@
 #Log{
 
     cursor: pointer;
+    text-decoration: none;
 }
 
 #LogIn{
