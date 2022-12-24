@@ -36,7 +36,7 @@
         if ($Allrecords == 0) { //an implication that the user passed on the wrong credentials or the user is simply not in the database
     
             echo "<div id=\"LogIn\">
-            <form style=\"height: 460px\" action=\"MidPoint.php\" id=\"fomSign2\" name=\"OldAccount\" method=\"post\"> <!-- Post method, used to post things on the database -->
+            <form style=\"height: 460px\" action=\"LogedIn.php\" id=\"fomSign2\" name=\"OldAccount\" method=\"post\"> <!-- Post method, used to post things on the database -->
             <table> <!-- Used to make sure that all the content are aligned -->
                 <h2 style=\"font-family: Monospace font-size=large\"><img src=\"Images/248961.png\" alt=\"Image of gear\" id=\"load\" class=\"Icons\" > Log In </h2>
                 <div>
@@ -68,7 +68,7 @@
         else{
 
             echo "good";
-            
+
         }
     
         
@@ -103,7 +103,7 @@
     </header>
 
     <div id="LogIn"  >
-        <form action="MidPoint.php" id="fomSign2" name="OldAccount" method="post"> <!-- Post method, used to post things on the database -->
+        <form action="LogedIn.php" id="fomSign2" name="OldAccount" method="post"> <!-- Post method, used to post things on the database -->
           <table> <!-- Used to make sure that all the content are aligned -->
             <h2 style="font-family: Monospace font-size=large"><img src="Images/248961.png" alt="Image of gear" id="load" class="Icons" > Log In </h2>
             <div>
