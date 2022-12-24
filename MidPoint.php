@@ -65,6 +65,39 @@
         
             $Allrecords = mysqli_num_rows($result); // is used to return the number of rows returned from the data base based on the query
         
+            if ($Allrecords == 0) {
+
+                $Option1Query = "INSERT INTO Customers (Customer_email, First_Name, Last_Name, Password, Address, phone)
+                            VALUES ('$email','$name','$Lname','$pass','$address','$phone')";
+
+                $Option1Results = mysqli_query($connect, $Option1Query) or die("Unable to connect to databasew!"); // Execute query then return the result
+        
+                echo "Successfully inserted data";
+
+            } else { // Now to make sure to let the customer know if their credentials are already in the database 
+        
+                while ($record = mysqli_fetch_array($result)) {
+
+                    if ($email == $record['Customer_email']) {
+
+                        $carry = "Email already contained in database, please try again";
+                        break;
+
+                    } else if ($pass == $record['Password']) {
+
+                        $carry = "Please insert a different Password";
+                        break;
+
+                    }
+
+
+                }
+
+                echo $carry;
+
+
+            }
+
         }
 
     ?>
