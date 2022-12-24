@@ -81,6 +81,7 @@
                     if ($email == $record['Customer_email']) {
 
                         $carry = "Email already contained in database, please try again";
+                        echo $carry;
                         break;
 
                     } else if ($pass == $record['Password']) {
@@ -93,7 +94,7 @@
 
                 }
 
-                echo $carry;
+               
 
 
             }
