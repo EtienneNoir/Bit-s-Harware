@@ -53,8 +53,13 @@ session_start();
     $address = $_SESSION["tel"];
     $pass = $_SESSION["pass"] ;
 
+    if (isset($_REQUEST["Register"])) {
+
+        echo $_POST['Unam'];
+    }
+
      echo "<div id=\"main2\" >
-     <form action=\"Profile.php\" id=\"fomSign\" name=\"newAccountform\" method=\"post\"> 
+     <form action=\"Edit.php\" id=\"fomSign\" name=\"newAccountform\" method=\"post\"> 
        <table> <!-- Used to make sure that all the content are aligned -->
          <h2 style=\"font-family: Monospace font-size=large\"><img src=\"../Images/248961.png\" alt=\"Image of gear\" id=\"load2\" class=\"Icons\"> $name </h2>
          <div>
@@ -89,8 +94,6 @@ session_start();
          <td> <input type=\"submit\" value=\"Edit\" id=\"SignUp\" name=\"Edit\"> </td>
        </tr>
        </table>
-       
-       <span> Already Have an Account? </span> <a  href=\"LogedIn.php\" class=\"button\" id=\"Log\" style=\"color: #fc8129;\">Log In</a>
      </form>
    </div><br>";
 
