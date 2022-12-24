@@ -255,6 +255,9 @@
 
             }
 
+        } 
+        else {
+            echo 'Charge!';
         }
     ?>
     
