@@ -120,7 +120,7 @@
           </tr>
           
           <tr>
-            <td> <input type="submit" value="Log In" id="SignUp" > </td>
+            <td> <input type="submit" value="Log In" id="SignUp" name="SignUp"> </td>
           </tr>
           </table>
 
