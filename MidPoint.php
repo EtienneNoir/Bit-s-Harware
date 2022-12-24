@@ -220,13 +220,13 @@
 
             $query = "SELECT * FROM Customers WHERE Customer_email = '$email' AND Password = '$password'"; // Return all records where all the specified conditions are met 
 
-            $result = mysqli_query($connect, $query) or die("Unable to connect to database!"); // Execute query then return the result
+            $result3 = mysqli_query($connect, $query) or die("Unable to connect to database!"); // Execute query then return the result
 
-            $record = mysqli_fetch_array($result);
+            $record = mysqli_fetch_array($result3);
         
-            $Allrecords = mysqli_num_rows($result); // is used to return the number of rows returned from the database based on the query
+            $Allrecords2 = mysqli_num_rows($result3); // is used to return the number of rows returned from the database based on the query
 
-            if ($Allrecords == 0) { //an implication that the user passed on the wrong credentials or the user is simply not in the database
+            if ($Allrecords2 == 0) { //an implication that the user passed on the wrong credentials or the user is simply not in the database
 
                 echo "<div id=\"LogIn\" style=\"display:block;\"  >
                     <form style=\"height: 460px\" action=\"MidPoint.php\" id=\"fomSign2\" name=\"OldAccount\" method=\"post\"> <!-- Post method, used to post things on the database -->
