@@ -104,10 +104,10 @@
             session_start();// Create a session and lead the customer to a subscribed version of the Website
 
             $_SESSION["User_Name"] = $name;
-            $_SESSION["User_Name"] = $Lname;
-            $_SESSION["User_Name"] = $email;
-            $_SESSION["User_Name"] = $phone;
-            $_SESSION["User_Name"] = $address;
+            $_SESSION["Last_Name"] = $Lname;
+            $_SESSION["email"] = $email;
+            $_SESSION["phone"] = $phone;
+            $_SESSION["tel"] = $address;
 
            header("Location: /Subscribed/index2.php.php");
 
