@@ -18,7 +18,7 @@ session_start();
 
 
 <body style="background-image:url(../Images/Background.jpg) ; width: fit-content; margin:auto;">
-    <h2 id="title"> <img src="Images/favicon.png" alt="Image of CPU" id="animation"> <Strong> Bit's Hardwares </Strong> </h2>
+    <h2 id="title"> <img src="../Images/favicon.png" alt="Image of CPU" id="animation"> <Strong> Bit's Hardwares </Strong> </h2>
 
     <header>
 
@@ -29,7 +29,7 @@ session_start();
                 </li>
 
                 <li>
-                    <a href="Profile.html" > <?php echo $_SESSION["User_Name"]; ?> <img src="Images/user.png" alt="Image of User"  class="Icons"> </a> 
+                    <a href="Profile.html" > <?php echo $_SESSION["User_Name"]; ?> <img src="../Images/user.png" alt="Image of User"  class="Icons"> </a> 
                 </li>
 
                 <li>
