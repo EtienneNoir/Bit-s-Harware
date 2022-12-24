@@ -206,7 +206,7 @@
         } 
         
         // When the other form is submitted 
-        else if (isset($_REQUEST["SignUp"])) {
+        else if (isset($_REQUEST["SignUp"]) || isset($_REQUEST["SignUps"])) {
 
             $password = $_POST['p'];
 
@@ -257,7 +257,9 @@
 
         } 
         else {
+
             echo 'Charge!';
+        
         }
     ?>
     
@@ -324,7 +326,7 @@
           </tr>
           
           <tr>
-            <td> <input type="submit" value="Log In" id="SignUp" name="SignUp"> </td>
+            <td> <input type="submit" value="Log In" id="SignUp" name="SignUps"> </td>
           </tr>
           </table>
 
