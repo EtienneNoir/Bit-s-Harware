@@ -92,7 +92,7 @@
                                     </tr>
                                     
                                     <img src=\"Images/user.png\" alt=\"Image of User\"  class=\"Icons\"> 
-                                    <p style=\"color:red\"> Email already found in database, please try again </p>
+                                    <p style=\"color:red\"> Email found in database, please try again </p>
                                 </div>
 
                                 <tr>
