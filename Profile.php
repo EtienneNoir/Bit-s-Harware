@@ -42,7 +42,7 @@
 
     </header>
     <?php
-    if (isset($_REQUEST["SignUp"])) { // Execute the following if the form has been submitted 
+    if (isset($_REQUEST["Register"])) { // Execute the following if the form has been submitted 
 
       $name = $_POST['Unam'];
       $Lname = $_POST['Lanam'];
