@@ -112,6 +112,8 @@
             $_SESSION["tel"] = $address;
             $_SESSION["pass"] = $pass;
 
+            CloseConnection($connect); // Closing the connection 
+
            header("Location: /Subscribed/index2.php");
 
         }
@@ -120,7 +122,7 @@
     } else {//Show this if the form was not submitted , thus show an unsubmitted form
 
 
-
+   
     echo "<div id=\"LogIn\"  >
         <form action=\"LogedIn.php\" id=\"fomSign2\" name=\"OldAccount\" method=\"post\"> <!-- Post method, used to post things on the database -->
           <table> <!-- Used to make sure that all the content are aligned -->

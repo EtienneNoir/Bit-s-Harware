@@ -45,20 +45,121 @@ session_start();
 
     </header>
     <?php
-
+    /* Used to show the current credentials of the user stored in their database */
     $name = $_SESSION["User_Name"];
     $Lname = $_SESSION["Last_Name"];
     $email = $_SESSION["email"];
     $phone = $_SESSION["phone"];
     $address = $_SESSION["tel"];
     $pass = $_SESSION["pass"] ;
-    include '../config.php'; // importing config page, to use its properties
 
-    $connect = OpenConnection(); // calling the function to connect to the database and storing its return value
+    /* */
+    if (isset($_REQUEST["Edit"])) { // Execute the following if the form has been submitted 
+        include '../config.php'; // importing config page, to use its properties
 
-   
+        $connect = OpenConnection(); // calling the function to connect to the database and storing its return value
 
-            echo "<div id=\"main2\" >
+        // create a main query that will take the values from the database 
+
+        $MainQuery = "SELECT * FROM customers WHERE Customer_email = '$email'"; 
+
+        $Mainresult = mysqli_query($connect, $Mainquery) or die("Unable to connect to database!"); // The result is then returned
+
+        /* These new values will be passed on to the updated form instead of making another query to retrieve something that we already have */
+
+        $newName = $_POST['Unam'];
+        $newLame = $_POST['Lanam'];
+        $newEmail = $_POST['E'];
+        $newPhone = $_POST['T'];
+        $newAddress = $_POST['Address'];
+        $newPass = $_POST['p'];
+
+        while ($recordsCheck2 = mysqli_fetch_array($resultUser)) { // While there is a record retrieved do the following the while condition is used to use the break command, so the loop should be traversed once, cause there is one record 
+       
+
+                
+
+                // Create a code that will check if any of the values have been changed 
+                // If they have then insert them 
+                // If the values ought to be unqiue then check that they are unique in the database if not then don't insert them and report to the user
+    
+                if ($name != $newName) { // Meaning that something has been changed , therefore update it on the database 
+    
+                    // Customers (Customer_email, First_Name, Last_Name, Password, Address, phone)
+                    $UpdateQuery = "UPDATE Customers SET First_Name='$newName' WHERE Customer_email = '$email'"; // implication that the connection function was a success. Thus go to the next phase, return the user name of all the records.
+    
+                    $result = mysqli_query($connect, $UpdateQuery) or die("Unable to connect to database!"); // The result is then returned
+                }
+
+                if ($Lname != $newLame) {
+
+                }
+
+                if ($phone != $newPhone) {
+
+                }
+
+                if ($address != $newAddress) {
+
+                }
+
+                /* 
+                if($emial != $newEmail){ // The unique fields
+                
+                }
+                if ($pass != $newPass) {
+                }
+                // Then connect to the database and retrieve the new or old data 
+                // change the session variables 
+                // Reprint the form
+                */
+                
+                echo "<div id=\"main2\" >
+                <form action=\"Edit.php\" id=\"fomSign\" name=\"newAccountform\" method=\"post\"> 
+                <table> <!-- Used to make sure that all the content are aligned -->
+                    <h2 style=\"font-family: Monospace font-size=large\"><img src=\"../Images/248961.png\" alt=\"Image of gear\" id=\"load2\" class=\"Icons\"> $newName </h2>
+                    <div>
+                    <tr><!-- First row-->
+                        <td><input type=\"text\" class=\"field\" id=\"Uname\" name=\"Unam\"placeholder=\"First Name\" autofocus value=\"$newName\" required></td>
+                    </tr>
+                    
+                    <img src=\"../Images/user.png\" alt=\"Image of User\"  class=\"Icons\"> 
+                </div>
+
+                <tr>
+                    <td><input type=\"text\" class=\"field\" id=\"Laname\" name=\"Lanam\" class=\"Icons1\" placeholder=\"Last Name\" value=\"$Lname\" required></td>
+                </tr>
+
+                <tr>
+                    <td><input type=\"email\" class=\"field\" id=\"Email\" name=\"E\" class=\"Icon1s\" placeholder=\"Email\" value=\"$email\" required></td>
+                </tr>
+
+                <tr>
+                    <td><input type=\"tel\" class=\"field\" id=\"Tele\" name=\"T\" class=\"Icon1s\" placeholder=\"Phone Number\" value=\"$phone\" required></td>
+                </tr>
+
+                <tr>
+                    <td><input type=\"text\" class=\"field\" id=\"Add\" name=\"Address\" class=\"Icons1\" placeholder=\"Address\" value=\"$address\" required></td>
+                </tr>
+
+                <tr>
+                    <td> <input type=\"password\" class=\"field\" id=\"ps\" name=\"p\" class=\"Icons1\" placeholder=\"Password\" value=\"$pass\" required pattern=\"^(?=.*?[A-Z])(?=(.*[a-z]){1,})(?=(.*[\d]){1,})(?=(.*[\W]){1,})(?!.*\s).{8,50}$\" title=\"Your Password must have at least one number and one uppercase and lowercase letter and one special character , and at least 8 or more characters\"> </td>
+                </tr>
+                
+                <tr>
+                    <td> <input type=\"submit\" value=\"Edit\" id=\"SignUp\" name=\"Edit\"> </td>
+                </tr>
+                </table>
+                </form>
+            </div><br>";
+            CloseConnection($connect); // Closing the connection 
+
+            
+        }
+    } 
+    else {
+
+        echo "<div id=\"main2\" >
         <form action=\"Edit.php\" id=\"fomSign\" name=\"newAccountform\" method=\"post\"> 
         <table> <!-- Used to make sure that all the content are aligned -->
             <h2 style=\"font-family: Monospace font-size=large\"><img src=\"../Images/248961.png\" alt=\"Image of gear\" id=\"load2\" class=\"Icons\"> $name </h2>
@@ -97,7 +198,7 @@ session_start();
         </form>
     </div><br>";
 
-    
+    }
 
  ?>
 
