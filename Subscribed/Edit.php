@@ -62,8 +62,8 @@ session_start();
         // create a main query that will take the values from the database 
 
         $MainQuery = "SELECT * FROM Customers WHERE Customer_email = '$email'"; 
-
-        $Mainresult = mysqli_query($connect, $Mainquery) or die("Unable to connect to database!W"); // The result is then returned
+  
+        $Mainresult = mysqli_query($connect, $MainQuery) or die("Unable to connect to database!W"); // The result is then returned
 
         /* These new values will be passed on to the updated form instead of making another query to retrieve something that we already have */
 
