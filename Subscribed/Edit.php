@@ -127,13 +127,14 @@ session_start();
         */
 
 
-
+        session_unset();
         $_SESSION["User_Name"] = $newName;
-        $_SESSION["Last_Name"] = $newLname;
+        $_SESSION["Last_Name"] = $newLame;
         $_SESSION["email"] = $newEmail;
         $_SESSION["phone"] = $newPhone;
         $_SESSION["tel"] = $newAddress;
         $_SESSION["pass"] = $newPass;
+        
         echo "<div id=\"main2\" >
         <form action=\"Edit.php\" id=\"fomSign\" name=\"newAccountform\" method=\"post\"> 
         <table> <!-- Used to make sure that all the content are aligned -->
