@@ -56,15 +56,15 @@ session_start();
     /* */
     if (isset($_REQUEST["Edit"])) { // Execute the following if the form has been submitted 
         include '../config.php'; // importing config page, to use its properties
-
+    
         $connect = OpenConnection(); // calling the function to connect to the database and storing its return value
-
+    
         // create a main query that will take the values from the database 
+    
+        $MainQuery = "SELECT * FROM Customers WHERE Customer_email = '$email'";
 
-        $MainQuery = "SELECT * FROM Customers WHERE Customer_email = '$email'"; 
-  
         $Mainresult = mysqli_query($connect, $MainQuery) or die("Unable to connect to database!W"); // The result is then returned
-
+    
         /* These new values will be passed on to the updated form instead of making another query to retrieve something that we already have */
 
         $newName = $_POST['Unam'];
@@ -74,30 +74,30 @@ session_start();
         $newAddress = $_POST['Address'];
         $newPass = $_POST['p'];
 
-       
 
-                
 
-                // Create a code that will check if any of the values have been changed 
+
+
+        // Create a code that will check if any of the values have been changed 
         // If they have then insert them 
         // If the values ought to be unqiue then check that they are unique in the database if not then don't insert them and report to the user
-
+    
         if ($name != $newName) { // Meaning that something has been changed , therefore update it on the database 
-
+    
             // Customers (Customer_email, First_Name, Last_Name, Password, Address, phone)
             $UpdateQuery = "UPDATE Customers SET First_Name='$newName' WHERE Customer_email = '$email'"; // implication that the connection function was a success. Thus go to the next phase, return the user name of all the records.
-
+    
             $result = mysqli_query($connect, $UpdateQuery) or die("Unable to connect to database!1"); // The result is then returned
         }
 
         if ($Lname != $newLame) {
 
             $UpdateQuery = "UPDATE Customers SET Last_Name='$newLame' WHERE Customer_email = '$email'"; // implication that the connection function was a success. Thus go to the next phase, return the user name of all the records.
-
+    
             $result = mysqli_query($connect, $UpdateQuery) or die("Unable to connect to database!1"); // The result is then returned
         }
 
-        }
+
 
         if ($phone != $newPhone) {
 
@@ -117,9 +117,9 @@ session_start();
         // change the session variables 
         // Reprint the form
         */
-                
-       
-        
+
+
+
 
         echo "<div id=\"main2\" >
         <form action=\"Edit.php\" id=\"fomSign\" name=\"newAccountform\" method=\"post\"> 
@@ -159,9 +159,9 @@ session_start();
         </table>
         </form>
     </div><br>";
-    CloseConnection($connect); // Closing the connection 
-    } 
-    else {
+        CloseConnection($connect); // Closing the connection 
+    
+    }else {
 
         echo "<div id=\"main2\" >
         <form action=\"Edit.php\" id=\"fomSign\" name=\"newAccountform\" method=\"post\"> 
