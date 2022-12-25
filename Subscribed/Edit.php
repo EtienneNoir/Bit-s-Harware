@@ -53,12 +53,9 @@ session_start();
     $address = $_SESSION["tel"];
     $pass = $_SESSION["pass"] ;
 
-   
+    $condition = true;
     /* */
     if (isset($_REQUEST["Edit"])) { // Execute the following if the form has been submitted 
-
-        $condition = true;
-
         include '../config.php'; // importing config page, to use its properties
     
         $connect = OpenConnection(); // calling the function to connect to the database and storing its return value
@@ -119,12 +116,10 @@ session_start();
 
         }
 
+        /* 
+        if($emial != $newEmail){ // The unique fields
         
-       
-        
-        
-
-        /*
+        }
         if ($pass != $newPass) {
         }
         // Then connect to the database and retrieve the new or old data 
@@ -132,16 +127,16 @@ session_start();
         // Reprint the form
         */
 
-      //  if ($condition) {
-            session_unset(); // Destroying all current sessions , thus removing all current variables 
-    
+        if($condition){
+            session_unset();// Destroying all current sessions , thus removing all current variables 
+
             $_SESSION["User_Name"] = $newName;
             $_SESSION["Last_Name"] = $newLame;
             $_SESSION["email"] = $newEmail;
             $_SESSION["phone"] = $newPhone;
             $_SESSION["tel"] = $newAddress;
             $_SESSION["pass"] = $newPass;
-
+            
             echo "<div id=\"main2\" >
             <form action=\"Edit.php\" id=\"fomSign\" name=\"newAccountform\" method=\"post\"> 
             <table> <!-- Used to make sure that all the content are aligned -->
@@ -179,12 +174,11 @@ session_start();
             </tr>
             </table>
             </form>
-            </div><br>";
+        </div><br>";
             CloseConnection($connect); // Closing the connection 
-      //  }
+        }
     
-   }
-        else {
+    }else {
 
         echo "<div id=\"main2\" >
         <form action=\"Edit.php\" id=\"fomSign\" name=\"newAccountform\" method=\"post\"> 
