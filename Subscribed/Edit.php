@@ -74,49 +74,53 @@ session_start();
         $newAddress = $_POST['Address'];
         $newPass = $_POST['p'];
 
-        while ($recordsCheck2 = mysqli_fetch_array($resultUser)) { // While there is a record retrieved do the following the while condition is used to use the break command, so the loop should be traversed once, cause there is one record 
        
 
                 
 
                 // Create a code that will check if any of the values have been changed 
-                // If they have then insert them 
-                // If the values ought to be unqiue then check that they are unique in the database if not then don't insert them and report to the user
-    
-                if ($name != $newName) { // Meaning that something has been changed , therefore update it on the database 
-    
-                    // Customers (Customer_email, First_Name, Last_Name, Password, Address, phone)
-                    $UpdateQuery = "UPDATE Customers SET First_Name='$newName' WHERE Customer_email = '$email'"; // implication that the connection function was a success. Thus go to the next phase, return the user name of all the records.
-    
-                    $result = mysqli_query($connect, $UpdateQuery) or die("Unable to connect to database!1"); // The result is then returned
-                }
+        // If they have then insert them 
+        // If the values ought to be unqiue then check that they are unique in the database if not then don't insert them and report to the user
 
-                if ($Lname != $newLame) {
+        if ($name != $newName) { // Meaning that something has been changed , therefore update it on the database 
 
-                }
+            // Customers (Customer_email, First_Name, Last_Name, Password, Address, phone)
+            $UpdateQuery = "UPDATE Customers SET First_Name='$newName' WHERE Customer_email = '$email'"; // implication that the connection function was a success. Thus go to the next phase, return the user name of all the records.
 
-                if ($phone != $newPhone) {
+            $result = mysqli_query($connect, $UpdateQuery) or die("Unable to connect to database!1"); // The result is then returned
+        }
 
-                }
+        if ($Lname != $newLame) {
 
-                if ($address != $newAddress) {
+            $UpdateQuery = "UPDATE Customers SET Last_Name='$newLame' WHERE Customer_email = '$email'"; // implication that the connection function was a success. Thus go to the next phase, return the user name of all the records.
 
-                }
+            $result = mysqli_query($connect, $UpdateQuery) or die("Unable to connect to database!1"); // The result is then returned
+        }
 
-                /* 
-                if($emial != $newEmail){ // The unique fields
-                
-                }
-                if ($pass != $newPass) {
-                }
-                // Then connect to the database and retrieve the new or old data 
-                // change the session variables 
-                // Reprint the form
-                */
+        }
+
+        if ($phone != $newPhone) {
+
+        }
+
+        if ($address != $newAddress) {
+
+        }
+
+        /* 
+        if($emial != $newEmail){ // The unique fields
+        
+        }
+        if ($pass != $newPass) {
+        }
+        // Then connect to the database and retrieve the new or old data 
+        // change the session variables 
+        // Reprint the form
+        */
                 
        
-        }
         
+
         echo "<div id=\"main2\" >
         <form action=\"Edit.php\" id=\"fomSign\" name=\"newAccountform\" method=\"post\"> 
         <table> <!-- Used to make sure that all the content are aligned -->
