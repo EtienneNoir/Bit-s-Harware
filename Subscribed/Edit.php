@@ -56,52 +56,7 @@ session_start();
 
     $connect = OpenConnection(); // calling the function to connect to the database and storing its return value
 
-    if (isset($_REQUEST["Edit"])) {
-
-        $newName = $_POST['Unam'];
-        $newLame = $_POST['Lanam'];
-        $newEmail = $_POST['E'];
-        $newPhone = $_POST['T'];
-        $newAddress = $_POST['Address'];
-        $newPass = $_POST['p'];
-
-        // Create a code that will check if any of the values have been changed 
-        // If they have then insert them 
-        // If the values ought to be unqiue then check that they are unique in the database if not then don't insert them and report to the user
-
-        if ($name != $newName) {// Meaning that something has been changed 
-
-            
-
-        }
-
-        if ($Lname != $newLame ) {
-
-        }
-
-        if ($phone != $newPhone) {
-
-        }
-
-        if ($address != $newAddress){
-
-        }
-
-        /* 
-        if($emial != $newEmail){ // The unique fields
-            
-        }
-
-        if ($pass != $newPass) {
-
-        }
-
-        // Then connect to the database and retrieve the new or old data 
-        // change the session variables 
-        // Reprint the form
-        */
-
-    } else {
+   
 
             echo "<div id=\"main2\" >
         <form action=\"Edit.php\" id=\"fomSign\" name=\"newAccountform\" method=\"post\"> 
@@ -142,7 +97,7 @@ session_start();
         </form>
     </div><br>";
 
-    }
+    
 
  ?>
 
