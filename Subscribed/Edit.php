@@ -63,7 +63,7 @@ session_start();
 
         $MainQuery = "SELECT * FROM Customers WHERE Customer_email = '$email'"; 
 
-        $Mainresult = mysqli_query($connect, $Mainquery) or die("Unable to connect to database!"); // The result is then returned
+        $Mainresult = mysqli_query($connect, $Mainquery) or die("Unable to connect to database!W"); // The result is then returned
 
         /* These new values will be passed on to the updated form instead of making another query to retrieve something that we already have */
 
@@ -88,7 +88,7 @@ session_start();
                     // Customers (Customer_email, First_Name, Last_Name, Password, Address, phone)
                     $UpdateQuery = "UPDATE Customers SET First_Name='$newName' WHERE Customer_email = '$email'"; // implication that the connection function was a success. Thus go to the next phase, return the user name of all the records.
     
-                    $result = mysqli_query($connect, $UpdateQuery) or die("Unable to connect to database!"); // The result is then returned
+                    $result = mysqli_query($connect, $UpdateQuery) or die("Unable to connect to database!1"); // The result is then returned
                 }
 
                 if ($Lname != $newLame) {
