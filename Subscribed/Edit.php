@@ -120,76 +120,9 @@ session_start();
         }
 
         
-        if($emial != $newEmail){ // The unique fields, If it is a different email from the one the user currently inserted 
-
-            $AllQuery = "SELECT * FROM Customers WHERE Customer_email = '$newEmail'"; // Return all records , where their email's identical to what the user is trying to store 
-
-            $result = mysqli_query($connect, $AllQuery) or die("Unable to connect to database!"); // Execute query then return the result
-  
-            $Allrecords = mysqli_num_rows($result); // is used to return the number of rows returned from the data base based on the query
-
-            if ($Allrecords == 0) { // Then it means that the email to be inserted is unqiue and can thus be passed onto the database
-    
-                $UpdateQuery = "UPDATE Customers SET Customer_email='$newEmail' WHERE Customer_email = '$email'"; // Change Customer currents email
-            }else {// Else return a error, letting the user know that an identical email already exists in the database
-
-                $condition = false; // So that the last updated form is not displayed as well 
-
-                session_unset(); // Destroying all current sessions , thus removing all current variables 
-    
-                $_SESSION["User_Name"] = $newName;
-                $_SESSION["Last_Name"] = $newLame;
-                $_SESSION["email"] = $email; // 
-                $_SESSION["phone"] = $newPhone;
-                $_SESSION["tel"] = $newAddress;
-                $_SESSION["pass"] = $newPass;
-
-                $oldEmail = $_SESSION["email"];
-
-                echo "<div id=\"main2\" >
-            <form action=\"Edit.php\" id=\"fomSign\" name=\"newAccountform\" method=\"post\"> 
-            <table> <!-- Used to make sure that all the content are aligned -->
-                <h2 style=\"font-family: Monospace font-size=large\"><img src=\"../Images/248961.png\" alt=\"Image of gear\" id=\"load2\" class=\"Icons\"> $newName </h2>
-                <div>
-                <tr><!-- First row-->
-                    <td><input type=\"text\" class=\"field\" id=\"Uname\" name=\"Unam\"placeholder=\"First Name\" autofocus value=\"$newName\" required></td>
-                </tr>
-                
-                <img src=\"../Images/user.png\" alt=\"Image of User\"  class=\"Icons\"> 
-                <p style=\"color:red\"> Email: $newEmail  found in database, please try again </p>
-            </div>
-
-            <tr>
-                <td><input type=\"text\" class=\"field\" id=\"Laname\" name=\"Lanam\" class=\"Icons1\" placeholder=\"Last Name\" value=\"$newLame\" required></td>
-            </tr>
-
-            <tr>
-                <td><input type=\"email\" class=\"field\" id=\"Email\" name=\"E\" class=\"Icon1s\" placeholder=\"Email\" value=\"$oldEmail\" required></td>
-            </tr>
-
-            <tr>
-                <td><input type=\"tel\" class=\"field\" id=\"Tele\" name=\"T\" class=\"Icon1s\" placeholder=\"Phone Number\" value=\"$newPhone\" required></td>
-            </tr>
-
-            <tr>
-                <td><input type=\"text\" class=\"field\" id=\"Add\" name=\"Address\" class=\"Icons1\" placeholder=\"Address\" value=\"$newAddress\" required></td>
-            </tr>
-
-            <tr>
-                <td> <input type=\"password\" class=\"field\" id=\"ps\" name=\"p\" class=\"Icons1\" placeholder=\"Password\" value=\"$newPass\" required pattern=\"^(?=.*?[A-Z])(?=(.*[a-z]){1,})(?=(.*[\d]){1,})(?=(.*[\W]){1,})(?!.*\s).{8,50}$\" title=\"Your Password must have at least one number and one uppercase and lowercase letter and one special character , and at least 8 or more characters\"> </td>
-            </tr>
-            
-            <tr>
-                <td> <input type=\"submit\" value=\"Edit\" id=\"SignUp\" name=\"Edit\"> </td>
-            </tr>
-            </table>
-            </form>
-            </div><br>";
-            CloseConnection($connect); // Closing the connection 
-
-            }
+       
         
-        }
+        
 
         /*
         if ($pass != $newPass) {
@@ -199,7 +132,7 @@ session_start();
         // Reprint the form
         */
 
-        if ($condition) {
+      //  if ($condition) {
             session_unset(); // Destroying all current sessions , thus removing all current variables 
     
             $_SESSION["User_Name"] = $newName;
@@ -248,9 +181,10 @@ session_start();
             </form>
             </div><br>";
             CloseConnection($connect); // Closing the connection 
-        }
+      //  }
     
-    }else {
+   }
+        else {
 
         echo "<div id=\"main2\" >
         <form action=\"Edit.php\" id=\"fomSign\" name=\"newAccountform\" method=\"post\"> 
