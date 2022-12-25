@@ -101,9 +101,17 @@ session_start();
 
         if ($phone != $newPhone) {
 
+            $UpdateQuery = "UPDATE Customers SET phone='$newPhone' WHERE Customer_email = '$email'"; // implication that the connection function was a success. Thus go to the next phase, return the user name of all the records.
+    
+            $result = mysqli_query($connect, $UpdateQuery) or die("Unable to connect to database!1"); // The result is then returned
+
         }
 
         if ($address != $newAddress) {
+
+            $UpdateQuery = "UPDATE Customers SET Address='$newAddress' WHERE Customer_email = '$email'"; // implication that the connection function was a success. Thus go to the next phase, return the user name of all the records.
+    
+            $result = mysqli_query($connect, $UpdateQuery) or die("Unable to connect to database!1"); // The result is then returned
 
         }
 
