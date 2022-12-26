@@ -73,6 +73,7 @@ session_start();
 
         $recordsid = mysqli_fetch_array($idResult);
 
+        $newId = $recordsid['Customer_id'];
     
         /* These new values will be passed on to the updated form instead of making another query to retrieve something that we already have */
 
@@ -151,6 +152,8 @@ session_start();
         $_SESSION["email"] = $newEmail;
 
         $_SESSION["pass"] = $newPass;
+
+        $_SESSION["id"] = $newId;
 
         CloseConnection($connect); // Closing the connection 
         header("Location: /Subscribed/index2.php");
