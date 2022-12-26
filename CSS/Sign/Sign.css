@@ -134,16 +134,14 @@
 #Edits{
 
     background-color:#fc8129; 
-    border-radius: 15px;
     width: 25px; 
-    height: 25px
+    height: 25px;
+    cursor: pointer;
 }
 
 #Edits :hover{
 
     background-color:#eb731e; 
-    cursor: pointer;
-   
     
 
 
