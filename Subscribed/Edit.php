@@ -97,6 +97,9 @@ session_start();
 
 
                 echo "Success";
+                echo  $email;
+                echo $newEmail;
+
             }
 
         } else {
