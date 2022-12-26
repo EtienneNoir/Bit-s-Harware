@@ -87,7 +87,7 @@ session_start();
             
                     if ($Allrecords != 0) { // Thus it means that the new email exists in the databse , thus cannot be inserted, user must try again  
             
-                        echo "Try again";
+                        echo "Try againE";
 
                     } else {
 
@@ -100,7 +100,7 @@ session_start();
             
 
 
-                        echo "Suceess";
+                        echo "SuceessE";
 
                     }
 
@@ -117,7 +117,7 @@ session_start();
 
                 if ($Allrecords != 0) { // Thus it means that the new password exists in the databse , thus cannot be inserted, show user error  
 
-                    echo "Try again";
+                    echo "Try againP";
 
                 } else {
 
@@ -131,7 +131,7 @@ session_start();
 
 
                     // Update and do nothing
-                    echo "Suceess";
+                    echo "SuceessP";
 
                 }
 
@@ -167,7 +167,7 @@ session_start();
         $phone = $_SESSION["phone"];
         $address = $_SESSION["tel"];
         $pass = $_SESSION["pass"] ;
-        
+
         echo "<div id=\"main2\" >
         <form action=\"Edit.php\" id=\"fomSign\" name=\"newAccountform\" method=\"post\"> 
         <table> <!-- Used to make sure that all the content are aligned -->
