@@ -144,7 +144,7 @@ session_start();
 
             }
 
-            
+
 
             $loop = $loop + 1; // to terminate the loop
             session_unset(); // Destroying all current sessions , thus removing all current variables 
@@ -158,7 +158,8 @@ session_start();
 
             CloseConnection($connect); // Closing the connection 
 
-            header("Location: Edit.php");
+            break;
+
 
         }
    
