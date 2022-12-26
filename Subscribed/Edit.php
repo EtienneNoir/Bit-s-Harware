@@ -99,7 +99,10 @@ session_start();
                 echo "Success";
             }
 
-        }       
+        } else {
+
+            echo "Nothing";
+        }    
     
     }else {
 
