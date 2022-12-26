@@ -94,6 +94,9 @@ session_start();
                 $EmailQuery = "UPDATE Customers SET Customer_email='$newEmail' WHERE Customer_email = '$email'"; // implication that the connection function was a success. Thus go to the next phase, return the user name of all the records.
     
                 $resultEmail = mysqli_query($connect, $EmailQuery) or die("Unable to connect to database!1"); // The result is then returned
+
+
+                echo "Success";
             }
 
         }       
