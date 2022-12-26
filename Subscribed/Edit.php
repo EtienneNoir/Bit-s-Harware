@@ -105,7 +105,7 @@ session_start();
         
 
 
-                    // Update and do nothing
+                    echo "Suceess";
 
                 }
 
@@ -141,85 +141,15 @@ session_start();
             }
 
         }
-        // Then update the following, these ones don't need to be checked for any duplicates thus can just be updated whether the user left the values the same or altered them 
 
-        $UpdateQuery1 = "UPDATE Customers SET Last_Name='$newLame' WHERE Customer_id = ' $id'";; // implication that the connection function was a success. Thus go to the next phase, return the user name of all the records.
-
-        $result1 = mysqli_query($connect, $UpdateQuery1) or die("Unable to connect to database!1"); // The result is then returned
-
-
-
-
-
-
-        $UpdateQuery2 = "UPDATE Customers SET phone='$newPhone' WHERE Customer_id = ' $id'";; // implication that the connection function was a success. Thus go to the next phase, return the user name of all the records.
-
-        $result2 = mysqli_query($connect, $UpdateQuery2) or die("Unable to connect to database!1"); // The result is then returned
-
-
-
-
-
-        $UpdateQuery3 = "UPDATE Customers SET Address='$newAddress' WHERE Customer_id = ' $id'";; // implication that the connection function was a success. Thus go to the next phase, return the user name of all the records.
-
-        $result3 = mysqli_query($connect, $UpdateQuery3) or die("Unable to connect to database!1"); // The result is then returned
-
-
-        $UpdateQuery4 = "UPDATE Customers SET First_Name='$newName' WHERE Customer_id = ' $id'";; // implication that the connection function was a success. Thus go to the next phase, return the user name of all the records.
-
-        $result3 = mysqli_query($connect, $UpdateQuery4) or die("Unable to connect to database!1"); // The result is then returned
-
-
-        session_unset(); // Destroying all current sessions , thus removing all current variables to replace them with the new values 
-
-        $_SESSION["User_Name"] = $newName;
-        $_SESSION["Last_Name"] = $newLame;
+        session_unset(); // Destroying all current sessions , thus removing all current variables 
         $_SESSION["email"] = $newEmail;
-        $_SESSION["phone"] = $newPhone;
-        $_SESSION["tel"] = $newAddress;
+
         $_SESSION["pass"] = $newPass;
 
-        // Showing the new updated values;
-
-        echo "<div id=\"main2\" >
-        <form action=\"Edit.php\" id=\"fomSign\" name=\"newAccountform\" method=\"post\"> 
-        <table> <!-- Used to make sure that all the content are aligned -->
-            <h2 style=\"font-family: Monospace font-size=large\"><img src=\"../Images/248961.png\" alt=\"Image of gear\" id=\"load2\" class=\"Icons\"> $newName </h2>
-            <div>
-            <tr><!-- First row-->
-                <td><input type=\"text\" class=\"field\" id=\"Uname\" name=\"Unam\"placeholder=\"First Name\" autofocus value=\"$newName\" required></td>
-            </tr>
-            
-            <img src=\"../Images/user.png\" alt=\"Image of User\"  class=\"Icons\"> 
-        </div>
-    
-        <tr>
-            <td><input type=\"text\" class=\"field\" id=\"Laname\" name=\"Lanam\" class=\"Icons1\" placeholder=\"Last Name\" value=\"$newLame\" required></td>
-        </tr>
-    
-        <tr>
-            <td><input type=\"email\" class=\"field\" id=\"Email\" name=\"E\" class=\"Icon1s\" placeholder=\"Email\" value=\"$newEmail\" required></td>
-        </tr>
-    
-        <tr>
-            <td><input type=\"tel\" class=\"field\" id=\"Tele\" name=\"T\" class=\"Icon1s\" placeholder=\"Phone Number\" value=\"$newPhone\" required></td>
-        </tr>
-    
-        <tr>
-            <td><input type=\"text\" class=\"field\" id=\"Add\" name=\"Address\" class=\"Icons1\" placeholder=\"Address\" value=\"$newAddress\" required></td>
-        </tr>
-    
-        <tr>
-            <td> <input type=\"password\" class=\"field\" id=\"ps\" name=\"p\" class=\"Icons1\" placeholder=\"Password\" value=\"$newPass\" required pattern=\"^(?=.*?[A-Z])(?=(.*[a-z]){1,})(?=(.*[\d]){1,})(?=(.*[\W]){1,})(?!.*\s).{8,50}$\" title=\"Your Password must have at least one number and one uppercase and lowercase letter and one special character , and at least 8 or more characters\"> </td>
-        </tr>
-        
-        <tr>
-            <td> <input type=\"submit\" value=\"Edit\" id=\"SignUp\" name=\"Edit\"> </td>
-        </tr>
-        </table>
-        </form>
-        </div><br>";
         CloseConnection($connect); // Closing the connection 
+
+        header("Location: Edit.php");
 
     
     }
