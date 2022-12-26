@@ -169,8 +169,7 @@ session_start();
             <tr><!-- First row-->
                 <td><input type=\"text\" class=\"field\" id=\"Uname\" name=\"Unam\"placeholder=\"First Name\" autofocus value=\"$name\" required>  <img src=\"../Images/user.png\" alt=\"Image of User\"  class=\"Icons\"> </td>
             </tr>
-            
-            <img src=\"../Images/user.png\" alt=\"Image of User\"  class=\"Icons\"> 
+
         </div>
 
         <tr>
@@ -178,19 +177,19 @@ session_start();
         </tr>
 
         <tr>
-            <td><input type=\"email\" class=\"field\" id=\"Email\" name=\"E\" class=\"Icon1s\" placeholder=\"Email\" value=\"$email\" required> <button type=\"button\" id=\"Edits\">  &#10003</button> </td>
+            <td><input type=\"email\" class=\"field\" id=\"Email\" name=\"E\" class=\"Icon1s\" placeholder=\"Email\" value=\"$email\" required>  <img src=\"../Images/user.png\" alt=\"Image of User\"  class=\"Icons\">  </td>
         </tr>
 
         <tr>
-            <td><input type=\"tel\" class=\"field\" id=\"Tele\" name=\"T\" class=\"Icon1s\" placeholder=\"Phone Number\" value=\"$phone\" required> <button type=\"button\" id=\"Edits\">  &#10003</button> </td>
+            <td><input type=\"tel\" class=\"field\" id=\"Tele\" name=\"T\" class=\"Icon1s\" placeholder=\"Phone Number\" value=\"$phone\" required>  <img src=\"../Images/user.png\" alt=\"Image of User\"  class=\"Icons\">  </td>
         </tr>
 
         <tr>
-            <td><input type=\"text\" class=\"field\" id=\"Add\" name=\"Address\" class=\"Icons1\" placeholder=\"Address\" value=\"$address\" required> <button type=\"button\" id=\"Edits\">  &#10003</button></td>
+            <td><input type=\"text\" class=\"field\" id=\"Add\" name=\"Address\" class=\"Icons1\" placeholder=\"Address\" value=\"$address\" required> <img src=\"../Images/user.png\" alt=\"Image of User\"  class=\"Icons\">  </td>
         </tr>
 
         <tr>
-            <td> <input type=\"password\" class=\"field\" id=\"ps\" name=\"p\" class=\"Icons1\" placeholder=\"Password\" value=\"$pass\" required pattern=\"^(?=.*?[A-Z])(?=(.*[a-z]){1,})(?=(.*[\d]){1,})(?=(.*[\W]){1,})(?!.*\s).{8,50}$\" title=\"Your Password must have at least one number and one uppercase and lowercase letter and one special character , and at least 8 or more characters\"><button type=\"button\" id=\"Edits\">  &#10003</button> </td>
+            <td> <input type=\"password\" class=\"field\" id=\"ps\" name=\"p\" class=\"Icons1\" placeholder=\"Password\" value=\"$pass\" required pattern=\"^(?=.*?[A-Z])(?=(.*[a-z]){1,})(?=(.*[\d]){1,})(?=(.*[\W]){1,})(?!.*\s).{8,50}$\" title=\"Your Password must have at least one number and one uppercase and lowercase letter and one special character , and at least 8 or more characters\">  <img src=\"../Images/user.png\" alt=\"Image of User\"  class=\"Icons\"> </td>
         </tr>
         
         </table>
