@@ -144,18 +144,25 @@ session_start();
 
             }
 
+            
+
             $loop = $loop + 1; // to terminate the loop
             session_unset(); // Destroying all current sessions , thus removing all current variables 
+            $_SESSION["User_Name"] = $newName;
+            $_SESSION["Last_Name"] = $newLame;
             $_SESSION["email"] = $newEmail;
-
+            $_SESSION["phone"] = $newPhone;
+            $_SESSION["tel"] = $newAddress;
             $_SESSION["pass"] = $newPass;
+    
 
             CloseConnection($connect); // Closing the connection 
 
             header("Location: Edit.php");
 
         }
-        echo "Yho!";
+   
+
     }
     else {
 
