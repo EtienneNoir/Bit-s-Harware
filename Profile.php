@@ -61,6 +61,7 @@
   
       $Allrecords = mysqli_num_rows($result); // is used to return the number of rows returned from the data base based on the query
       
+      
   
       if ($Allrecords == 0) { // Meaning that this is the first customer
 
