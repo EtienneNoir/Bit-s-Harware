@@ -186,7 +186,7 @@ session_start();
         </tr>
 
         <tr>
-            <td><input type=\"text\" class=\"field\" id=\"Add\" name=\"Address\" class=\"Icons1\" placeholder=\"Address\" value=\"$address\" required <input type=\"submit\" value=\"Edit\" id=\"SignUp\" name=\"Edit\"> ></td>
+            <td><input type=\"text\" class=\"field\" id=\"Add\" name=\"Address\" class=\"Icons1\" placeholder=\"Address\" value=\"$address\" required> <input type=\"submit\" value=\"Edit\" id=\"SignUp\" name=\"Edit\"> </td>
         </tr>
 
         <tr>
