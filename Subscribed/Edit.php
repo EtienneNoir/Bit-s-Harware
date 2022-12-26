@@ -165,6 +165,10 @@ session_start();
         $result3 = mysqli_query($connect, $UpdateQuery3) or die("Unable to connect to database!1"); // The result is then returned
 
 
+        $UpdateQuery4 = "UPDATE Customers SET First_Name='$newName' WHERE Customer_id = ' $id'";; // implication that the connection function was a success. Thus go to the next phase, return the user name of all the records.
+
+        $result3 = mysqli_query($connect, $UpdateQuery4) or die("Unable to connect to database!1"); // The result is then returned
+
 
         session_unset(); // Destroying all current sessions , thus removing all current variables to replace them with the new values 
 
