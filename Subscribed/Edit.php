@@ -167,14 +167,14 @@ session_start();
             <h2 style=\"font-family: Monospace font-size=large\"><img src=\"../Images/248961.png\" alt=\"Image of gear\" id=\"load2\" class=\"Icons\"> $name </h2>
             <div>
             <tr><!-- First row-->
-                <td><input type=\"text\" class=\"field\" id=\"Uname\" name=\"Unam\"placeholder=\"First Name\" autofocus value=\"$name\" required> <button type=\"button\" id=\"Edits\">  &#10003</button></td>
+                <td><input type=\"text\" class=\"field\" id=\"Uname\" name=\"Unam\"placeholder=\"First Name\" autofocus value=\"$name\" required>  <img src=\"../Images/user.png\" alt=\"Image of User\"  class=\"Icons\"> </td>
             </tr>
             
             <img src=\"../Images/user.png\" alt=\"Image of User\"  class=\"Icons\"> 
         </div>
 
         <tr>
-            <td><input type=\"text\" class=\"field\" id=\"Laname\" name=\"Lanam\" class=\"Icons1\" placeholder=\"Last Name\" value=\"$Lname\" required> <button type=\"button\" id=\"Edits\">  &#10003</button> </td>
+            <td><input type=\"text\" class=\"field\" id=\"Laname\" name=\"Lanam\" class=\"Icons1\" placeholder=\"Last Name\" value=\"$Lname\" required>  <img src=\"../Images/user.png\" alt=\"Image of User\"  class=\"Icons\">  </td>
         </tr>
 
         <tr>
