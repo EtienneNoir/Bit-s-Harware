@@ -80,7 +80,7 @@ session_start();
         $newPass = $_POST['p'];
 
 
-        while($recordsid = mysqli_fetch_array($idResult)){
+        while($recordsids = mysqli_fetch_array($idResult)){
             // create a main query that will take the values from the database 
             if ($newEmail != $recordsid['Customer_email']) { // meaning something has been changed if the new email to be updated is not equal to the email in the database record of this user
             
