@@ -111,7 +111,7 @@ session_start();
 
         }
 
-        if ($newPass != $recordsid['Password']){// Using the same logic that was used to identify any duplicates newEmail to be insterted in the database and then reporting it to the user
+        else if ($newPass != $recordsid['Password']){// Using the same logic that was used to identify any duplicates newEmail to be insterted in the database and then reporting it to the user
 
 
             $MainQuery = "SELECT * FROM Customers WHERE Password = '$newPass'"; // To see if there are other records with the same email 
@@ -142,13 +142,20 @@ session_start();
 
         }
 
+    
+
         session_unset(); // Destroying all current sessions , thus removing all current variables 
 
         $_SESSION["email"] = $newEmail;
-
+        $_SESSION["Last_Name"]= $newLame ;
+        $_SESSION["User_Name"] = $newName;
+        $_SESSION["tel"] =  $newAddress;
+        $_SESSION["phone"] = $newPhone;
         $_SESSION["pass"] = $newPass;
 
         CloseConnection($connect); // Closing the connection 
+
+        header("Location: /Subscribed/index2.php");
 
     
     }
