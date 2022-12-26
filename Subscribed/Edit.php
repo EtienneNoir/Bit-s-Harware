@@ -46,13 +46,20 @@ session_start();
     </header>
     <?php
     /* Used to show the current credentials of the user stored in their database */
+    $name = $_SESSION["User_Name"];
+    $Lname = $_SESSION["Last_Name"];
+    $email = $_SESSION["email"];
+    $phone = $_SESSION["phone"];
+    $address = $_SESSION["tel"];
+    $pass = $_SESSION["pass"] ;
+    $id = $_SESSION["id"];
 
 
+  
     /* */
     if (isset($_REQUEST["Edit"])) { // Execute the following if the form has been submitted 
         include '../config.php'; // importing config page, to use its properties
     
-        $id = $_SESSION["id"];
 
         $connect = OpenConnection(); // calling the function to connect to the database and storing its return value
     
@@ -62,7 +69,6 @@ session_start();
 
         $recordsid = mysqli_fetch_array($idResult);
 
-        $loop = 0;
     
         /* These new values will be passed on to the updated form instead of making another query to retrieve something that we already have */
 
@@ -74,99 +80,79 @@ session_start();
         $newPass = $_POST['p'];
 
 
-        while($loop !== 1 ){
-            // create a main query that will take the values from the database 
-            if ($newEmail != $recordsid['Customer_email']) { // meaning something has been changed if the new email to be updated is not equal to the email in the database record of this user
-            
+         // create a main query that will take the values from the database 
+        if ($newEmail != $recordsid['Customer_email']) { // meaning something has been changed if the new email to be updated is not equal to the email in the database record of this user
+        
 
-                    $MainQuery = "SELECT * FROM Customers WHERE Customer_email = '$newEmail'"; // To see if there are other records with the same email 
-            
-                    $Mainresult = mysqli_query($connect, $MainQuery) or die("Unable to connect to database!W"); // The result is then returned
-            
-                    $Allrecords = mysqli_num_rows($Mainresult); // is used to return the number of rows returned from the data base based on the query
-            
-                    if ($Allrecords != 0) { // Thus it means that the new email exists in the databse , thus cannot be inserted, user must try again  
-            
-                        echo "Try againE";
-
-                    } else {
-
-                        // Create a code that will check if any of the values have been changed 
-                        // If they have then insert them 
-                        // If the values ought to be unqiue then check that they are unique in the database if not then don't insert them and report to the user
-                        $EmailQuery = "UPDATE Customers SET Customer_email='$newEmail' WHERE Customer_id = '$id'"; // implication that the connection function was a success. Thus go to the next phase, return the user name of all the records.
-            
-                        $resultEmail = mysqli_query($connect, $EmailQuery) or die("Unable to connect to database!1"); // The result is then returned
-            
-
-
-                        echo "SuceessE";
-
-                    }
-
-            }
-
-            if ($newPass != $recordsid['Password']){// Using the same logic that was used to identify any duplicates newEmail to be insterted in the database and then reporting it to the user
-
-
-                $MainQuery = "SELECT * FROM Customers WHERE Password = '$newPass'"; // To see if there are other records with the same email 
-            
+                $MainQuery = "SELECT * FROM Customers WHERE Customer_email = '$newEmail'"; // To see if there are other records with the same email 
+        
                 $Mainresult = mysqli_query($connect, $MainQuery) or die("Unable to connect to database!W"); // The result is then returned
-
+        
                 $Allrecords = mysqli_num_rows($Mainresult); // is used to return the number of rows returned from the data base based on the query
-
-                if ($Allrecords != 0) { // Thus it means that the new password exists in the databse , thus cannot be inserted, show user error  
-
-                    echo "Try againP";
+        
+                if ($Allrecords != 0) { // Thus it means that the new email exists in the databse , thus cannot be inserted, user must try again  
+        
+                    echo "Try again";
 
                 } else {
 
                     // Create a code that will check if any of the values have been changed 
                     // If they have then insert them 
                     // If the values ought to be unqiue then check that they are unique in the database if not then don't insert them and report to the user
-                    $EmailQuery = "UPDATE Customers SET Password = '$newPass' WHERE Customer_id = '$id'"; // implication that the connection function was a success. Thus go to the next phase, return the user name of all the records.
-
+                    $EmailQuery = "UPDATE Customers SET Customer_email='$newEmail' WHERE Customer_id = '$id'"; // implication that the connection function was a success. Thus go to the next phase, return the user name of all the records.
+        
                     $resultEmail = mysqli_query($connect, $EmailQuery) or die("Unable to connect to database!1"); // The result is then returned
+        
 
 
-
-                    // Update and do nothing
-                    echo "SuceessP";
+                    echo "Suceess";
 
                 }
 
+        }
+
+        if ($newPass != $recordsid['Password']){// Using the same logic that was used to identify any duplicates newEmail to be insterted in the database and then reporting it to the user
+
+
+            $MainQuery = "SELECT * FROM Customers WHERE Password = '$newPass'"; // To see if there are other records with the same email 
+        
+            $Mainresult = mysqli_query($connect, $MainQuery) or die("Unable to connect to database!W"); // The result is then returned
+
+            $Allrecords = mysqli_num_rows($Mainresult); // is used to return the number of rows returned from the data base based on the query
+
+            if ($Allrecords != 0) { // Thus it means that the new password exists in the databse , thus cannot be inserted, show user error  
+
+                echo "Try again";
+
+            } else {
+
+                // Create a code that will check if any of the values have been changed 
+                // If they have then insert them 
+                // If the values ought to be unqiue then check that they are unique in the database if not then don't insert them and report to the user
+                $EmailQuery = "UPDATE Customers SET Password = '$newPass' WHERE Customer_id = '$id'"; // implication that the connection function was a success. Thus go to the next phase, return the user name of all the records.
+
+                $resultEmail = mysqli_query($connect, $EmailQuery) or die("Unable to connect to database!1"); // The result is then returned
+
+
+
+                // Update and do nothing
+                echo "Suceess";
+
             }
 
-
-
-            $loop = $loop + 1; // to terminate the loop
-            session_unset(); // Destroying all current sessions , thus removing all current variables 
-            $_SESSION["User_Name"] = $newName;
-            $_SESSION["Last_Name"] = $newLame;
-            $_SESSION["email"] = $newEmail;
-            $_SESSION["phone"] = $newPhone;
-            $_SESSION["tel"] = $newAddress;
-            $_SESSION["pass"] = $newPass;
-    
-
-            CloseConnection($connect); // Closing the connection 
-
-            break;
-
-
         }
-   
 
+        session_unset(); // Destroying all current sessions , thus removing all current variables 
+
+        $_SESSION["email"] = $newEmail;
+
+        $_SESSION["pass"] = $newPass;
+
+        CloseConnection($connect); // Closing the connection 
+
+    
     }
     else {
-
-
-        $name = $_SESSION["User_Name"];
-        $Lname = $_SESSION["Last_Name"];
-        $email = $_SESSION["email"];
-        $phone = $_SESSION["phone"];
-        $address = $_SESSION["tel"];
-        $pass = $_SESSION["pass"] ;
 
         echo "<div id=\"main2\" >
         <form action=\"Edit.php\" id=\"fomSign\" name=\"newAccountform\" method=\"post\"> 
