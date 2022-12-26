@@ -81,17 +81,47 @@ session_start();
 
 
          // create a main query that will take the values from the database 
-    if ($newEmail != $recordsid['Customer_email']) { // meaning something has been changed if the new email to be updated is not equal to the email in the database record of this user
-    
+        if ($newEmail != $recordsid['Customer_email']) { // meaning something has been changed if the new email to be updated is not equal to the email in the database record of this user
+        
 
-            $MainQuery = "SELECT * FROM Customers WHERE Customer_email = '$newEmail'"; // To see if there are other records with the same email 
+                $MainQuery = "SELECT * FROM Customers WHERE Customer_email = '$newEmail'"; // To see if there are other records with the same email 
+        
+                $Mainresult = mysqli_query($connect, $MainQuery) or die("Unable to connect to database!W"); // The result is then returned
+        
+                $Allrecords = mysqli_num_rows($Mainresult); // is used to return the number of rows returned from the data base based on the query
+        
+                if ($Allrecords != 0) { // Thus it means that the new email exists in the databse , thus cannot be inserted, user must try again  
+        
+                    echo "Try again";
 
+                } else {
+
+                    // Create a code that will check if any of the values have been changed 
+                    // If they have then insert them 
+                    // If the values ought to be unqiue then check that they are unique in the database if not then don't insert them and report to the user
+                    $EmailQuery = "UPDATE Customers SET Customer_email='$newEmail' WHERE Customer_id = ' $id'"; // implication that the connection function was a success. Thus go to the next phase, return the user name of all the records.
+        
+                    $resultEmail = mysqli_query($connect, $EmailQuery) or die("Unable to connect to database!1"); // The result is then returned
+        
+
+
+                    // Update and do nothing
+
+                }
+
+        }
+
+        if ($newPass != $recordsid['Password']){// Using the same logic that was used to identify any duplicates newEmail to be insterted in the database and then reporting it to the user
+
+
+            $MainQuery = "SELECT * FROM Customers WHERE Password = '$newPass'"; // To see if there are other records with the same email 
+        
             $Mainresult = mysqli_query($connect, $MainQuery) or die("Unable to connect to database!W"); // The result is then returned
-    
+
             $Allrecords = mysqli_num_rows($Mainresult); // is used to return the number of rows returned from the data base based on the query
-    
-            if ($Allrecords != 0) { // Thus it means that the new email exists in the databse , thus cannot be inserted, user must try again  
-    
+
+            if ($Allrecords != 0) { // Thus it means that the new password exists in the databse , thus cannot be inserted, user must try again  
+
                 echo "Try again";
 
             } else {
@@ -99,24 +129,21 @@ session_start();
                 // Create a code that will check if any of the values have been changed 
                 // If they have then insert them 
                 // If the values ought to be unqiue then check that they are unique in the database if not then don't insert them and report to the user
-                $EmailQuery = "UPDATE Customers SET Customer_email='$newEmail' WHERE Customer_email = '$email'"; // implication that the connection function was a success. Thus go to the next phase, return the user name of all the records.
-    
+                $EmailQuery = "UPDATE Customers SET Password = '$newPass' WHERE Customer_id = ' $id'"; // implication that the connection function was a success. Thus go to the next phase, return the user name of all the records.
+
                 $resultEmail = mysqli_query($connect, $EmailQuery) or die("Unable to connect to database!1"); // The result is then returned
 
 
-                echo "Success";
-                
+
+                // Update and do nothing
+                echo "Suceess";
 
             }
 
-        } else {
-
-            echo "Nothing";
-            echo  $email;
-            echo $newEmail;
-        }    
+        }
     
-    }else {
+    }
+    else {
 
         echo "<div id=\"main2\" >
         <form action=\"Edit.php\" id=\"fomSign\" name=\"newAccountform\" method=\"post\"> 
