@@ -162,7 +162,7 @@ session_start();
     else {
 
         echo "<div id=\"main2\" >
-        <form action=\"Edit.php\" id=\"fomSign\" name=\"newAccountform\" method=\"post\"> 
+        <form action=\"Edit.php\" id=\"fomSignEdit\" name=\"newAccountform\" method=\"post\"> 
         <table> <!-- Used to make sure that all the content are aligned -->
             <h2 style=\"font-family: Monospace font-size=large\"><img src=\"../Images/248961.png\" alt=\"Image of gear\" id=\"load2\" class=\"Icons\"> $name </h2>
             <div>
@@ -186,7 +186,7 @@ session_start();
         </tr>
 
         <tr>
-            <td><input type=\"text\" class=\"field\" id=\"Add\" name=\"Address\" class=\"Icons1\" placeholder=\"Address\" value=\"$address\" required></td>
+            <td><input type=\"text\" class=\"field\" id=\"Add\" name=\"Address\" class=\"Icons1\" placeholder=\"Address\" value=\"$address\" required <input type=\"submit\" value=\"Edit\" id=\"SignUp\" name=\"Edit\"> ></td>
         </tr>
 
         <tr>

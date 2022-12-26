@@ -131,20 +131,14 @@
 
 }
 
-#Edits{
-
-    background-color:#66605c; 
-    width: 25px; 
-    height: 25px;
-    cursor: pointer;
+#fomSignEdit{
+    
+    margin: auto;
     border-style: solid;
     border-color: #10558d;
-}
-
-#Edits :hover{
-
-    background-color:#eb731e; 
+    border-width: thin;
+    text-align: center;
     
-
+    height: 8050px;
 
 }
