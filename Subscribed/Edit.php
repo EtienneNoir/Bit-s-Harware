@@ -167,35 +167,32 @@ session_start();
             <h2 style=\"font-family: Monospace font-size=large\"><img src=\"../Images/248961.png\" alt=\"Image of gear\" id=\"load2\" class=\"Icons\"> $name </h2>
             <div>
             <tr><!-- First row-->
-                <td><input type=\"text\" class=\"field\" id=\"Uname\" name=\"Unam\"placeholder=\"First Name\" autofocus value=\"$name\" required> <input type=\"submit\" value=\"Edit\" id=\"SignUp\" name=\"Edit\"></td>
+                <td><input type=\"text\" class=\"field\" id=\"Uname\" name=\"Unam\"placeholder=\"First Name\" autofocus value=\"$name\" required> <button type=\"button\" id=\"Edits\">  &#10003</button></td>
             </tr>
             
             <img src=\"../Images/user.png\" alt=\"Image of User\"  class=\"Icons\"> 
         </div>
 
         <tr>
-            <td><input type=\"text\" class=\"field\" id=\"Laname\" name=\"Lanam\" class=\"Icons1\" placeholder=\"Last Name\" value=\"$Lname\" required> <input type=\"submit\" value=\"Edit\" id=\"SignUp\" name=\"Edit\"> </td>
+            <td><input type=\"text\" class=\"field\" id=\"Laname\" name=\"Lanam\" class=\"Icons1\" placeholder=\"Last Name\" value=\"$Lname\" required> <button type=\"button\" id=\"Edits\">  &#10003</button> </td>
         </tr>
 
         <tr>
-            <td><input type=\"email\" class=\"field\" id=\"Email\" name=\"E\" class=\"Icon1s\" placeholder=\"Email\" value=\"$email\" required> <input type=\"submit\" value=\"Edit\" id=\"SignUp\" name=\"Edit\"></td>
+            <td><input type=\"email\" class=\"field\" id=\"Email\" name=\"E\" class=\"Icon1s\" placeholder=\"Email\" value=\"$email\" required> <button type=\"button\" id=\"Edits\">  &#10003</button> </td>
         </tr>
 
         <tr>
-            <td><input type=\"tel\" class=\"field\" id=\"Tele\" name=\"T\" class=\"Icon1s\" placeholder=\"Phone Number\" value=\"$phone\" required> <input type=\"submit\" value=\"Edit\" id=\"SignUp\" name=\"Edit\"></td>
+            <td><input type=\"tel\" class=\"field\" id=\"Tele\" name=\"T\" class=\"Icon1s\" placeholder=\"Phone Number\" value=\"$phone\" required> <button type=\"button\" id=\"Edits\">  &#10003</button> </td>
         </tr>
 
         <tr>
-            <td><input type=\"text\" class=\"field\" id=\"Add\" name=\"Address\" class=\"Icons1\" placeholder=\"Address\" value=\"$address\" required></td>
+            <td><input type=\"text\" class=\"field\" id=\"Add\" name=\"Address\" class=\"Icons1\" placeholder=\"Address\" value=\"$address\" required> <button type=\"button\" id=\"Edits\">  &#10003</button></td>
         </tr>
 
         <tr>
-            <td> <input type=\"password\" class=\"field\" id=\"ps\" name=\"p\" class=\"Icons1\" placeholder=\"Password\" value=\"$pass\" required pattern=\"^(?=.*?[A-Z])(?=(.*[a-z]){1,})(?=(.*[\d]){1,})(?=(.*[\W]){1,})(?!.*\s).{8,50}$\" title=\"Your Password must have at least one number and one uppercase and lowercase letter and one special character , and at least 8 or more characters\"> </td>
+            <td> <input type=\"password\" class=\"field\" id=\"ps\" name=\"p\" class=\"Icons1\" placeholder=\"Password\" value=\"$pass\" required pattern=\"^(?=.*?[A-Z])(?=(.*[a-z]){1,})(?=(.*[\d]){1,})(?=(.*[\W]){1,})(?!.*\s).{8,50}$\" title=\"Your Password must have at least one number and one uppercase and lowercase letter and one special character , and at least 8 or more characters\"><button type=\"button\" id=\"Edits\">  &#10003</button> </td>
         </tr>
         
-        <tr>
-            <td> <input type=\"submit\" value=\"Edit\" id=\"SignUp\" name=\"Edit\"> </td>
-        </tr>
         </table>
         </form>
     </div><br>";
