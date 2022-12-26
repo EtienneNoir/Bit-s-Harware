@@ -111,7 +111,7 @@ session_start();
 
         }
 
-        else if ($newPass != $recordsid['Password']){// Using the same logic that was used to identify any duplicates newEmail to be insterted in the database and then reporting it to the user
+        if ($newPass != $recordsid['Password']){// Using the same logic that was used to identify any duplicates newEmail to be insterted in the database and then reporting it to the user
 
 
             $MainQuery = "SELECT * FROM Customers WHERE Password = '$newPass'"; // To see if there are other records with the same email 
@@ -142,19 +142,13 @@ session_start();
 
         }
 
-    
-
         session_unset(); // Destroying all current sessions , thus removing all current variables 
 
         $_SESSION["email"] = $newEmail;
-        $_SESSION["Last_Name"]= $newLame ;
-        $_SESSION["User_Name"] = $newName;
-        $_SESSION["tel"] =  $newAddress;
-        $_SESSION["phone"] = $newPhone;
+
         $_SESSION["pass"] = $newPass;
 
         CloseConnection($connect); // Closing the connection 
-
         header("Location: /Subscribed/index2.php");
 
     
@@ -162,31 +156,31 @@ session_start();
     else {
 
         echo "<div id=\"main2\" >
-        <form action=\"Edit.php\" id=\"fomSignEdit\" name=\"newAccountform\" method=\"post\"> 
+        <form action=\"Edit.php\" id=\"fomSign\" name=\"newAccountform\" method=\"post\"> 
         <table> <!-- Used to make sure that all the content are aligned -->
             <h2 style=\"font-family: Monospace font-size=large\"><img src=\"../Images/248961.png\" alt=\"Image of gear\" id=\"load2\" class=\"Icons\"> $name </h2>
             <div>
             <tr><!-- First row-->
-                <td><input type=\"text\" class=\"field\" id=\"Uname\" name=\"Unam\"placeholder=\"First Name\" autofocus value=\"$name\" required> <input type=\"submit\" value=\"Edit\" id=\"SignUp\" name=\"Edit\"></td>
+                <td><input type=\"text\" class=\"field\" id=\"Uname\" name=\"Unam\"placeholder=\"First Name\" autofocus value=\"$name\" required></td>
             </tr>
             
             <img src=\"../Images/user.png\" alt=\"Image of User\"  class=\"Icons\"> 
         </div>
 
         <tr>
-            <td><input type=\"text\" class=\"field\" id=\"Laname\" name=\"Lanam\" class=\"Icons1\" placeholder=\"Last Name\" value=\"$Lname\" required> <input type=\"submit\" value=\"Edit\" id=\"SignUp\" name=\"Edit\"> </td>
+            <td><input type=\"text\" class=\"field\" id=\"Laname\" name=\"Lanam\" class=\"Icons1\" placeholder=\"Last Name\" value=\"$Lname\" required></td>
         </tr>
 
         <tr>
-            <td><input type=\"email\" class=\"field\" id=\"Email\" name=\"E\" class=\"Icon1s\" placeholder=\"Email\" value=\"$email\" required> <input type=\"submit\" value=\"Edit\" id=\"SignUp\" name=\"Edit\"></td>
+            <td><input type=\"email\" class=\"field\" id=\"Email\" name=\"E\" class=\"Icon1s\" placeholder=\"Email\" value=\"$email\" required></td>
         </tr>
 
         <tr>
-            <td><input type=\"tel\" class=\"field\" id=\"Tele\" name=\"T\" class=\"Icon1s\" placeholder=\"Phone Number\" value=\"$phone\" required> <input type=\"submit\" value=\"Edit\" id=\"SignUp\" name=\"Edit\"></td>
+            <td><input type=\"tel\" class=\"field\" id=\"Tele\" name=\"T\" class=\"Icon1s\" placeholder=\"Phone Number\" value=\"$phone\" required></td>
         </tr>
 
         <tr>
-            <td><input type=\"text\" class=\"field\" id=\"Add\" name=\"Address\" class=\"Icons1\" placeholder=\"Address\" value=\"$address\" required> <input type=\"submit\" value=\"Edit\" id=\"SignUp\" name=\"Edit\"> </td>
+            <td><input type=\"text\" class=\"field\" id=\"Add\" name=\"Address\" class=\"Icons1\" placeholder=\"Address\" value=\"$address\" required></td>
         </tr>
 
         <tr>
