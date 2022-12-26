@@ -97,14 +97,15 @@ session_start();
 
 
                 echo "Success";
-                echo  $email;
-                echo $newEmail;
+                
 
             }
 
         } else {
 
             echo "Nothing";
+            echo  $email;
+            echo $newEmail;
         }    
     
     }else {
