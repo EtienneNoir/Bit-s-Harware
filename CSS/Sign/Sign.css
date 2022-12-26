@@ -133,10 +133,12 @@
 
 #Edits{
 
-    background-color:#fc8129; 
+    background-color:#66605c; 
     width: 25px; 
     height: 25px;
     cursor: pointer;
+    border-style: solid;
+    border-color: #10558d;
 }
 
 #Edits :hover{
