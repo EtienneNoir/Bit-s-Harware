@@ -52,15 +52,23 @@ session_start();
     $phone = $_SESSION["phone"];
     $address = $_SESSION["tel"];
     $pass = $_SESSION["pass"] ;
+    $id = $_SESSION["id"];
+
 
   
     /* */
     if (isset($_REQUEST["Edit"])) { // Execute the following if the form has been submitted 
         include '../config.php'; // importing config page, to use its properties
     
+
         $connect = OpenConnection(); // calling the function to connect to the database and storing its return value
     
-       
+        $IdQuery = "SELECT * FROM Customers WHERE Customer_id = '$id'";
+
+        $idResult = mysqli_query($connect, $IdQuery) or die("Unable to connect to database!"); // Execute query then return the result
+
+        $recordsid = mysqli_fetch_array($idResult);
+
     
         /* These new values will be passed on to the updated form instead of making another query to retrieve something that we already have */
 
@@ -73,18 +81,18 @@ session_start();
 
 
          // create a main query that will take the values from the database 
-    if ($newEmail != $email) { // meaning something has been changed
+    if ($newEmail != $recordsid['Customer_email']) { // meaning something has been changed if the new email to be updated is not equal to the email in the database record of this user
     
 
-            $MainQuery = "SELECT * FROM Customers WHERE Customer_email = '$newEmail'";
+            $MainQuery = "SELECT * FROM Customers WHERE Customer_email = '$newEmail'"; // To see if there are other records with the same email 
 
             $Mainresult = mysqli_query($connect, $MainQuery) or die("Unable to connect to database!W"); // The result is then returned
     
             $Allrecords = mysqli_num_rows($Mainresult); // is used to return the number of rows returned from the data base based on the query
     
-            if ($Allrecords != 0) { // Thus it means that the email exists in teh databse and the user must try again 
+            if ($Allrecords != 0) { // Thus it means that the new email exists in the databse , thus cannot be inserted, user must try again  
     
-                echo "asdaasd";
+                echo "Try again";
 
             } else {
 

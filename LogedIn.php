@@ -102,6 +102,7 @@
             $email = $record['Customer_email'];
             $phone = $record['phone'];
             $pass = $record['Password'];
+            $id =  $record["Customer_id"];
 
             session_start();// Create a session and lead the customer to a subscribed version of the Website
 
@@ -111,6 +112,7 @@
             $_SESSION["phone"] = $phone;
             $_SESSION["tel"] = $address;
             $_SESSION["pass"] = $pass;
+            $_SESSION["id"] = $id;
 
             CloseConnection($connect); // Closing the connection 
 
