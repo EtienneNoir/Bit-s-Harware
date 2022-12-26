@@ -85,9 +85,7 @@ session_start();
         $newPass = $_POST['p'];
 
 
-        $init = true;
-        $emailMessage = "";
-        $PassMessage = "";
+        
          // create a main query that will take the values from the database 
         if ($newEmail != $recordsid['Customer_email']) { // meaning something has been changed if the new email to be updated is not equal to the email in the database record of this user
         
@@ -99,9 +97,8 @@ session_start();
                 $Allrecords = mysqli_num_rows($Mainresult); // is used to return the number of rows returned from the data base based on the query
         
                 if ($Allrecords != 0) { // Thus it means that the new email exists in the databse , thus cannot be inserted, user must try again  
-
-                    $emailMessage = "<p style=\"color:red\"> Email found in database, please try again </p>";
-                    $init = false;
+        
+                    echo "Try again";
 
                 } else {
 
@@ -109,25 +106,29 @@ session_start();
                     // If they have then insert them 
                     // If the values ought to be unqiue then check that they are unique in the database if not then don't insert them and report to the user
                     $EmailQuery = "UPDATE Customers SET Customer_email='$newEmail' WHERE Customer_id = '$id'"; // implication that the connection function was a success. Thus go to the next phase, return the user name of all the records.
-
+        
                     $resultEmail = mysqli_query($connect, $EmailQuery) or die("Unable to connect to database!1"); // The result is then returned
+        
+
+
+                    echo "Suceess";
+
                 }
 
         }
 
-        if ($newPass != $recordsid['Password']) { // Using the same logic that was used to identify any duplicates newEmail to be insterted in the database and then reporting it to the user
-    
+        if ($newPass != $recordsid['Password']){// Using the same logic that was used to identify any duplicates newEmail to be insterted in the database and then reporting it to the user
+
 
             $MainQuery = "SELECT * FROM Customers WHERE Password = '$newPass'"; // To see if there are other records with the same email 
-
+        
             $Mainresult = mysqli_query($connect, $MainQuery) or die("Unable to connect to database!W"); // The result is then returned
 
             $Allrecords = mysqli_num_rows($Mainresult); // is used to return the number of rows returned from the data base based on the query
 
             if ($Allrecords != 0) { // Thus it means that the new password exists in the databse , thus cannot be inserted, show user error  
 
-                $PassMessage = "<p style=\"color:red\"> Please insert a different password </p>";
-                $init = false;
+                echo "Try again";
 
             } else {
 
@@ -138,78 +139,25 @@ session_start();
 
                 $resultEmail = mysqli_query($connect, $EmailQuery) or die("Unable to connect to database!1"); // The result is then returned
 
+
+
                 // Update and do nothing
+                echo "Suceess";
 
             }
 
         }
 
-        $Message =  $PassMessage + " " +  $emailMessage;
+        session_unset(); // Destroying all current sessions , thus removing all current variables 
 
-        if ($init = false) {
+        $_SESSION["email"] = $newEmail;
 
-            echo "<div id=\"main2\" >
-            <form action=\"Edit.php\" id=\"fomSign\" name=\"newAccountform\" method=\"post\"> 
-            <table> <!-- Used to make sure that all the content are aligned -->
-                <h2 style=\"font-family: Monospace font-size=large\"><img src=\"../Images/248961.png\" alt=\"Image of gear\" id=\"load2\" class=\"Icons\"> $name </h2>
-                <div>
-                <tr><!-- First row-->
-                    <td><input type=\"text\" class=\"field\" id=\"Uname\" name=\"Unam\"placeholder=\"First Name\" autofocus value=\"$name\" required></td>
-                </tr>
-                
-                <img src=\"../Images/user.png\" alt=\"Image of User\"  class=\"Icons\"> 
-                $Message 
-            </div>
-    
-            <tr>
-                <td><input type=\"text\" class=\"field\" id=\"Laname\" name=\"Lanam\" class=\"Icons1\" placeholder=\"Last Name\" value=\"$Lname\" required></td>
-            </tr>
-    
-            <tr>
-                <td><input type=\"email\" class=\"field\" id=\"Email\" name=\"E\" class=\"Icon1s\" placeholder=\"Email\" value=\"$email\" required></td>
-            </tr>
-    
-            <tr>
-                <td><input type=\"tel\" class=\"field\" id=\"Tele\" name=\"T\" class=\"Icon1s\" placeholder=\"Phone Number\" value=\"$phone\" required></td>
-            </tr>
-    
-            <tr>
-                <td><input type=\"text\" class=\"field\" id=\"Add\" name=\"Address\" class=\"Icons1\" placeholder=\"Address\" value=\"$address\" required></td>
-            </tr>
-    
-            <tr>
-                <td> <input type=\"password\" class=\"field\" id=\"ps\" name=\"p\" class=\"Icons1\" placeholder=\"Password\" value=\"$pass\" required pattern=\"^(?=.*?[A-Z])(?=(.*[a-z]){1,})(?=(.*[\d]){1,})(?=(.*[\W]){1,})(?!.*\s).{8,50}$\" title=\"Your Password must have at least one number and one uppercase and lowercase letter and one special character , and at least 8 or more characters\"> </td>
-            </tr>
-            
-            <tr>
-                <td> <input type=\"submit\" value=\"Edit\" id=\"SignUp\" name=\"Edit\"> </td>
-            </tr>
-            </table>
-            </form>
-        </div><br>";
-    
+        $_SESSION["pass"] = $newPass;
+
+        $_SESSION["id"] = $newId;
+
         CloseConnection($connect); // Closing the connection 
-            
-
-
-
-        } else {
-
-            
-
-
-            session_unset(); // Destroying all current sessions , thus removing all current variables 
-    
-            $_SESSION["email"] = $newEmail;
-
-            $_SESSION["pass"] = $newPass;
-
-            $_SESSION["id"] = $newId;
-
-            CloseConnection($connect); // Closing the connection 
-            header("Location: /Subscribed/index2.php");
-
-        }
+        header("Location: /Subscribed/index2.php");
 
     
     }
