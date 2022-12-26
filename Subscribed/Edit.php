@@ -69,6 +69,7 @@ session_start();
 
         $recordsid = mysqli_fetch_array($idResult);
 
+        $loop = 0;
     
         /* These new values will be passed on to the updated form instead of making another query to retrieve something that we already have */
 
@@ -80,7 +81,7 @@ session_start();
         $newPass = $_POST['p'];
 
 
-        while($recordsids = mysqli_fetch_array($idResult)){
+        while($loop !== 1 ){
             // create a main query that will take the values from the database 
             if ($newEmail != $recordsid['Customer_email']) { // meaning something has been changed if the new email to be updated is not equal to the email in the database record of this user
             
@@ -143,6 +144,7 @@ session_start();
 
             }
 
+            $loop = $loop + 1; // to terminate the loop
             session_unset(); // Destroying all current sessions , thus removing all current variables 
             $_SESSION["email"] = $newEmail;
 
@@ -153,6 +155,7 @@ session_start();
             header("Location: Edit.php");
 
         }
+        echo "Yho!";
     }
     else {
 
