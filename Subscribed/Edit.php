@@ -46,20 +46,13 @@ session_start();
     </header>
     <?php
     /* Used to show the current credentials of the user stored in their database */
-    $name = $_SESSION["User_Name"];
-    $Lname = $_SESSION["Last_Name"];
-    $email = $_SESSION["email"];
-    $phone = $_SESSION["phone"];
-    $address = $_SESSION["tel"];
-    $pass = $_SESSION["pass"] ;
-    $id = $_SESSION["id"];
 
 
-  
     /* */
     if (isset($_REQUEST["Edit"])) { // Execute the following if the form has been submitted 
         include '../config.php'; // importing config page, to use its properties
     
+        $id = $_SESSION["id"];
 
         $connect = OpenConnection(); // calling the function to connect to the database and storing its return value
     
@@ -167,6 +160,14 @@ session_start();
     }
     else {
 
+
+        $name = $_SESSION["User_Name"];
+        $Lname = $_SESSION["Last_Name"];
+        $email = $_SESSION["email"];
+        $phone = $_SESSION["phone"];
+        $address = $_SESSION["tel"];
+        $pass = $_SESSION["pass"] ;
+        
         echo "<div id=\"main2\" >
         <form action=\"Edit.php\" id=\"fomSign\" name=\"newAccountform\" method=\"post\"> 
         <table> <!-- Used to make sure that all the content are aligned -->
