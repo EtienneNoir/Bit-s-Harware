@@ -45,16 +45,20 @@ session_start();
 
     </header>
     <?php
-    /* Used to show the current credentials of the user stored in their database */
-    $name = $_SESSION["User_Name"];
-    $Lname = $_SESSION["Last_Name"];
-    $email = $_SESSION["email"];
-    $phone = $_SESSION["phone"];
-    $address = $_SESSION["tel"];
-    $pass = $_SESSION["pass"] ;
+
     $id = $_SESSION["id"];
+    /* Used to show the current credentials of the user stored in their database */
+    /*
 
+        $name = $_SESSION["User_Name"];
+        $Lname = $_SESSION["Last_Name"];
+        $email = $_SESSION["email"];
+        $phone = $_SESSION["phone"];
+        $address = $_SESSION["tel"];
+        $pass = $_SESSION["pass"] ;
+        $id = $_SESSION["id"];
 
+    */
   
     /* */
     if (isset($_REQUEST["Edit"])) { // Execute the following if the form has been submitted 
@@ -155,6 +159,26 @@ session_start();
     }
     else {
 
+
+        include '../config.php'; // importing config page, to use its properties
+    
+
+        $connect = OpenConnection(); // calling the function to connect to the database and storing its return value
+    
+        $IdQuery = "SELECT * FROM Customers WHERE Customer_id = '$id'";
+
+        $idResult = mysqli_query($connect, $IdQuery) or die("Unable to connect to database!"); // Execute query then return the result
+
+        $recordsid = mysqli_fetch_array($idResult);
+
+        $name =  $recordsid["First_Name"];
+        $Lname =  $recordsid["Last_Name"];
+        $email =  $recordsid["Customer_email"];
+        $phone =  $recordsid["phone"];
+        $address =  $recordsid["Address"];
+        $pass =  $recordsid["Password"] ;
+ 
+
         echo "<div id=\"main2\" >
         <form action=\"Edit.php\" id=\"fomSign\" name=\"newAccountform\" method=\"post\"> 
         <table> <!-- Used to make sure that all the content are aligned -->
@@ -193,6 +217,8 @@ session_start();
         </table>
         </form>
     </div><br>";
+
+    CloseConnection($connect); // Closing the connection 
 
     }
 
