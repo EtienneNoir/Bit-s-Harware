@@ -142,3 +142,16 @@
     height: 850px;
 
 }
+
+#fomSignEdit table{
+    
+    place-items: center;
+    margin:auto;
+
+}
+
+#fomSignEdit td{
+
+    padding: 20px;
+    align-items: center;
+}
