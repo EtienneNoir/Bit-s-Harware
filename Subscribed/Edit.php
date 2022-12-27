@@ -48,19 +48,7 @@ session_start();
 
     $id = $_SESSION["id"];
     /* Used to show the current credentials of the user stored in their database */
-    /*
 
-        $name = $_SESSION["User_Name"];
-        $Lname = $_SESSION["Last_Name"];
-        $email = $_SESSION["email"];
-        $phone = $_SESSION["phone"];
-        $address = $_SESSION["tel"];
-        $pass = $_SESSION["pass"] ;
-        $id = $_SESSION["id"];
-
-    */
-  
-    /* */
     if (isset($_REQUEST["Edit"])) { // Execute the following if the form has been submitted 
         include '../config.php'; // importing config page, to use its properties
     

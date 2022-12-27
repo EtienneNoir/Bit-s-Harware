@@ -57,7 +57,7 @@
 
       $query1 = "SELECT * FROM Customers"; // Return all records
   
-      $result = mysqli_query($connect, $query1) or die("Unable to connect to database!"); // Execute query then return the result
+      $result = mysqli_query($connect, $query1) or die("Unable to connect to database!A"); // Execute query then return the result
   
       $Allrecords = mysqli_num_rows($result); // is used to return the number of rows returned from the data base based on the query
       
@@ -72,7 +72,7 @@
   
           $idQuery = "SELECT * FROM Customers WHERE Customer_email = $email"; // Return all records , 
 
-          $idResult = mysqli_query($connect, $idQuery) or die("Unable to connect to database!"); // Execute query then return the result
+          $idResult = mysqli_query($connect, $idQuery) or die("Unable to connect to database!B"); // Execute query then return the result
 
           $recordsid = mysqli_fetch_array($idResult);
 
@@ -204,11 +204,11 @@
               $Option1Query = "INSERT INTO Customers (Customer_email, First_Name, Last_Name, Password, Address, phone)
                       VALUES ('$email','$name','$Lname','$pass','$address','$phone')";
 
-              $Option1Results = mysqli_query($connect, $Option1Query) or die("Unable to connect to databasew!"); // Execute query then return the result
+              $Option1Results = mysqli_query($connect, $Option1Query) or die("Unable to connect to databaseC!"); // Execute query then return the result
       
               $idQuery = "SELECT * FROM Customers WHERE Customer_email = $email"; // Return all records , 
 
-              $idResult = mysqli_query($connect, $idQuery) or die("Unable to connect to database!"); // Execute query then return the result
+              $idResult = mysqli_query($connect, $idQuery) or die("Unable to connect to databaseD!"); // Execute query then return the result
 
               $recordsid = mysqli_fetch_array($idResult);
 
