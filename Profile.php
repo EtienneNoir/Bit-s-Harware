@@ -70,7 +70,7 @@
 
           $Option1Results = mysqli_query($connect, $Option1Query) or die("Unable to connect to databasew!"); // Execute query then return the result
   
-          $idQuery = "SELECT * FROM Customers WHERE Customer_email = $email"; // Return all records , 
+          $idQuery = "SELECT * FROM Customers WHERE Customer_email = '$email'"; // Return all records , 
 
           $idResult = mysqli_query($connect, $idQuery) or die("Unable to connect to database!B"); // Execute query then return the result
 
@@ -206,7 +206,7 @@
 
               $Option1Results = mysqli_query($connect, $Option1Query) or die("Unable to connect to databaseC!"); // Execute query then return the result
       
-              $idQuery = "SELECT * FROM Customers WHERE Customer_email = $email"; // Return all records , 
+              $idQuery = "SELECT * FROM Customers WHERE Customer_email = '$email'"; // Return all records , 
 
               $idResult = mysqli_query($connect, $idQuery) or die("Unable to connect to databaseD!"); // Execute query then return the result
 
