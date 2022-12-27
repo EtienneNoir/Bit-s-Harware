@@ -74,7 +74,13 @@ session_start();
         $recordsid = mysqli_fetch_array($idResult);
 
        
-
+        /* To be used just in case the update failed */
+        $name =  $recordsid["First_Name"];
+        $Lname =  $recordsid["Last_Name"];
+        $email =  $recordsid["Customer_email"];
+        $phone =  $recordsid["phone"];
+        $address =  $recordsid["Address"];
+        $pass =  $recordsid["Password"] ;
         $newId = $recordsid['Customer_id'];
     
         /* These new values will be passed on to the updated form instead of making another query to retrieve something that we already have */
@@ -97,10 +103,53 @@ session_start();
                 $Mainresult = mysqli_query($connect, $MainQuery) or die("Unable to connect to database!W"); // The result is then returned
     
                 $Allrecords = mysqli_num_rows($Mainresult); // is used to return the number of rows returned from the data base based on the query
+
+                
+         
     
                 if ($Allrecords != 0) { // Thus it means that the new email exists in the databse , thus cannot be inserted, user must try again  
     
-                    echo "Try again";
+                    echo "<div id=\"main2\" >
+                    <form action=\"Edit.php\" id=\"fomSign\" name=\"newAccountform\" method=\"post\"> 
+                    <table> <!-- Used to make sure that all the content are aligned -->
+                        <h2 style=\"font-family: Monospace font-size=large\"><img src=\"../Images/248961.png\" alt=\"Image of gear\" id=\"load2\" class=\"Icons\"> $name </h2>
+                        <div>
+                        <tr><!-- First row-->
+                            <td><input type=\"text\" class=\"field\" id=\"Uname\" name=\"Unam\"placeholder=\"First Name\" autofocus value=\"$name\" required></td>
+                        </tr>
+                        
+                        <img src=\"../Images/user.png\" alt=\"Image of User\"  class=\"Icons\"> 
+                        <p style=\"color:red\"> Email: $newEmail already exists in the database, please try again</p>
+                    </div>
+            
+                    <tr>
+                        <td><input type=\"text\" class=\"field\" id=\"Laname\" name=\"Lanam\" class=\"Icons1\" placeholder=\"Last Name\" value=\"$Lname\" required></td>
+                    </tr>
+            
+                    <tr>
+                        <td><input type=\"email\" class=\"field\" id=\"Email\" name=\"E\" class=\"Icon1s\" placeholder=\"Email\" value=\"$email\" required></td>
+                    </tr>
+            
+                    <tr>
+                        <td><input type=\"tel\" class=\"field\" id=\"Tele\" name=\"T\" class=\"Icon1s\" placeholder=\"Phone Number\" value=\"$phone\" required></td>
+                    </tr>
+            
+                    <tr>
+                        <td><input type=\"text\" class=\"field\" id=\"Add\" name=\"Address\" class=\"Icons1\" placeholder=\"Address\" value=\"$address\" required></td>
+                    </tr>
+            
+                    <tr>
+                        <td> <input type=\"password\" class=\"field\" id=\"ps\" name=\"p\" class=\"Icons1\" placeholder=\"Password\" value=\"$pass\" required pattern=\"^(?=.*?[A-Z])(?=(.*[a-z]){1,})(?=(.*[\d]){1,})(?=(.*[\W]){1,})(?!.*\s).{8,50}$\" title=\"Your Password must have at least one number and one uppercase and lowercase letter and one special character , and at least 8 or more characters\"> </td>
+                    </tr>
+                    
+                    <tr>
+                        <td> <input type=\"submit\" value=\"Edit\" id=\"SignUp\" name=\"Edit\"> </td>
+                    </tr>
+                    </table>
+                    </form>
+                    </div><br>";
+            
+                    CloseConnection($connect); // Closing the connection
                     break;
 
                 } else {
