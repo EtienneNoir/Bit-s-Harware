@@ -239,16 +239,22 @@ session_start();
 
             }
 
-                        // Customers (Customer_email, First_Name, Last_Name, Password, Address, phone)
+            //----------------------------------------------------------First Name----------------------------------------------------------------
             $First_Name_Query = "UPDATE Customers SET First_Name='$newName'  WHERE Customer_id = '$id'"; // implication that the connection function was a success. Thus go to the next phase, return the user name of all the records.
-
             $First_Name_result = mysqli_query($connect, $First_Name_Query) or die("Unable to connect to database!"); // The result is then returned
 
+            //----------------------------------------------------------Last Name--------------------------------------------------------------------
             $Last_Name_Query = "UPDATE Customers SET Last_Name='$newLame' WHERE Customer_id = '$id'"; // implication that the connection function was a success. Thus go to the next phase, return the user name of all the records.
 
-            
             $Last_Name_result1 = mysqli_query($connect,  $Last_Name_Query) or die("Unable to connect to database!"); // The result is then returned
 
+            //-----------------------------------------------------------Phone------------------------------------------------------------------------
+            $Phone_Query = "UPDATE Customers SET phone='$newPhone' WHERE Customer_id = '$id'"; // implication that the connection function was a success. Thus go to the next phase, return the user name of all the records.
+
+            $Phone_result = mysqli_query($connect, $Phone_Query) or die("Unable to connect to database!1"); // The result is then returned
+
+            //-----------------------------------------------------------Address------------------------------------------------------------------------
+            
             session_unset(); // Destroying all current sessions , thus removing all current variables 
     
             $_SESSION["email"] = $newEmail;
@@ -256,7 +262,7 @@ session_start();
             $_SESSION["pass"] = $newPass;
             $_SESSION["Last_Name"] = $newLame;
             $_SESSION["id"] = $newId; // re-creating new session that will hold the id as the previous would have been destroyed
-
+            $_SESSION["phone"] = $newPhone;
             CloseConnection($connect); // Closing the connection 
             echo "Success!";
             break;
