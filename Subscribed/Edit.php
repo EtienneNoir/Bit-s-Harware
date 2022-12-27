@@ -267,7 +267,7 @@ session_start();
 
 
             echo "<div id=\"main2\" >
-            <form action=\"Edit.php\" id=\"fomSign\" name=\"newAccountform\" method=\"post\"> 
+            <form action=\"Edit.php\" id=\"fomSignErr\" name=\"newAccountform\" method=\"post\"> 
             <table> <!-- Used to make sure that all the content are aligned -->
                 <h2 style=\"font-family: Monospace font-size=large\"><img src=\"../Images/248961.png\" alt=\"Image of gear\" id=\"load2\" class=\"Icons\"> $newName </h2>
                 <div>
