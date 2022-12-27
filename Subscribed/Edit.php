@@ -110,7 +110,7 @@ session_start();
                 if ($Allrecords != 0) { // Thus it means that the new email exists in the databse , thus cannot be inserted, user must try again  
     
                     echo "<div id=\"main2\" >
-                    <form action=\"Edit.php\" id=\"fomSign\" name=\"newAccountform\" method=\"post\" style=\"850\"> 
+                    <form action=\"Edit.php\" id=\"fomSign\" name=\"newAccountform\" method=\"post\" style=\"850px\"> 
                     <table> <!-- Used to make sure that all the content are aligned -->
                         <h2 style=\"font-family: Monospace font-size=large\"><img src=\"../Images/248961.png\" alt=\"Image of gear\" id=\"load2\" class=\"Icons\"> $name </h2>
                         <div>
