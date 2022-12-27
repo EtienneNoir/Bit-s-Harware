@@ -92,8 +92,7 @@ session_start();
         $newAddress = $_POST['Address'];
         $newPass = $_POST['p'];
 
-        $entry = 0 ;
-        while ($entry != 1) {
+        while (1) {
             // create a main query that will take the values from the database 
             if ($newEmail != $recordsid['Customer_email']) { // meaning something has been changed if the new email to be updated is not equal to the email in the database record of this user
     
@@ -276,7 +275,6 @@ session_start();
                 </tr>
                 
                 <img src=\"../Images/user.png\" alt=\"Image of User\"  class=\"Icons\"> 
-                <p style=\"color:green\"> Successfully updated </p>
             </div>
 
             <tr>
