@@ -21,6 +21,7 @@ function myFunction(image , price , description, P_id ){
     document.getElementById("images").src = image;
     document.getElementById("about").innerHTML = description;
     document.getElementById("price").innerHTML = "R "+ price;
+    Product_id = P_id;
 
 }
 
