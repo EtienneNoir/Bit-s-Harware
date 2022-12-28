@@ -78,7 +78,7 @@ session_start();
 
             if (isset($_REQUEST["Cart"])) {
 
-                echo $_POST['id'];
+                echo "<h1>".$_POST['id']."</h1>";
 
             }
 
