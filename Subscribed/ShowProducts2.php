@@ -197,7 +197,7 @@ session_start();
 
         <div>
             
-            <button id="btn" onclick="checkLogin()"> Add Item to Cart </button>  
+            <button id="btn" onclick="AddCart()"> Add Item to Cart </button>  
         
         </div>
 
@@ -207,7 +207,8 @@ session_start();
 
 
     <div id="backdrop" > </div> <!-- // The element that will blur out the background -->
-
+        
+    <div id="AddToCart"><?php  ?> </div>
     <!--  -->
     <footer style="background-image:url(../Images/Background.jpg) ;">
         <h4 style="font-family:Serif; " > &copy;  Copyright <strong> Bit's Hardwares</strong> </h4>
