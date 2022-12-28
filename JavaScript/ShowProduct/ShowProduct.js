@@ -39,8 +39,8 @@ function checkLogin(){
 document.getElementById("backdrop").addEventListener("click", close);// Function should be defined before this addEventListener, this is used instead of onclick because onclick does not appear to be working at run-tim
 document.getElementById("close").addEventListener("click", close);
 
-function AddCart(){
+function AddCart (){
 
-    window.location.href="Cart.php";
+    window.location.href="Cart.php?id=Product_id";
 
 }
