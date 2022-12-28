@@ -199,8 +199,8 @@ session_start();
             
             
             <!-- Create a form that will hold just the id of the product , Php will then be used to store or put the product in the -->
-            <form name="form" action="" method="get">
-                <input type="number" name="subject" id="subject" style="height:0px; width: 0px;">
+            <form action="ShowProducts2.php" method="get">
+                <input type="hidden" name="subject" id="id">
                 <input type="submit" value="Add Item to Cart" id="btn" name="Cart">
             </form>
         </div>

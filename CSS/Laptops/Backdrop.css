@@ -112,3 +112,9 @@
     border-left: none;
     border-width: thin;
 }
+
+#id{ /* Making the hidden field as small as possible to prevent it from taking too much space */
+
+    height:0px; 
+    width: 0px;
+}
