@@ -41,6 +41,6 @@ document.getElementById("close").addEventListener("click", close);
 
 function AddCart (){
 
-    window.location.href="./Subscribed/Cart.php?id=Product_id";
+    window.location.href="Cart.php?id=Product_id";
 
 }
