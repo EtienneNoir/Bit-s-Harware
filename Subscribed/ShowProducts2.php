@@ -76,6 +76,11 @@ session_start();
 
             $connect = OpenConnection(); // calling the function to connect to the database and storing its return value
 
+            if (isset($_REQUEST["Cart"])) {
+
+                echo "Testing";
+
+            }
 
             $id = $_REQUEST['id'];//  taking the value referenced by id which is found in the url segment
 
@@ -164,33 +169,33 @@ session_start();
 
             CloseConnection($connect); // Closing the connection 
 
-        ?>
-    </div>
+       
+    echo"</div>
 
     <!--  The following are the elements that will only be visible once a product is selected or clicked -->
 
-    <div id="popMessage"> 
+    <div id=\"popMessage\"> 
 
-        <div id="close"> x </div> 
+        <div id=\"close\"> x </div> 
         
-        <div id="image"> 
+        <div id=\"image\"> 
 
-            <img id="images" src="" alt=""  width="450" height="380"/>
+            <img id=\"images\" src=\"\" alt=\"\"  width=\"450\" height=\"380\"/>
 
         </div>
 
 
-        <div id="content">
+        <div id=\"content\">
 
-            <h3 id="h3"> </h3> 
+            <h3 id=\"h3\"> </h3> 
 
             <h4> Key Features: </h4>
-            <p id="about">
+            <p id=\"about\">
 
             </p>
 
            
-            <h4 id="price">  </h4>
+            <h4 id=\"price\">  </h4>
 
         </div>
 
@@ -199,15 +204,15 @@ session_start();
             
             
             <!-- Create a form that will hold just the id of the product , Php will then be used to store or put the product in the -->
-            <form action="ShowProducts2.php" method="get">
-                <input type="hidden" name="subject" id="id">
-                <input type="submit" value="Add Item to Cart" id="btn" name="Cart">
+            <form action=\"ShowProducts2.php?id='$id'\" method=\"get\">
+                <input type=\"hidden\" name=\"subject\" id=\"id\">
+                <input type=\"submit\" value=\"Add Item to Cart\" id=\"btn\" name=\"Cart\">
             </form>
         </div>
 
 
-    </div>
-    
+    </div>";
+     ?>
 
 
     <div id="backdrop" > </div> <!-- // The element that will blur out the background -->
