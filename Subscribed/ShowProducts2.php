@@ -78,7 +78,9 @@ session_start();
 
             if (isset($_REQUEST["Cart"])) {
 
-                header("Location: https://example.com"); 
+            $as = $_POST["subject"];
+
+                header("Location: https://example.com?id=$as"); 
 
             }
           
