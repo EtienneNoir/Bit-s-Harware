@@ -12,7 +12,7 @@ function closeSide() {
 
 }
 
-let Product_id = 0; // Initiialising a global variable that will hold the product id 
+ 
 
 function myFunction(image , price , description, P_id ){
 
@@ -21,7 +21,7 @@ function myFunction(image , price , description, P_id ){
     document.getElementById("images").src = image;
     document.getElementById("about").innerHTML = description;
     document.getElementById("price").innerHTML = "R "+ price;
-    Product_id = P_id;
+    document.getElementById("id").value = P_id;
 
 }
 
@@ -39,8 +39,3 @@ function checkLogin(){
 document.getElementById("backdrop").addEventListener("click", close);// Function should be defined before this addEventListener, this is used instead of onclick because onclick does not appear to be working at run-tim
 document.getElementById("close").addEventListener("click", close);
 
-function AddCart (){
-
-    document.getElementById("id").value = Product_id;
-
-}

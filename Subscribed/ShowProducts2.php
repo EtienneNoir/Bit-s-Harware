@@ -117,7 +117,7 @@ session_start();
             while ($records = mysqli_fetch_array($results)) {
 
                 if ($index <= 2){
-                    $id = $records["Product_id"]; // Using global variable Post to access data sent via Post method
+                    $P_id = $records["Product_id"]; // Using global variable Post to access data sent via Post method
                     $image = $records["Product_Image"];
                     $name =  $records["Product_Name"];
                     $description = $records["description"];
@@ -128,7 +128,7 @@ session_start();
                         
                     echo "<td>";
                     echo "<a >";
-                    echo "<img src=\"../$image\" alt=\"$alt\" width=\"450\" height=\"380\" onclick=\"myFunction('../$image' , '$price' , '$description', $id)\">";
+                    echo "<img src=\"../$image\" alt=\"$alt\" width=\"450\" height=\"380\" onclick=\"myFunction('../$image' , '$price' , '$description', '$P_id')\">";
                     echo "</a>";
                     echo "</td>";
 
@@ -147,7 +147,7 @@ session_start();
 
                 if ($count > 2) { // Thus only print this once $count is bigger than 3 which is an indication that the categories that we dont want to be reprinted have been traversed 
             
-                    $names = $records["Product_id"]; // Using global variable Post to access data sent via Post method
+                    $P_id = $records["Product_id"]; // Using global variable Post to access data sent via Post method
                     $image = $records["Product_Image"];
                     $name =  $records["Product_Name"];
                     $description = $records["description"];
@@ -158,7 +158,7 @@ session_start();
                         
                     echo "<td>";
                     echo "<a >";
-                    echo "<img src=\"../$image\" alt=\"$alt\" width=\"450\" height=\"380\" onclick=\"myFunction('../$image' , '$price' , '$description', $id)\">";
+                    echo "<img src=\"../$image\" alt=\"$alt\" width=\"450\" height=\"380\" onclick=\"myFunction('../$image' , '$price' , '$description', '$P_id')\">";
                     echo "</a>";
                     echo "</td>";
 
@@ -209,7 +209,7 @@ session_start();
             
             
             <!-- Create a form that will hold just the id of the product , Php will then be used to store or put the product in the -->
-            <form action=\"ShowProducts2.php?id=$Pro\" method=\"post\" onsubmit=\"AddCart()\">
+            <form action=\"ShowProducts2.php?id=$Pro\" method=\"post\">
                 <input type=\"hidden\" name=\"subject\" id=\"id\">
                 <input type=\"submit\" value=\"Add Item to Cart\" id=\"btn\" name=\"Cart\">
             </form>
