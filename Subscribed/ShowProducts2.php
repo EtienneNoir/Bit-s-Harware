@@ -78,7 +78,7 @@ session_start();
 
             if (isset($_REQUEST["Cart"])) {
 
-                echo "Testing";
+                echo $_POST['id'];
 
             }
 
@@ -172,7 +172,7 @@ session_start();
             CloseConnection($connect); // Closing the connection 
 
 
-        $Pro = $_SESSION['Product_id'];
+    $Pro = $_SESSION['Product_id']; // To pass on the current Product_id of the category to show the right items 
     echo"</div>
 
     <!--  The following are the elements that will only be visible once a product is selected or clicked -->
@@ -207,7 +207,7 @@ session_start();
             
             
             <!-- Create a form that will hold just the id of the product , Php will then be used to store or put the product in the -->
-            <form action=\"ShowProducts2.php?id=$Pro\" method=\"post\">
+            <form action=\"ShowProducts2.php?id=$Pro\" method=\"post\" onsubmit=\"AddCart()\">
                 <input type=\"hidden\" name=\"subject\" id=\"id\">
                 <input type=\"submit\" value=\"Add Item to Cart\" id=\"btn\" name=\"Cart\">
             </form>
@@ -229,6 +229,8 @@ session_start();
     </footer>
 
     <script type="text/javascript" src="../JavaScript/ShowProduct/ShowProduct.js"></script>
+
+
 
 </body>
 </html>
