@@ -83,6 +83,7 @@ session_start();
             }
 
             $_SESSION['Product_id'] =  $_REQUEST['id'];
+
             $id = $_SESSION['Product_id'];//  taking the value referenced by id which is found in the url segment
 
             $query = "SELECT * FROM Product WHERE Category_id = '$id'"; // Retrieving all the product based on the selected category which is an image on the front page    
@@ -170,7 +171,8 @@ session_start();
 
             CloseConnection($connect); // Closing the connection 
 
-       
+
+        $Pro = $_SESSION['Product_id'];
     echo"</div>
 
     <!--  The following are the elements that will only be visible once a product is selected or clicked -->
@@ -205,7 +207,7 @@ session_start();
             
             
             <!-- Create a form that will hold just the id of the product , Php will then be used to store or put the product in the -->
-            <form action=\"ShowProducts2.php?id=$id\" method=\"post\">
+            <form action=\"ShowProducts2.php?id=$Pro\" method=\"post\">
                 <input type=\"hidden\" name=\"subject\" id=\"id\">
                 <input type=\"submit\" value=\"Add Item to Cart\" id=\"btn\" name=\"Cart\">
             </form>
