@@ -14,14 +14,14 @@ function closeSide() {
 
  
 
-function myFunction(image , price , description, P_id ){
+function myFunction(image , price , description, PID ){
 
     document.getElementById("popMessage").style.display = "block";
     document.getElementById("backdrop").style.display = "block";   
     document.getElementById("images").src = image;
     document.getElementById("about").innerHTML = description;
     document.getElementById("price").innerHTML = "R "+ price;
-    document.getElementById("ids").value =  price ;
+    document.getElementById("ids").value = PID ;
 
 }
 
