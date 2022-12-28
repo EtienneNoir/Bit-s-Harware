@@ -78,15 +78,10 @@ session_start();
 
             if (isset($_REQUEST["Cart"])) {
 
-                echo "<h1 >".$_POST['id']."</h1>";
+                header("Location: https://example.com"); 
 
             }
-            else{
-
-                echo "<h1 >".$_POST['id']."</h1>";
-
-            }
-
+          
             $_SESSION['Product_id'] =  $_REQUEST['id'];
 
             $id = $_SESSION['Product_id'];//  taking the value referenced by id which is found in the url segment
