@@ -82,7 +82,8 @@ session_start();
 
             }
 
-            $id = $_REQUEST['id'];//  taking the value referenced by id which is found in the url segment
+            $_SESSION['Product_id'] =  $_REQUEST['id'];
+            $id = $_SESSION['Product_id'];//  taking the value referenced by id which is found in the url segment
 
             $query = "SELECT * FROM Product WHERE Category_id = '$id'"; // Retrieving all the product based on the selected category which is an image on the front page    
 
