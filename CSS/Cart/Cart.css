@@ -37,14 +37,13 @@
 
 #items {
 
- 
+    text-decoration:none;
 
 }
 
 #CartMain {
 
     border-style:solid; 
-    border-color:red;
     margin: auto;
     width: 800px;
     overflow-x: hidden;
