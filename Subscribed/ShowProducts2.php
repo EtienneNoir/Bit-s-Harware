@@ -85,7 +85,7 @@ session_start();
                 $Customer_id = $_SESSION["User_Name"];
 
                 $CartQuery = "INSERT INTO Cart_Item (Customer_id, Product_id)
-                    VALUES ('$Customer_id','$id')";
+                    VALUES (4,2)";
 
                 $AddToCartResult = mysqli_query($connect , $CartQuery) or die("Unable to retrieve data!");// Execute query using specified connection);
 
