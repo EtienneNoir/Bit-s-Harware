@@ -76,22 +76,7 @@ session_start();
 
             $connect = OpenConnection(); // calling the function to connect to the database and storing its return value
 
-            if (isset($_REQUEST["Cart"])) { // insert item to cart once the user submits the add item to cart form
-
-                $connect = OpenConnection(); // calling the function to connect to the database and storing its return value
-
-                $Product_id = $_POST["P_id"];
-
-                $Customer_id = $_SESSION["User_Name"];
-
-                $CartQuery = "INSERT INTO Cart_Item (Customer_id, Product_id)
-                    VALUES ('$Customer_id','$Product_id')";
-
-                $AddToCartResult = mysqli_query($connect , $CartQuery) or die("Unable to retrieve data!");// Execute query using specified connection);
-                
-                
-
-            }
+         
           
             $_SESSION['Product_id'] =  $_REQUEST['id'];
 
