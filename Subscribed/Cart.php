@@ -92,8 +92,9 @@ session_start();
         
 
         <div id=\"popMessage\"> 
-
-            <div id=\"close\"> x </div> 
+            <form action=\"Cart.php\" method=\"post\">
+                <input type=\"submit\" id=\"close\" value=\"Remove Item\" name=\"remove\"> 
+            </form>
             
             <div id=\"image\"> 
 
@@ -126,7 +127,7 @@ session_start();
     }
     echo "</ul><br>";
 
-    echo "</div>";
+    echo "</div><br><br>";
 
     ?>
  
