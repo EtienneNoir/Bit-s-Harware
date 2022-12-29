@@ -37,10 +37,7 @@
 
 #items {
 
-    list-style: none; /* Getting rid of the list item */
-    display: flex; /* converting the elements inside the ul component into boxes that are arranged horizontally */
-    align-items: baseline;/* The flex box items are arranged vertically */ 
-    
+ 
 
 }
 
@@ -49,5 +46,6 @@
     border-style:solid; 
     border-color:red;
     margin: auto;
-    width: 200px;
+    width: 800px;
+    overflow-x: hidden;
 }
