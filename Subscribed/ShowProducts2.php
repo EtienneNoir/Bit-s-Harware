@@ -82,11 +82,12 @@ session_start();
 
             if (isset($_REQUEST["Cart"])) { // insert item to cart once the user submits the add item to cart form
 
-                $Customer_id = $_SESSION["User_Name"];
+                $Customer_id = $_SESSION["id"];
 
+                $ProDuct_id = $_POST['P_id'];
                 
 
-                $CartQuery = "INSERT INTO Cart_Item(Customer_id, Product_id) VALUES (8,6)";
+                $CartQuery = "INSERT INTO Cart_Item(Customer_id, Product_id) VALUES ('$Customer_id' ,  '$ProDuct_id')"; // Storing the Product id and the Customer id, thus the item and who bought it
 
                 $AddToCartResult = mysqli_query($connect , $CartQuery) or die("Unable to retrieve data!");// Execute query using specified connection);
 
