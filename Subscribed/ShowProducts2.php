@@ -76,16 +76,16 @@ session_start();
 
             $connect = OpenConnection(); // calling the function to connect to the database and storing its return value
 
+            $_SESSION['Product_id'] = $_REQUEST['id'];
+
+            $id = $_SESSION['Product_id']; //  taking the value referenced by id which is found in the url segment
+
             if (isset($_REQUEST["Cart"])) { // insert item to cart once the user submits the add item to cart form
-
-               
-
-                $Product_id = $_POST["P_id"];
 
                 $Customer_id = $_SESSION["User_Name"];
 
                 $CartQuery = "INSERT INTO Cart_Item (Customer_id, Product_id)
-                    VALUES ('$Customer_id','$Product_id')";
+                    VALUES ('$Customer_id','$id')";
 
                 $AddToCartResult = mysqli_query($connect , $CartQuery) or die("Unable to retrieve data!");// Execute query using specified connection);
 
@@ -93,9 +93,9 @@ session_start();
 
             } else {
 
-            $_SESSION['Product_id'] = $_REQUEST['id'];
+           
 
-            $id = $_SESSION['Product_id']; //  taking the value referenced by id which is found in the url segment
+           
         
             $query = "SELECT * FROM Product WHERE Category_id = '$id'"; // Retrieving all the product based on the selected category which is an image on the front page    
         
