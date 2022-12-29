@@ -5,10 +5,11 @@
 
     height: 25px;
     width: 25px;
-    background-color: #fc8129;;
+    background-color: #fb8f41;
     border-radius: 50%;
     display: inline-block;
     color:whitesmoke;
     text-align:center;
+    margin: auto;
 
 }
