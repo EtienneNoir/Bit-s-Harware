@@ -106,6 +106,7 @@
 
             session_start();// Create a session and lead the customer to a subscribed version of the Website
 
+            $_SESSION['Quantity'] = 0;
             $_SESSION["User_Name"] = $name;
             $_SESSION["Last_Name"] = $Lname;
             $_SESSION["email"] = $email;

@@ -86,6 +86,7 @@
           $_SESSION["tel"] = $address;
           $_SESSION["pass"] = $pass;
           $_SESSION["id"] = $recordsid["Customer_id"];
+          $_SESSION['Quantity'] = 0;
 
           header("Location: /Subscribed/index2.php");
 
