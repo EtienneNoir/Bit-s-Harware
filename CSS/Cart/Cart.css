@@ -35,7 +35,7 @@
 
 }
 
-#items {
+#items li{
 
     text-decoration:none;
 
@@ -48,4 +48,5 @@
     width: 800px;
     overflow-x: hidden;
     height: 70vh;
+    border-color: none;
 }
