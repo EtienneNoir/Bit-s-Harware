@@ -117,7 +117,7 @@ session_start();
             while ($records = mysqli_fetch_array($results)) {
 
                 if ($index <= 2){
-                    $d = $records["Product_id"]; // Using global variable Post to access data sent via Post method
+                    $d = $records["Product_Id"]; // Using global variable Post to access data sent via Post method
                     $image = $records["Product_Image"];
                     $name =  $records["Product_Name"];
                     $description = $records["description"];
@@ -128,7 +128,7 @@ session_start();
                         
                     echo "<td>";
                     echo "<a >";
-                    echo "<img src=\"../$image\" alt=\"$alt\" width=\"450\" height=\"380\" onclick=\"myFunction('../$image' , '$price' , '$d', '$d')\">";
+                    echo "<img src=\"../$image\" alt=\"$alt\" width=\"450\" height=\"380\" onclick=\"myFunction('../$image' , '$price' , '$description', '$d')\">";
                     echo "</a>";
                     echo "</td>";
 
@@ -147,7 +147,7 @@ session_start();
 
                 if ($count > 2) { // Thus only print this once $count is bigger than 3 which is an indication that the categories that we dont want to be reprinted have been traversed 
             
-                    $d = $records["Product_id"]; // Using global variable Post to access data sent via Post method
+                    $d = $records["Product_Id"]; // Using global variable Post to access data sent via Post method
                     $image = $records["Product_Image"];
                     $name =  $records["Product_Name"];
                     $description = $records["description"];
@@ -158,7 +158,7 @@ session_start();
                         
                     echo "<td>";
                     echo "<a >";
-                    echo "<img src=\"../$image\" alt=\"$alt\" width=\"450\" height=\"380\" onclick=\"myFunction('../$image' , '$price' , '$d', '$d')\">";
+                    echo "<img src=\"../$image\" alt=\"$alt\" width=\"450\" height=\"380\" onclick=\"myFunction('../$image' , '$price' , '$description', '$d')\">";
                     echo "</a>";
                     echo "</td>";
 
