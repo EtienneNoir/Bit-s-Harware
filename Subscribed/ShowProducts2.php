@@ -34,7 +34,7 @@ session_start();
 
             $_SESSION['Product_id'] = $_REQUEST['id'];
 
-            $quantity = $_SESSION['Quantity'];
+           
 
             $id = $_SESSION['Product_id']; //  taking the value referenced by id which is found in the url segment
 
@@ -54,6 +54,7 @@ session_start();
 
             }
 
+            $quantity = $_SESSION['Quantity'];
             
         echo"<nav id=\"nav\">
             <ul>
