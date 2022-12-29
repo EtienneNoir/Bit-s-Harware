@@ -79,7 +79,7 @@ session_start();
         $image = $Product_Info["Product_Image"];
         $about = $Product_Info["description"];
         $price = $Product_Info['Price'];
-
+        $name = $Product_Info['Product_Name'];
     
         echo "<li>";
         
@@ -92,8 +92,9 @@ session_start();
         
 
         <div id=\"popMessage\"> 
-            <form action=\"Cart.php\" method=\"post\">
+            <form action=\"Cart.php?id=$Product_id\" method=\"post\">
                 <input type=\"submit\" id=\"remove\" value=\"Remove Item\" name=\"remove\"> 
+                <input type=\"hidden\" name=\"P_id\" value=\"$name\" id=\"ids\">
             </form>
             
             <div id=\"image\"> 
