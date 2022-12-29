@@ -1,9 +1,4 @@
 
-header{
-
-    margin-top: 3rem; /* Creating space outside the element */
-
-}
 
 #title{
 
@@ -36,4 +31,9 @@ header{
 #nav a:hover,
 #nav a:active {
     color: #818181;
+}
+
+#headerCart{
+
+    margin:auto;
 }

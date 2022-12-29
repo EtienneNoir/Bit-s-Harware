@@ -111,7 +111,7 @@ session_start();
                 </p>
 
                 
-                <h4 id=\"price\"> $price </h4>
+                <h4 id=\"price\"> R $price </h4>
 
             </div>
 
