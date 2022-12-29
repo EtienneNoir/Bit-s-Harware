@@ -45,49 +45,87 @@ session_start();
 
     </header>
   
-    <?php 
+    <?php
 
-    $Product_id = $_REQUEST['id'];
-
-    echo "<div id=\"Cart\">
-       
+    $Customer_id = $_SESSION["id"];
 
 
+    // Retrieve all the items stored in the Cart_Item table linked to the current user (Customer_id); 
+    // Retrieve the Product_id and get its information like price, feature from the product table
+
+    include '../config.php'; // importing config page, to use its properties
     
 
-    <div id=\"popMessage\"> 
+    $connect = OpenConnection(); // calling the function to connect to the database and storing its return value
 
-        <div id=\"close\"> x </div> 
+    $IdQuery = "SELECT * FROM Cart_Item WHERE Customer_id = '$Customer_id'";
+
+    $idResult = mysqli_query($connect, $IdQuery) or die("Unable to connect to database!"); // Execute query then return the result
+
+
+    echo "<ul>";
+    while ($recordsid = mysqli_fetch_array($idResult)){
+
+        $Product_id = $recordsid['Product_id'];
+
         
-        <div id=\"image\"> 
+        $Product_Query = "SELECT * FROM Product WHERE Product_id = '$Product_id'";
 
-            <img id=\"images\" src=\"\" alt=\"\"  width=\"450\" height=\"380\"/>
+        $Product_Result = mysqli_query($connect, $Product_Query) or die("Unable to connect to database!"); // Execute query then return the result
 
-        </div>
+        $Product_Info = mysqli_fetch_array($Product_Result);
+
+        $image = $Product_Info["Product_Image"];
+        $about = $Product_Info["description"];
+        $price = $Product_Info['Price'];
+
+    
+        echo "<li>";
+        
+        
+        
+        echo"<div id=\"Cart\">
+        
 
 
-        <div id=\"content\">
+        
 
-            <h3 id=\"h3\"> </h3> 
+        <div id=\"popMessage\"> 
 
-            <h4> Key Features: </h4>
-            <p id=\"about\">
-
-            </p>
-
+            <div id=\"close\"> x </div> 
             
-            <h4 id=\"price\"> $Product_id </h4>
+            <div id=\"image\"> 
 
-        </div>
+                <img id=\"images\" src=\"../$image\" alt=\"\"  width=\"450\" height=\"380\"/>
 
-
-       
-
-
-    </div>
+            </div>
 
 
-    </div><br><br>";
+            <div id=\"content\">
+
+                <h3 id=\"h3\"> </h3> 
+
+                <h4> Key Features: </h4>
+                <p id=\"about\">
+                    $about
+                </p>
+
+                
+                <h4 id=\"price\"> $price </h4>
+
+            </div>
+
+
+        
+
+
+        </div>";
+
+        echo "</li>";
+    }
+    echo "</ul>";
+
+    echo"<br><br>";
 
     ?>
  
