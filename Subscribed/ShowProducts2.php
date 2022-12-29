@@ -88,8 +88,8 @@ session_start();
                     VALUES ('$Customer_id','$Product_id')";
 
                 $AddToCartResult = mysqli_query($connect , $CartQuery) or die("Unable to retrieve data!");// Execute query using specified connection);
-                
-                
+
+                echo "Success";                 
 
             } else {
 
