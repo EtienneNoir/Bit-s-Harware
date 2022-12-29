@@ -14,7 +14,7 @@ function closeSide() {
 
  
 
-function myFunction(image , price , description, PID ){
+function myFunction(image , price , description , PID ){
 
     document.getElementById("popMessage").style.display = "block";
     document.getElementById("backdrop").style.display = "block";   
