@@ -53,6 +53,8 @@ session_start();
                 echo "Success";                 
 
             }
+
+            
         echo"<nav id=\"nav\">
             <ul>
 
