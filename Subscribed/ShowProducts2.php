@@ -80,7 +80,7 @@ session_start();
                 </li>
 
                 <li>
-                    <a href=\"javascript:void(0)\" style=\"color:#fc8129\"  > Cart <div id=\"dot\"> $quantity </div> </a> 
+                    <a href=\"javascript:void(0)\" > Cart <div id=\"dot\"> $quantity </div> </a> 
                 </li>
 
                 <li>
