@@ -48,4 +48,6 @@
 
     border-style:solid; 
     border-color:red;
+    margin: auto;
+    width: 200px;
 }
