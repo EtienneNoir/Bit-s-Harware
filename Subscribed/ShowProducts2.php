@@ -24,60 +24,17 @@ session_start();
     <h2 id="title"> <img src="../Images/favicon.png" alt="Image of CPU" id="animation"> <Strong> Bit's Hardwares </Strong> </h2>
 
     <header> 
+    <?php
 
-        <nav id="nav">
-            <ul>
+            $user_Name = $_SESSION["User_Name"];
 
-                <li>
-                    <a href="javascript:void(0)" onclick="openSide()" > &#9776;Filter </a> 
-                </li>
-
-
-                <li>
-                    <a href="index2.php" > Home </a> 
-                </li>
-
-                <li>
-                    <a href="Edit.php" > <?php echo $_SESSION["User_Name"]; ?> <img src="../Images/user.png" alt="Image of User"  class="Icons"> </a> 
-                </li>
-
-                <li>
-                    <a href="About.php" > about </a> 
-                </li>
-
-                <li>
-                    <a href="javascript:void(0)" style="color:#fc8129"  > Cart <?php echo $_SESSION['Quantity']; ?> </a> 
-                </li>
-
-                <li>
-                    <a href="javascript:void(0)"  > Search </a> 
-                </li>
-            </ul>
-        </nav>
-
-    </header>
-
-    
-
-    <div id="sideContent" >
-        <ul><a id="a" class="f" href="javascript:void(0)" onclick="closeSide()" ><img src="../Images/close.png" alt="Image of Close Sign" class="animationClose" width="100" height="100"> </a><br><br><br><br><br><br>
-            <a id="a" href="#"> <img src="../Images/Ram1.png"  class="animationClose" alt="Image of Ram" width="100" height="100"> </a><br><br><br>
-            <a id="a" href="#"> <img src="../Images/Towers1.png"  class="animationClose" alt="Image of a Tower" width="100" height="100"> </a><br><br><br>
-            <a id="a" href="#"> <img src="../Images/Periph1.png"  class="animationClose" alt="Peripherals" width="100" height="100">  </a><br><br><br><br><br>
-            <a id="a" href="#"> <img src="../Images/Speaker1.png"  class="animationClose" alt="Image of a Speaker" width="100" height="100"> </a><br><br><br>
-            <a id="a" href="#"> <img src="../Images/GPU1.png"  class="animationClose" alt="Image of a GPU" width="100" height="100"> </a><br><br><br><br>
-            <a id="a" href="#"> <img src="../Images/Monitor1.png"  class="animationClose" alt="Image of a Monitors" width="100" height="100"></a><br><br><br>
-            <a id="a" href="#"> <img src="../Images/CPU1.png"  class="animationClose" alt="Image of CPU" width="100" height="100"> </a>
-        </ul>
-    </div>
-
-    <div id="main">
-        <?php
             include '../config.php'; // importing config page, to use its properties
 
             $connect = OpenConnection(); // calling the function to connect to the database and storing its return value
 
             $_SESSION['Product_id'] = $_REQUEST['id'];
+
+            $quantity = $_SESSION['Quantity'];
 
             $id = $_SESSION['Product_id']; //  taking the value referenced by id which is found in the url segment
 
@@ -96,6 +53,54 @@ session_start();
                 echo "Success";                 
 
             }
+        echo"<nav id=\"nav\">
+            <ul>
+
+                <li>
+                    <a href=\"javascript:void(0)\" onclick=\"openSide()\" > &#9776;Filter </a> 
+                </li>
+
+
+                <li>
+                    <a href=\"index2.php\" > Home </a> 
+                </li>
+
+                <li>
+                    <a href=\"Edit.php\" >  $user_Name <img src=\"../Images/user.png\" alt=\"Image of User\"  class=\"Icons\"> </a> 
+                </li>
+
+                <li>
+                    <a href=\"About.php\" > about </a> 
+                </li>
+
+                <li>
+                    <a href=\"javascript:void(0)\" style=\"color:#fc8129\"  > Cart $quantity  </a> 
+                </li>
+
+                <li>
+                    <a href=\"javascript:void(0)\"  > Search </a> 
+                </li>
+            </ul>
+        </nav>
+
+    </header>";
+
+    
+
+    echo"<div id=\"sideContent\" >
+        <ul><a id=\"a\" class=\"f\" href=\"javascript:void(0)\" onclick=\"closeSide()\" ><img src=\"../Images/close.png\" alt=\"Image of Close Sign\" class=\"animationClose\" width=\"100\" height=\"100\"> </a><br><br><br><br><br><br>
+            <a id=\"a\" href=\"#\"> <img src=\"../Images/Ram1.png\"  class=\"animationClose\" alt=\"Image of Ram\" width=\"100\" height=\"100\"> </a><br><br><br>
+            <a id=\"a\" href=\"#\"> <img src=\"../Images/Towers1.png\"  class=\"animationClose\" alt=\"Image of a Tower\" width=\"100\" height=\"100\"> </a><br><br><br>
+            <a id=\"a\" href=\"#\"> <img src=\"../Images/Periph1.png\"  class=\"animationClose\" alt=\"Peripherals\" width=\"100\" height=\"100\">  </a><br><br><br><br><br>
+            <a id=\"a\" href=\"#\"> <img src=\"../Images/Speaker1.png\"  class=\"animationClose\" alt=\"Image of a Speaker\" width=\"100\" height=\"100\"> </a><br><br><br>
+            <a id=\"a\" href=\"#\"> <img src=\"../Images/GPU1.png\"  class=\"animationClose\" alt=\"Image of a GPU\" width=\"100\" height=\"100\"> </a><br><br><br><br>
+            <a id=\"a\" href=\"#\"> <img src=\"../Images/Monitor1.png\"  class=\"animationClose\" alt=\"Image of a Monitors\" width=\"100\" height=\"100\"></a><br><br><br>
+            <a id=\"a\" href=\"#\"> <img src=\"../Images/CPU1.png\"  class=\"animationClose\" alt=\"Image of CPU\" width=\"100\" height=\"100\"> </a>
+        </ul>
+    </div>";
+
+    echo "<div id=\"main\">";
+        
 
            
 
