@@ -212,7 +212,7 @@ session_start();
 
         <div id=\"content\">
 
-            <h3 id=\"h3\"> </h3> 
+            <h3 id=\"h3\"> $name </h3> 
 
             <h4> Key Features: </h4>
             <p id=\"about\">
