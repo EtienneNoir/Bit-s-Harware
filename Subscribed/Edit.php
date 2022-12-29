@@ -34,7 +34,7 @@ session_start();
                 </li>
 
                 <li>
-                    <a href="javascript:void(0)"  > Your cart </a> 
+                    <a href="javascript:void(0)"> Cart <div id="quantity"> <?php echo $_SESSION['Quantity']; ?></div>   </a> 
                 </li>
 
                 <li>
