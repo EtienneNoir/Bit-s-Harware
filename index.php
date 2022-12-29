@@ -1,3 +1,6 @@
+<?php 
+    session_destroy(); // Destroyed any previous sessions, to start a new one 
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
