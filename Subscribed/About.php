@@ -13,6 +13,7 @@ session_start();
     <link rel="stylesheet" href="../CSS/Animation.css">
     <link rel="icon" type="png" href="../Images/favicon.png">
     <link rel="stylesheet" href="../CSS/About/About.css">
+    <link rel="stylesheet" href="../CSS/Cart/Quantity.css">
     <title>Bit's Hardwares</title>
 
 </head>
