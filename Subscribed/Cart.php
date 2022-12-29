@@ -47,6 +47,7 @@ session_start();
   
     <?php
 
+    echo "<div id=\"CartMain\">";
     $Customer_id = $_SESSION["id"];
 
 
@@ -63,7 +64,7 @@ session_start();
     $idResult = mysqli_query($connect, $IdQuery) or die("Unable to connect to database!"); // Execute query then return the result
 
 
-    echo "<ul id=\"items\">";
+    echo "<ul id=\"items\" style=\"border-style:sold; border-color:red; \">";
     while ($recordsid = mysqli_fetch_array($idResult)){
 
         $Product_id = $recordsid['Product_id'];
@@ -123,9 +124,9 @@ session_start();
 
         echo "</li>";
     }
-    echo "</ul>";
+    echo "</ul><br>";
 
-    echo"<br><br>";
+    echo "</div>";
 
     ?>
  
