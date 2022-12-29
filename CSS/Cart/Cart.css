@@ -43,10 +43,12 @@
 
 #CartMain {
 
-    border-style:solid; 
     margin: auto;
     width: 800px;
     overflow-x: hidden;
     height: 70vh;
-    border-color: none;
+    list-style: none; /* Getting rid of the list item */
+    border-style: solid;
+    border-color: rgb(1, 41, 64);
+    border-width: thin;
 }
