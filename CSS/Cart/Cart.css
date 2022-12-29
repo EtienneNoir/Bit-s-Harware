@@ -37,7 +37,7 @@
 
 #items li{
 
-    text-decoration:none;
+    list-style: none; /* Getting rid of the list item */
 
 }
 
@@ -47,8 +47,5 @@
     width: 800px;
     overflow-x: hidden;
     height: 70vh;
-    list-style: none; /* Getting rid of the list item */
-    border-style: solid;
-    border-color: rgb(1, 41, 64);
-    border-width: thin;
+
 }
