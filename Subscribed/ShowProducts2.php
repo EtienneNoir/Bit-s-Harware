@@ -76,11 +76,11 @@ session_start();
                 </li>
 
                 <li>
-                    <a href=\"About.php\" > about </a> 
+                    <a href=\"About.php\" > about </a>
                 </li>
 
                 <li>
-                    <a href=\"javascript:void(0)\" > Cart <div id=\"dot\"> $quantity </div> </a> 
+                    <a href=\"javascript:void(0)\" ><img src=\"../Images/pngwing.com.png\" alt=\"Image of Cart\"  class=\"Icons\"> $quantity </div> </a> 
                 </li>
 
                 <li>
