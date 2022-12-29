@@ -1,6 +1,6 @@
 <?php
 session_start();
-$_SESSION['Quantity'] = 0;// Indicating the amount of items the user has in the cart
+$_SESSION['Quantity'];// Indicating the amount of items the user has in the cart
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,6 +13,7 @@ $_SESSION['Quantity'] = 0;// Indicating the amount of items the user has in the 
     <link rel="stylesheet" href="../CSS/Index/Footer.css">
     <link rel="stylesheet" href="../CSS/Animation.css">
     <link rel="icon" type="png" href="../Images/favicon.png">
+    <link rel="stylesheet" href="../CSS/Cart/Quantity.css">
     <title>Bit's Hardwares</title>
 
 </head>
@@ -38,7 +39,7 @@ $_SESSION['Quantity'] = 0;// Indicating the amount of items the user has in the 
                 </li>
 
                 <li>
-                    <a href="javascript:void(0)"  > Your cart </a> 
+                    <a href="javascript:void(0)"> Cart <div id="quantity"> <?php $_SESSION['Quantity']; ?></div>  </a> 
                 </li>
 
                 <li>
