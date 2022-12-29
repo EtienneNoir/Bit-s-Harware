@@ -92,142 +92,142 @@ session_start();
 
                 echo "Success";                 
 
-            } else {
+            }
 
            
 
            
+    
+        $query = "SELECT * FROM Product WHERE Category_id = '$id'"; // Retrieving all the product based on the selected category which is an image on the front page    
+    
+        $results = mysqli_query($connect, $query) or die("Unable to retrieve data!"); // Execute query using specified connection);
+    
+        $results1 = mysqli_query($connect, $query) or die("Unable to retrieve data!"); // Another query that stores the same result to be used by another while loop 
+    
+
+        echo "<table>";
+
+        echo "<tr>"; // Creating the first row of the table
+    
+        /* 
         
-            $query = "SELECT * FROM Product WHERE Category_id = '$id'"; // Retrieving all the product based on the selected category which is an image on the front page    
+        * What the following code does : 
+        * While there are still records or rows in the array execute the inner loop 
+        * In the inner loop execute the code in the if statements only three times and increments the $index variable to ensure of this
+        * This is done to have one row of four items so that another code can be put together to output another row
         
-            $results = mysqli_query($connect, $query) or die("Unable to retrieve data!"); // Execute query using specified connection);
-        
-            $results1 = mysqli_query($connect, $query) or die("Unable to retrieve data!"); // Another query that stores the same result to be used by another while loop 
-        
-
-            echo "<table>";
-
-            echo "<tr>"; // Creating the first row of the table
-        
-            /* 
-            
-            * What the following code does : 
-            * While there are still records or rows in the array execute the inner loop 
-            * In the inner loop execute the code in the if statements only three times and increments the $index variable to ensure of this
-            * This is done to have one row of four items so that another code can be put together to output another row
-            
-            */
+        */
 
 
-            echo "<table>";
+        echo "<table>";
 
-            echo "<tr>"; // Creating the first row of the table
-            $index = 0;
+        echo "<tr>"; // Creating the first row of the table
+        $index = 0;
 
-            while ($records = mysqli_fetch_array($results)) {
+        while ($records = mysqli_fetch_array($results)) {
 
-                if ($index <= 2) {
-                    $d = $records["Product_Id"]; // Using global variable Post to access data sent via Post method
-                    $image = $records["Product_Image"];
-                    $name = $records["Product_Name"];
-                    $description = $records["description"];
-                    $price = $records['Price'];
-                    $alt = $records["alt"];
+            if ($index <= 2) {
+                $d = $records["Product_Id"]; // Using global variable Post to access data sent via Post method
+                $image = $records["Product_Image"];
+                $name = $records["Product_Name"];
+                $description = $records["description"];
+                $price = $records['Price'];
+                $alt = $records["alt"];
 
 
 
-                    echo "<td>";
-                    echo "<a >";
-                    echo "<img src=\"../$image\" alt=\"$alt\" width=\"450\" height=\"380\" onclick=\"myFunction('../$image' , '$price' , '$description', '$d')\">";
-                    echo "</a>";
-                    echo "</td>";
+                echo "<td>";
+                echo "<a >";
+                echo "<img src=\"../$image\" alt=\"$alt\" width=\"450\" height=\"380\" onclick=\"myFunction('../$image' , '$price' , '$description', '$d')\">";
+                echo "</a>";
+                echo "</td>";
 
-                    $index = $index + 1;
-
-                }
+                $index = $index + 1;
 
             }
 
-            echo "</tr>"; // Creating the first row of the table
-        
-            echo "<tr>"; // Creating the second row of the table that will hold its four items 
-        
-            $count = 0;
-            while ($records = mysqli_fetch_array($results1)) {
+        }
 
-                if ($count > 2) { // Thus only print this once $count is bigger than 3 which is an indication that the categories that we dont want to be reprinted have been traversed 
-        
-                    $d = $records["Product_Id"]; // Using global variable Post to access data sent via Post method
-                    $image = $records["Product_Image"];
-                    $name = $records["Product_Name"];
-                    $description = $records["description"];
-                    $price = $records['Price'];
-                    $alt = $records["alt"];
+        echo "</tr>"; // Creating the first row of the table
+    
+        echo "<tr>"; // Creating the second row of the table that will hold its four items 
+    
+        $count = 0;
+        while ($records = mysqli_fetch_array($results1)) {
+
+            if ($count > 2) { // Thus only print this once $count is bigger than 3 which is an indication that the categories that we dont want to be reprinted have been traversed 
+    
+                $d = $records["Product_Id"]; // Using global variable Post to access data sent via Post method
+                $image = $records["Product_Image"];
+                $name = $records["Product_Name"];
+                $description = $records["description"];
+                $price = $records['Price'];
+                $alt = $records["alt"];
 
 
 
-                    echo "<td>";
-                    echo "<a >";
-                    echo "<img src=\"../$image\" alt=\"$alt\" width=\"450\" height=\"380\" onclick=\"myFunction('../$image' , '$price' , '$description', '$d')\">";
-                    echo "</a>";
-                    echo "</td>";
+                echo "<td>";
+                echo "<a >";
+                echo "<img src=\"../$image\" alt=\"$alt\" width=\"450\" height=\"380\" onclick=\"myFunction('../$image' , '$price' , '$description', '$d')\">";
+                echo "</a>";
+                echo "</td>";
 
-                }
-
-                $count = $count + 1; // Everytime we don't execute the code in the if statement this is incremented to make sure we eventually print out everything
             }
 
-            echo "</tr>";
+            $count = $count + 1; // Everytime we don't execute the code in the if statement this is incremented to make sure we eventually print out everything
+        }
 
-            echo "</table>";
+        echo "</tr>";
 
-            CloseConnection($connect); // Closing the connection 
+        echo "</table>";
+
+        CloseConnection($connect); // Closing the connection 
+    
+
+        $Pro = $_SESSION['Product_id']; // To pass on the current Product_id of the category to show the right items 
+        echo "</div>
+
+    <!--  The following are the elements that will only be visible once a product is selected or clicked -->
+
+    <div id=\"popMessage\"> 
+
+        <div id=\"close\"> x </div> 
         
+        <div id=\"image\"> 
 
-            $Pro = $_SESSION['Product_id']; // To pass on the current Product_id of the category to show the right items 
-            echo "</div>
+            <img id=\"images\" src=\"\" alt=\"\"  width=\"450\" height=\"380\"/>
 
-        <!--  The following are the elements that will only be visible once a product is selected or clicked -->
+        </div>
 
-        <div id=\"popMessage\"> 
 
-            <div id=\"close\"> x </div> 
+        <div id=\"content\">
+
+            <h3 id=\"h3\"> </h3> 
+
+            <h4> Key Features: </h4>
+            <p id=\"about\">
+
+            </p>
+
+        
+            <h4 id=\"price\">  </h4>
+
+        </div>
+
+
+        <div>
             
-            <div id=\"image\"> 
-
-                <img id=\"images\" src=\"\" alt=\"\"  width=\"450\" height=\"380\"/>
-
-            </div>
-
-
-            <div id=\"content\">
-
-                <h3 id=\"h3\"> </h3> 
-
-                <h4> Key Features: </h4>
-                <p id=\"about\">
-
-                </p>
-
             
-                <h4 id=\"price\">  </h4>
-
-            </div>
-
-
-            <div>
-                
-                
-                <!-- Create a form that will hold just the id of the product , Php will then be used to store or put the product in the -->
-                <form action=\"ShowProducts2.php?id=$Pro\" method=\"post\">
-                    <input type=\"hidden\" name=\"P_id\" value=\"Awe\" id=\"ids\">
-                    <input type=\"submit\" value=\"Add Item to Cart\" id=\"btn\" name=\"Cart\">
-                </form>
-            </div>
+            <!-- Create a form that will hold just the id of the product , Php will then be used to store or put the product in the -->
+            <form action=\"ShowProducts2.php?id=$Pro\" method=\"post\">
+                <input type=\"hidden\" name=\"P_id\" value=\"Awe\" id=\"ids\">
+                <input type=\"submit\" value=\"Add Item to Cart\" id=\"btn\" name=\"Cart\">
+            </form>
+        </div>
 
 
-        </div>";
-    }
+    </div>";
+    
      ?>
 
 
