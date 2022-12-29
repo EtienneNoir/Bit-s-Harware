@@ -93,7 +93,7 @@ session_start();
 
         <div id=\"popMessage\"> 
             <form action=\"Cart.php\" method=\"post\">
-                <input type=\"submit\" id=\"close\" value=\"Remove Item\" name=\"remove\"> 
+                <input type=\"submit\" id=\"remove\" value=\"Remove Item\" name=\"remove\"> 
             </form>
             
             <div id=\"image\"> 
