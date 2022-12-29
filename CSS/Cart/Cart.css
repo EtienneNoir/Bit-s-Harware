@@ -1,59 +1,26 @@
-#Cart{
-
-
-}
-
 #popMessage{
 
-    
     color:whitesmoke;
     border-style: solid;
-
     text-align: center;
-    
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 6px;
     background-color:black;
     border-style: solid;
     border-color: rgb(1, 41, 64);
-
     border-width: thin;
-
     margin: auto;
-
     margin-top: 10px;
-
     /* The code below is to center the element at the page */
-
-
     height: fit-content;
 
     zoom: 90%;
-
-
     width:fit-content;
     
     /* To hide the element until it is selected */
-
-
-   
-
-
-
-
-
-    
     top: 10vh;
     left: calc(50% - 15rem); /* This is to make sure that it is always in the middle */
-
-
-
     opacity: 0.8;
-
-
-
-
-
 }
 
 #nav{
@@ -65,5 +32,14 @@
 #headerCart{
 
    width: 650px;
+
+}
+
+#items {
+
+    list-style: none; /* Getting rid of the list item */
+    display: flex; /* converting the elements inside the ul component into boxes that are arranged horizontally */
+    align-items: baseline;/* The flex box items are arranged vertically */ 
+    
 
 }
