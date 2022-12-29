@@ -46,7 +46,7 @@ session_start();
                 </li>
 
                 <li>
-                    <a href="javascript:void(0)" style="color:#fc8129" <?php echo $_SESSION['Quantity']; ?> > Your cart </a> 
+                    <a href="javascript:void(0)" style="color:#fc8129"  > <?php echo $_SESSION['Quantity']; ?> </a> 
                 </li>
 
                 <li>
