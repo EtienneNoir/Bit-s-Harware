@@ -5,10 +5,10 @@
 
     height: 25px;
     width: 25px;
-    background-color: #fb8f41;
+    background-color: transparent;
     border-radius: 50%;
     display: inline-block;
-    color:whitesmoke;
+    color:#fb8f41;
     text-align:center;
     margin: auto;
 
