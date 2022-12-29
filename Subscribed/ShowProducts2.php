@@ -128,7 +128,7 @@ session_start();
                         
                     echo "<td>";
                     echo "<a >";
-                    echo "<img src=\"../$image\" alt=\"$alt\" width=\"450\" height=\"380\" onclick=\"myFunction('../$image' , '$price' , '$description', '$d')\">";
+                    echo "<img src=\"../$image\" alt=\"$alt\" width=\"450\" height=\"380\" onclick=\"myFunction('../$image' , '$price' , '$d', '$d')\">";
                     echo "</a>";
                     echo "</td>";
 
@@ -158,7 +158,7 @@ session_start();
                         
                     echo "<td>";
                     echo "<a >";
-                    echo "<img src=\"../$image\" alt=\"$alt\" width=\"450\" height=\"380\" onclick=\"myFunction('../$image' , '$price' , '$description', '$d')\">";
+                    echo "<img src=\"../$image\" alt=\"$alt\" width=\"450\" height=\"380\" onclick=\"myFunction('../$image' , '$price' , '$d', '$d')\">";
                     echo "</a>";
                     echo "</td>";
 
