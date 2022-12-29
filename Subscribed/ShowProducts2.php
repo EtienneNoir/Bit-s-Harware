@@ -80,7 +80,7 @@ session_start();
                 </li>
 
                 <li>
-                    <a href=\"javascript:void(0)\" ><img src=\"../Images/pngwing.com.png\" alt=\"Image of Cart\" id=\"cartPng\"> $quantity </div> </a> 
+                    <a href=\"javascript:void(0)\" > Cart <div id=\"quantity\"> $quantity </div> </a> 
                 </li>
 
                 <li>
