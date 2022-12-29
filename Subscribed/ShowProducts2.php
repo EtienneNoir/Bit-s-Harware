@@ -1,5 +1,6 @@
 <?php
 session_start();
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -45,7 +46,7 @@ session_start();
                 </li>
 
                 <li>
-                    <a href="javascript:void(0)"  > Your cart </a> 
+                    <a href="javascript:void(0)" style="color:#fc8129" <?php echo $_SESSION['Quantity']; ?> > Your cart </a> 
                 </li>
 
                 <li>
@@ -91,6 +92,7 @@ session_start();
 
                 $AddToCartResult = mysqli_query($connect , $CartQuery) or die("Unable to retrieve data!");// Execute query using specified connection);
 
+                $_SESSION['Quantity'] = $_SESSION['Quantity'] + 1; // Used to indicate how many items the user has in the cart
                 echo "Success";                 
 
             }

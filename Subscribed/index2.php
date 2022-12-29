@@ -1,5 +1,6 @@
 <?php
 session_start();
+$_SESSION['Quantity'] = 0;// Indicating the amount of items the user has in the cart
 ?>
 <!DOCTYPE html>
 <html lang="en">
