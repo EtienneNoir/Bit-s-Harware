@@ -17,7 +17,7 @@ session_start();
     <link rel="stylesheet" href="../CSS/Animation.css">
     <link rel="stylesheet" href="../CSS/Laptops/Laptop.css">
     <link rel="stylesheet" href="../CSS/Laptops/Backdrop.css">
-    <link rel="stylesheet" href="../CSS/Cart/Quantity.css>>
+    <link rel="stylesheet" href="../CSS/Cart/Quantity.css">
     <link rel="icon" type="png" href="../Images/favicon.png">
     <title>Document</title>
 </head> <!-- The fit-content is to get rid of any overlap or extra spaces that body might allow, which as a result can allow the elements within the body to move around -->
