@@ -64,7 +64,7 @@ session_start();
     $idResult = mysqli_query($connect, $IdQuery) or die("Unable to connect to database!"); // Execute query then return the result
 
 
-    echo "<ul id=\"items\" style=\"border-style:sold; border-color:red; \">";
+    echo "<ul id=\"items\">";
     while ($recordsid = mysqli_fetch_array($idResult)){
 
         $Product_id = $recordsid['Product_id'];
