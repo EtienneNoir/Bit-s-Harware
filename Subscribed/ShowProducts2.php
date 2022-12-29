@@ -76,7 +76,7 @@ session_start();
                 </li>
 
                 <li>
-                    <a href=\"javascript:void(0)\" > Cart <div id=\"quantity\"> $quantity </div> </a> 
+                    <a href=\"Cart.php\" > Cart <div id=\"quantity\"> $quantity </div> </a> 
                 </li>
 
                 <li>

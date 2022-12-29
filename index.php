@@ -34,7 +34,7 @@
                 </li>
 
                 <li>
-                    <a href="javascript:void(0)"  > Your cart </a> 
+                    <a href="Profile.php"  > Your cart </a> 
                 </li>
 
                 <li>
