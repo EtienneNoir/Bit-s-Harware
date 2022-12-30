@@ -76,7 +76,7 @@ session_start();
 
         $date = date("Y-m-d H:i:s");   // The current Date format acceptable in mysql
 
-        $orderQuery = "INSERT INTO Orders(Customer_id, Date, Phone, Email, Address. Total_Price) VALUES ('$Customer_id','$date','$phone', '$email', '$address', '$Price_Total')";
+        $orderQuery = "INSERT INTO Orders(Customer_id, Date, Phone, Email, Address, Total_Price) VALUES ('$Customer_id','$date','$phone', '$email', '$address', '$Price_Total')";
 
         $orderResult = mysqli_query($connect, $orderQuery) or die("Unable to connect to database!"); // Execute query then return the result
 
@@ -196,7 +196,7 @@ session_start();
         echo "</ul><br>";
 
         echo "<form action=\"Cart.php\" method=\"post\" id=\"Purchase_form\" >
-            <input type=\"submit\" value=\"Confirm: Total Price: R $Price_Total\" title=\"Confirm Order\" id=\"buy\" name=\"Cart\">
+            <input type=\"submit\" value=\"Total Price: R $Price_Total\" title=\"Confirm Order\" id=\"buy\" name=\"Cart\">
             </form>";
 
         echo "</div><br>";
