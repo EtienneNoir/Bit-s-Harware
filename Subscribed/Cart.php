@@ -145,14 +145,15 @@ session_start();
 
     
 
-    echo "</div><br><br>";
+   
 
     CloseConnection($connect); // Closing the connection 
 
     echo"<div style=\"margin:auto\"><form action=\"Order.php\" method=\"post\" id=\"Purchase_form\" >
             <input type=\"submit\" value=\"Purchase order\" id=\"buy\" name=\"Cart\">
         </form></div>";
-            
+       
+    echo "</div><br><br>";
     
     ?>
  
