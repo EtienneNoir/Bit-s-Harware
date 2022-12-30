@@ -39,7 +39,7 @@ session_start();
                 </li>
 
                 <li>
-                    <a href="javascript:void(0)"  > Search </a> 
+                    <a href="Order.php"  > Invoices</a> 
                 </li>
             </ul>
         </nav>

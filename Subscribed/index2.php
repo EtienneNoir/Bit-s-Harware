@@ -43,7 +43,7 @@ $_SESSION['Quantity'];// Indicating the amount of items the user has in the cart
                 </li>
 
                 <li>
-                    <a href="javascript:void(0)"  > Search </a> 
+                    <a href="javascript:void(0)"  > Invoices</a> 
                 </li>
             </ul>
         </nav>
