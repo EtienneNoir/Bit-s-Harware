@@ -111,7 +111,7 @@ session_start();
 
          // Remove items in the cart as the items in the cart have been purchased
 
-        $deItems = "DELETE FROM Cart_Item WHERE Customer = '$Customer_id'";
+        $deItems = "DELETE FROM Cart_Item WHERE Customer_id = '$Customer_id'";
 
         $delResults = mysqli_query($connect, $deItems) or die("Unable to connect to database!"); // Execute query then return the result
 
