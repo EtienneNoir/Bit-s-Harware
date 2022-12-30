@@ -69,7 +69,7 @@ session_start();
         
         $_SESSION['Quantity'] = $_SESSION['Quantity'] - 1;// To visually show that an item has been removed
 
-        echo '<script>alert("Item Removed from cart")</script>';
+        echo '<script>alert("Item has been Removed from cart")</script>';
     
 
     }
@@ -146,8 +146,12 @@ session_start();
     echo "</div><br><br>";
 
     CloseConnection($connect); // Closing the connection 
-    
 
+    echo"<form action=\"Order.php\" method=\"post\">
+            <input type=\"submit\" value=\"Buy Items\" id=\"buy\" name=\"Cart\">
+        </form>";
+            
+    
     ?>
  
     <footer style="background-image:url(../Images/Background.jpg) ;">
