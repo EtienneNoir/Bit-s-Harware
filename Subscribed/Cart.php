@@ -63,7 +63,7 @@ session_start();
 
     if(isset($_REQUEST['Cart'])){
 
-        $date = date("F j, Y, g:i a"); // The current Date
+        $date = date("Y-m-d H:i:s");   // The current Date
 
         $orderQuery = "INSERT INTO Orders(Customer_id, Date, Phone, Email, Address) VALUES ('$Customer_id','$date','$phone', '$email', '$address')";
 
