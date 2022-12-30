@@ -99,14 +99,14 @@ session_start();
             
             <div id=\"image\"> 
 
-                <img id=\"images\" src=\"../$image\" alt=\"\"  width=\"450\" height=\"380\"/>
+                <img id=\"images\" src=\"../$image\" alt=\"\"  width=\"450\" height=\"380\" title=\"$name\"/>
 
             </div>
 
 
             <div id=\"content\">
 
-                <h3 id=\"h3\"> $name </h3> 
+                <h3 id=\"h3\"> </h3> 
 
                 <h4> Key Features: </h4>
                 <p id=\"about\">
