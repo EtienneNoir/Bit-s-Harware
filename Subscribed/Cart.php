@@ -149,9 +149,9 @@ session_start();
 
     CloseConnection($connect); // Closing the connection 
 
-    echo"<form action=\"Order.php\" method=\"post\" id=\"Purchase_form\" style=\"margin:auto\">
+    echo"<div style=\"margin:auto\"><form action=\"Order.php\" method=\"post\" id=\"Purchase_form\" >
             <input type=\"submit\" value=\"Purchase order\" id=\"buy\" name=\"Cart\">
-        </form>";
+        </form></div>";
             
     
     ?>
