@@ -74,7 +74,7 @@ session_start();
 
         $Price_Total = $Price_records['SUM(Price )'];
 
-        $date = date("Y-m-d H:i:s");   // The current Date format acceptable in mysql
+        $date = date("Y-m-d H:i:s");   // The current Date format acceptable in mysql, which is the time of the time zone or location that the server is in 
 
         $orderQuery = "INSERT INTO Orders(Customer_id, Date, Phone, Email, Address, Total_Price) VALUES ('$Customer_id','$date','$phone', '$email', '$address', '$Price_Total')";
 
@@ -82,7 +82,7 @@ session_start();
 
         //To retrieve the order_id in order to link it to all the products purchased:
 
-        $retrieve = "SELECT Order_id FROM Orders WHERE Customer_id = '$Customer_id'";
+        $retrieve = "SELECT Order_id FROM Orders WHERE Customer_id = '$Customer_id' and WHERE Date = '$date'";
 
         $retrieveResult = mysqli_query($connect, $retrieve) or die("Unable to connect to database!"); // Execute query then return the result
 
