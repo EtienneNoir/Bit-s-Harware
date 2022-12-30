@@ -45,9 +45,13 @@ session_start();
         </nav>
 
     </header>
-    <div style="border-style:solid; border-color: green; height: 600px; ">
+    <div style="border-style:solid; border-color: green; height: 600px; overflow-y:scroll; ">
 
+        <div  style="border-style:solid; background-color: black; opacity: 0.8; box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); transition: 0.3s;
+  width: 40%;">
+              
 
+        </div>
 
     </div>
  
