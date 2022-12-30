@@ -143,7 +143,7 @@ session_start();
     }
     echo "</ul><br>";
 
-    echo "</div><br><br>";
+    echo "</div><br>";
 
    
 
