@@ -89,6 +89,7 @@ session_start();
         while ($Item_records = mysqli_fetch_array($Item_Result)) {
 
             $P_ID = $Item_records['Product_id'];
+            
 
             $details = "INSERT INTO Order_record(`Order_id`, Product_id) VALUES ( $order_id,$P_ID )";
 
@@ -118,7 +119,16 @@ session_start();
         $IdQuery = "SELECT * FROM Cart_Item WHERE Customer_id = '$Customer_id'";
 
         $idResult = mysqli_query($connect, $IdQuery) or die("Unable to connect to database!"); // Execute query then return the result
-    
+
+
+        $priceQuery = "SELECT SUM(Price ) FROM Cart_Item WHERE Customer_id = '$Customer_id'"; // Getting the Total proce of all the items 
+
+
+        $Price_Result = mysqli_query($connect,  $priceQuery) or die("Unable to connect to database!"); // Execute query 
+
+        $Price_records = mysqli_fetch_array($Price_Result);
+
+        $Price_Total = $Price_records['SUM(Price )'];
 
         echo "<ul id=\"items\">";
         while ($recordsid = mysqli_fetch_array($idResult)) {
@@ -174,15 +184,17 @@ session_start();
         }
         echo "</ul><br>";
 
+        echo "<form action=\"Cart.php\" method=\"post\" id=\"Purchase_form\" >
+            <input type=\"submit\" value=\"Total Price: $Price_Total\" title=\"Confirm Order\" id=\"buy\" name=\"Cart\">
+            </form>";
+
         echo "</div><br>";
 
 
 
         CloseConnection($connect); // Closing the connection 
     
-        echo "<form action=\"Cart.php\" method=\"post\" id=\"Purchase_form\" >
-                <input type=\"submit\" value=\"Purchase order\" id=\"buy\" name=\"Cart\">
-            </form>";
+       
     }
        
     echo "<br><br>"
