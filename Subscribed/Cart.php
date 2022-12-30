@@ -75,7 +75,9 @@ session_start();
 
         $retrieveResult = mysqli_query($connect, $retrieve) or die("Unable to connect to database!"); // Execute query then return the result
 
-        echo $retrieveResult;
+        $recordsid = mysqli_fetch_array($retrieveResult);
+
+        echo $recordsid['Order_id'];
     
 
     } else {
