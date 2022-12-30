@@ -12,6 +12,7 @@ session_start();
     <link rel="stylesheet" href="../CSS/Index/Footer.css">
     <link rel="stylesheet" href="../CSS/Animation.css">
     <link rel="icon" type="png" href="../Images/favicon.png">
+    <link rel="stylesheet" href="../CSS/Cart/Cart.css">
     <link rel="stylesheet" href="../CSS/Cart/Quantity.css">
     <title>Bit's Hardwares</title>
 
@@ -44,7 +45,7 @@ session_start();
         </nav>
 
     </header>
-    <div style="border-style:solid; border-color: green; height: 300px">
+    <div style="border-style:solid; border-color: green; height: 600px; ">
 
 
 
