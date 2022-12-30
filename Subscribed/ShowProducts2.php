@@ -41,9 +41,10 @@ session_start();
                 $Customer_id = $_SESSION["id"];
 
                 $ProDuct_id = $_POST['P_id'];
-                
 
-                $CartQuery = "INSERT INTO Cart_Item(Customer_id, Product_id) VALUES ('$Customer_id' ,  '$ProDuct_id')"; // Storing the Product id and the Customer id, thus the item and who bought it
+                $Price = $_POST['Price'];
+
+                $CartQuery = "INSERT INTO Cart_Item(Customer_id, Product_id, Price) VALUES ('$Customer_id' ,  '$ProDuct_id' ,  '$Price')"; // Storing the Product id and the Customer id, thus the item and who bought it
 
                 $AddToCartResult = mysqli_query($connect , $CartQuery) or die("Unable to retrieve data!");// Execute query using specified connection);
 
@@ -231,6 +232,7 @@ session_start();
             <!-- Create a form that will hold just the id of the product , Php will then be used to store or put the product in the -->
             <form action=\"ShowProducts2.php?id=$Pro\" method=\"post\">
                 <input type=\"hidden\" name=\"P_id\" value=\"Awe\" id=\"ids\">
+                <input type=\"hidden\" name=\"Price\" value=\"0\" id=\"Price\">
                 <input type=\"submit\" value=\"Add Item to Cart\" id=\"btn\" name=\"Cart\">
             </form>
         </div>
