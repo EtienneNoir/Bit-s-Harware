@@ -143,13 +143,15 @@ session_start();
     }
     echo "</ul><br>";
 
+    echo"<form action=\"Order.php\" method=\"post\">
+            <input type=\"submit\" value=\"Purchase order\" id=\"buy\" name=\"Cart\">
+        </form>";
+
     echo "</div><br><br>";
 
     CloseConnection($connect); // Closing the connection 
 
-    echo"<form action=\"Order.php\" method=\"post\">
-            <input type=\"submit\" value=\"Purchase order\" id=\"buy\" name=\"Cart\">
-        </form>";
+    
             
     
     ?>
