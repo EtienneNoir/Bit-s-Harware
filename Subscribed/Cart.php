@@ -109,6 +109,13 @@ session_start();
         }
 
 
+         // Remove items in the cart as the items in the cart have been purchased
+
+        $deItems = "DELETE FROM `Cart_Item` WHERE Customer = '$Customer_id'";
+
+        $delResults = mysqli_query($connect, $deItems) or die("Unable to connect to database!"); // Execute query then return the result
+
+        $_SESSION['Quantity'] = 0; // Indicating that all the items have been removed;
         
     
 
@@ -122,7 +129,7 @@ session_start();
             $delResult = mysqli_query($connect, $delQuery) or die("Unable to connect to database!"); // Execute query then return the result
     
             $_SESSION['Quantity'] = $_SESSION['Quantity'] - 1; // To visually show that an item has been removed
-    
+
             echo '<script>alert("Item has been Removed from cart")</script>';
 
 
