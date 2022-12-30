@@ -54,17 +54,17 @@ session_start();
 
             <table  style="margin: auto">
  
-            <tr>
+            <tr style="padding-bottom: 30px;">
                 <td>Delivery Address : </td>
                 <td>24 Paradise Row</td>
             </tr>
 
-            <tr>
+            <tr style="padding-bottom: 30px;">
                 <td>Contact Number: </td>
                 <td>0162332</td>
             </tr>
             
-            <tr>
+            <tr style="padding-bottom: 30px;">
                 <td>Total Price: </td>
                 <td> R 0162332</td>
             </tr>
