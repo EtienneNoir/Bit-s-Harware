@@ -153,7 +153,7 @@ session_start();
             <input type=\"submit\" value=\"Purchase order\" id=\"buy\" name=\"Cart\">
         </form>";
        
-   
+    echo "<br><br>"
     
     ?>
  
