@@ -80,9 +80,9 @@ session_start();
 
         $orderResult = mysqli_query($connect, $orderQuery) or die("Unable to connect to database!"); // Execute query then return the result
 
-        //To retrieve the order_id in order to link it to all the products purchased:
+        //To retrieve the order_id in order to link it to all the products purchased based on the customer id and the current date and time the items where bought:
 
-        $retrieve = "SELECT Order_id FROM Orders WHERE Customer_id = '$Customer_id' and WHERE Date = '$date'";
+        $retrieve = "SELECT Order_id FROM Orders WHERE Customer_id = '$Customer_id' and Date = '$date'";
 
         $retrieveResult = mysqli_query($connect, $retrieve) or die("Unable to connect to database!"); // Execute query then return the result
 
