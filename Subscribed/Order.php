@@ -55,17 +55,22 @@ session_start();
             <table  style="margin: auto">
  
             <tr style="padding-bottom: 30px;">
-                <td>Delivery Address : </td>
+                <td  style="padding-left: 40px ">Delivery Address : </td>
                 <td>24 Paradise Row</td>
             </tr>
 
             <tr style="padding-bottom: 30px;">
-                <td>Contact Number: </td>
+                <td  style="padding-left: 40px ">Contact Number: </td>
                 <td>0162332</td>
             </tr>
-            
+
             <tr style="padding-bottom: 30px;">
-                <td>Total Price: </td>
+                <td style="padding-left: 40px ">Date: </td>
+                <td> 2022/03/10</td>
+            </tr>
+
+            <tr style="padding-bottom: 30px;">
+                <td  style="padding-left: 40px ">Total Price: </td>
                 <td> R 0162332</td>
             </tr>
             
