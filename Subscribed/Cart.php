@@ -148,7 +148,7 @@ session_start();
     CloseConnection($connect); // Closing the connection 
 
     echo"<form action=\"Order.php\" method=\"post\">
-            <input type=\"submit\" value=\"Buy Items\" id=\"buy\" name=\"Cart\">
+            <input type=\"submit\" value=\"Purchase order\" id=\"buy\" name=\"Cart\">
         </form>";
             
     
