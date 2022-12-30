@@ -116,6 +116,8 @@ session_start();
         $delResults = mysqli_query($connect, $deItems) or die("Unable to connect to database!"); // Execute query then return the result
 
         $_SESSION['Quantity'] = 0; // Indicating that all the items have been removed;
+
+        CloseConnection($connect); // Closing the connection 
         
         header("Location: index2.php");  
     
