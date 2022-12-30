@@ -77,7 +77,27 @@ session_start();
 
         $recordsid = mysqli_fetch_array($retrieveResult);
 
-        echo $recordsid['Order_id'];
+        $order_id =  $recordsid['Order_id']; // unqiue order id based on the customer id
+
+        //Link the order to all the purchased items so that we can actually know what the customer ordered 
+
+        $Item_Query = "SELECT * FROM Cart_Item WHERE Customer_id = '$Customer_id'";
+
+        $Item_Result = mysqli_query($connect, $Item_Query) or die("Unable to connect to database!"); // Execute query then return the result
+
+
+        while ($Item_records = mysqli_fetch_array($Item_Result)) {
+
+            $P_ID = $Item_records['Product_id'];
+
+            $details = "INSERT INTO Order_record(`Order_id`, Product_id) VALUES ( $order_id,$P_ID )";
+
+            $execute = mysqli_query($connect, $details) or die("Unable to connect to database!"); // Execute query then return the result
+
+        }
+
+
+        
     
 
     } else {
@@ -120,14 +140,8 @@ session_start();
 
             echo "<li>";
 
-
-
             echo "<div id=\"Cart\">
             
-
-
-            
-
             <div id=\"popMessage\"> 
                 <form action=\"Cart.php?id=$Cart_id\" method=\"post\">
                     <input type=\"submit\" id=\"remove\" value=\"Remove Item\" name=\"remove\"> 
@@ -139,7 +153,6 @@ session_start();
                     <img id=\"images\" src=\"../$image\" alt=\"\"  width=\"450\" height=\"380\" title=\"$name\"/>
 
                 </div>
-
 
                 <div id=\"content\">
 
@@ -154,10 +167,6 @@ session_start();
                     <h4 id=\"price\"> R $price </h4>
 
                 </div>
-
-
-            
-
 
             </div>";
 
