@@ -67,6 +67,9 @@ session_start();
 
         $orderQuery = "INSERT INTO Orders(Customer_id, Date, Phone, Email, Address) VALUES ('$Customer_id','$date','$phone', '$email', '$address')";
 
+        $orderResult = mysqli_query($connect, $orderQuery) or die("Unable to connect to database!"); // Execute query then return the result
+    
+
     } else {
         if (isset($_REQUEST["remove"])) {
 
