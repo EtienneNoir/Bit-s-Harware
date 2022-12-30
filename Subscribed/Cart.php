@@ -59,6 +59,20 @@ session_start();
 
     $connect = OpenConnection(); // calling the function to connect to the database and storing its return value
 
+    if (isset($_REQUEST["remove"])) {
+
+        $Item_id = $_REQUEST['id'];
+
+        $delQuery = "DELETE FROM Cart_Item WHERE Cart_id = '$Item_id'";
+
+        $delResult = mysqli_query($connect, $delQuery) or die("Unable to connect to database!"); // Execute query then return the result
+        
+        $_SESSION['Quantity'] = $_SESSION['Quantity'] - 1;// To visually show that an item has been removed
+
+        echo '<script>alert("Item Removed from cart")</script>';
+    
+
+    }
     $IdQuery = "SELECT * FROM Cart_Item WHERE Customer_id = '$Customer_id'";
 
     $idResult = mysqli_query($connect, $IdQuery) or die("Unable to connect to database!"); // Execute query then return the result
@@ -69,7 +83,8 @@ session_start();
 
         $Product_id = $recordsid['Product_id'];
 
-        
+        $Cart_id =  $recordsid['Cart_id'];
+
         $Product_Query = "SELECT * FROM Product WHERE Product_id = '$Product_id'";
 
         $Product_Result = mysqli_query($connect, $Product_Query) or die("Unable to connect to database!"); // Execute query then return the result
@@ -92,7 +107,7 @@ session_start();
         
 
         <div id=\"popMessage\"> 
-            <form action=\"Cart.php?id=$Product_id\" method=\"post\">
+            <form action=\"Cart.php?id=$Cart_id\" method=\"post\">
                 <input type=\"submit\" id=\"remove\" value=\"Remove Item\" name=\"remove\"> 
                 <input type=\"hidden\" name=\"P_id\" value=\"$name\" id=\"ids\">
             </form>
@@ -129,6 +144,9 @@ session_start();
     echo "</ul><br>";
 
     echo "</div><br><br>";
+
+    CloseConnection($connect); // Closing the connection 
+    
 
     ?>
  
