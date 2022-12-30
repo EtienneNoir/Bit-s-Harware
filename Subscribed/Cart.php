@@ -149,7 +149,7 @@ session_start();
 
     CloseConnection($connect); // Closing the connection 
 
-    echo"<form action=\"Order.php\" method=\"post\" id=\"Purchase_form\">
+    echo"<form action=\"Order.php\" method=\"post\" id=\"Purchase_form\" style=\"margin:auto\">
             <input type=\"submit\" value=\"Purchase order\" id=\"buy\" name=\"Cart\">
         </form>";
             
