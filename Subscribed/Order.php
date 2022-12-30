@@ -44,27 +44,11 @@ session_start();
         </nav>
 
     </header>
-  
-    <?php
-
-    echo "<div id=\"Order\">";
-    $Customer_id = $_SESSION["id"];
-    $email = $_SESSION["email"];
-    $phone = $_SESSION["phone"];
-    $address = $_SESSION["tel"];
-
-    $connect = OpenConnection(); // calling the function to connect to the database and storing its return value
+    <div style="border-style:solid; border-color: green;">
 
 
-    include '../config.php'; // importing config page, to use its properties
 
-    echo "<div style=\"border-style:solid; border-color: green; width: 400px;\">";
-
-
-    echo "</div>";
-    echo "<br><br>";
-    
-    ?>
+    </div>
  
     <footer style="background-image:url(../Images/Background.jpg) ;">
         <h4 style="font-family:Serif; " > &copy;  Copyright <strong> Bit's Hardwares</strong> </h4>
