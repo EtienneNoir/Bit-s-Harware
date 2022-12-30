@@ -48,7 +48,7 @@ session_start();
     <div style="border-style:solid; border-color: green; height: 600px; overflow-y:scroll; ">
 
         <div  style="border-style:solid; background-color: black; opacity: 0.8; box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); transition: 0.3s;
-  width: 70%; height: 70%; margin:auto;">
+  width: 70%; height: 70%; margin:auto; color: whitesmoke;">
             
             <h4 style="margin: auto"><b>John Doe</b></h4> 
 
