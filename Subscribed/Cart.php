@@ -63,11 +63,19 @@ session_start();
 
     if(isset($_REQUEST['Cart'])){
 
-        $date = date("Y-m-d H:i:s");   // The current Date
+        $date = date("Y-m-d H:i:s");   // The current Date format acceptable in mysql
 
         $orderQuery = "INSERT INTO Orders(Customer_id, Date, Phone, Email, Address) VALUES ('$Customer_id','$date','$phone', '$email', '$address')";
 
         $orderResult = mysqli_query($connect, $orderQuery) or die("Unable to connect to database!"); // Execute query then return the result
+
+        //To retrieve the order_id in order to link it to all the products purchased:
+
+        $retrieve = "SELECT Order_id FROM Orders WHERE Customer_id = '$Customer_id'";
+
+        $retrieveResult = mysqli_query($connect, $retrieve) or die("Unable to connect to database!"); // Execute query then return the result
+
+        echo $retrieveResult;
     
 
     } else {
