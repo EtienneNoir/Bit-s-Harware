@@ -63,9 +63,20 @@ session_start();
 
     if(isset($_REQUEST['Cart'])){
 
+        //Getting the total Price of the items in the cart 
+
+        $priceQuery = "SELECT SUM(Price ) FROM Cart_Item WHERE Customer_id = '$Customer_id'"; // Getting the Total proce of all the items 
+
+
+        $Price_Result = mysqli_query($connect,  $priceQuery) or die("Unable to connect to database!"); // Execute query 
+
+        $Price_records = mysqli_fetch_array($Price_Result);
+
+        $Price_Total = $Price_records['SUM(Price )'];
+
         $date = date("Y-m-d H:i:s");   // The current Date format acceptable in mysql
 
-        $orderQuery = "INSERT INTO Orders(Customer_id, Date, Phone, Email, Address) VALUES ('$Customer_id','$date','$phone', '$email', '$address')";
+        $orderQuery = "INSERT INTO Orders(Customer_id, Date, Phone, Email, Address. Total_Price) VALUES ('$Customer_id','$date','$phone', '$email', '$address', '$Price_Total')";
 
         $orderResult = mysqli_query($connect, $orderQuery) or die("Unable to connect to database!"); // Execute query then return the result
 
@@ -185,7 +196,7 @@ session_start();
         echo "</ul><br>";
 
         echo "<form action=\"Cart.php\" method=\"post\" id=\"Purchase_form\" >
-            <input type=\"submit\" value=\"Total Price: $Price_Total\" title=\"Confirm Order\" id=\"buy\" name=\"Cart\">
+            <input type=\"submit\" value=\"Confirm: Total Price: R $Price_Total\" title=\"Confirm Order\" id=\"buy\" name=\"Cart\">
             </form>";
 
         echo "</div><br>";
