@@ -49,7 +49,9 @@ session_start();
 
     echo "<div id=\"CartMain\">";
     $Customer_id = $_SESSION["id"];
-
+    $email = $_SESSION["email"];
+    $phone = $_SESSION["phone"];
+    $address = $_SESSION["tel"];
 
     // Retrieve all the items stored in the Cart_Item table linked to the current user (Customer_id); 
     // Retrieve the Product_id and get its information like price, feature from the product table
@@ -61,7 +63,9 @@ session_start();
 
     if(isset($_REQUEST['Cart'])){
 
-        echo "Submitted";
+        $date = date("F j, Y, g:i a"); // The current Date
+
+        $orderQuery = "INSERT INTO Orders(Customer_id, Date, Phone, Email, Address) VALUES ('$Customer_id','$date','$phone', '$email', '$address')";
 
     } else {
         if (isset($_REQUEST["remove"])) {
