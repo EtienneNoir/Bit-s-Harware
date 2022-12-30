@@ -4,7 +4,7 @@ session_start();
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../CSS/Index/Navigation/nav&Title.css">
@@ -12,7 +12,7 @@ session_start();
     <link rel="stylesheet" href="../CSS/Index/Footer.css">
     <link rel="stylesheet" href="../CSS/Animation.css">
     <link rel="icon" type="png" href="../Images/favicon.png">
-    <link rel="stylesheet" href="../CSS/Cart/Cart.css">
+    <link rel="stylesheet" href="../CSS/Cart/Quantity.css">
     <title>Bit's Hardwares</title>
 
 </head>
@@ -44,7 +44,7 @@ session_start();
         </nav>
 
     </header>
-    <div style="border-style:solid; border-color: green;">
+    <div style="border-style:solid; border-color: green; height: 300phv">
 
 
 
