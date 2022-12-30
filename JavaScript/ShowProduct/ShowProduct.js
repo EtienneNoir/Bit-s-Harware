@@ -22,7 +22,7 @@ function myFunction(image , price , description , P_ID ){
     document.getElementById("about").innerHTML = description;
     document.getElementById("price").innerHTML = "R "+ price;
     document.getElementById("ids").value = P_ID ;
-    document.getElementById("Price").value = price ;
+    document.getElementById("Prices").value = price ;
 
 }
 
