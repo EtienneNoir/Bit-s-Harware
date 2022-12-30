@@ -52,18 +52,13 @@
 
 #remove{
     
-
     cursor: pointer;
     font-weight:normal;
     height:25px;
-
-
 }
 
 
 #buy{
-
- 
 
     border: none;
     padding: 15px 32px;
@@ -71,11 +66,9 @@
     background-color:#fc8129; 
     border-radius: 15px;
 
-    opacity: 0.8;
-    
 }
 
 #Purchase_form{
 
-    margin-left: 280px;
+    margin-left: 300px;
 }
