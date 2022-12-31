@@ -41,7 +41,7 @@ $_SESSION['Quantity'];// Indicating the amount of items the user has in the cart
                             <form action="" id="FormSearch" name="Search" onsubmit="return Validation2()">
                                 <table>
                                     <tr>
-                                        <td> <input type="text" id="in" placeholder="Search.." name="search" > </td>
+                                        <td> <input type="text" id="#SearchField" placeholder="Search.." name="search" > </td>
                                         <td> <button type="submit" id="Se" class="glowEffect">&#128269;</button> </td>
                                     </tr> 
                                 </table> 
