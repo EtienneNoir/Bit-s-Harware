@@ -45,7 +45,7 @@
     display: inline-block;
     }
       
-#dropdown-content {
+.dropdown-content {
     display: none;
     opacity: 0.9;
     position: absolute;
@@ -60,6 +60,8 @@
 #dropdown:hover .dropdown-content {
     display: block;
 }
+
+
 
 .glowEffect {
     width: 220px;
