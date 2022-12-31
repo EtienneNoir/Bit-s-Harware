@@ -42,7 +42,7 @@ $_SESSION['Quantity'];// Indicating the amount of items the user has in the cart
                                     <table>
                                         <tr>
                                             <td> <input type="text" id="in" placeholder="Search.." name="search" style="height: 45px; width: 210px; border-radius: 15px; text-align: center;"> </td>
-                                            <td> <button type="submit" id="Se" class="glowEffect">&#128269;</button> </td>
+                                            <td> <button type="submit" id="Se" class="effect">&#128269;</button> </td>
                                         </tr> 
                                     </table> 
                                 </form>
