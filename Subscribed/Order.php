@@ -48,29 +48,27 @@ session_start();
     <div style="border-style:solid; border-color: green; height: 600px; overflow-y:scroll; ">
 
         <div  style="border-style:solid; background-color: black; opacity: 0.8; box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); transition: 0.3s;
-  width: 70%; height: 70%; margin:auto; color: whitesmoke;">
+  width: 70%; height: 30%; margin:auto; color: whitesmoke;">
             
-            <h4 style="margin: auto"><b>John Doe</b></h4> 
-
             <table  style="margin: auto">
  
-            <tr style="padding-bottom: 30px;">
-                <td  style="padding-left: 40px ">Delivery Address : </td>
+            <tr style="padding-bottom: 40px;">
+                <td>Delivery Address : </td>
                 <td>24 Paradise Row</td>
             </tr>
 
-            <tr style="padding-bottom: 30px;">
-                <td  style="padding-left: 40px ">Contact Number: </td>
+            <tr style="padding-bottom: 40px;">
+                <td>Contact Number: </td>
                 <td>0162332</td>
             </tr>
 
-            <tr style="padding-bottom: 30px;">
-                <td style="padding-left: 40px ">Date: </td>
+            <tr style="padding-bottom: 40px;">
+                <td>Date: </td>
                 <td> 2022/03/10</td>
             </tr>
 
-            <tr style="padding-bottom: 30px;">
-                <td  style="padding-left: 40px ">Total Price: </td>
+            <tr style="padding-bottom: 40px;">
+                <td>Total Price: </td>
                 <td> R 0162332</td>
             </tr>
             
