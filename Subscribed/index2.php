@@ -22,7 +22,7 @@ $_SESSION['Quantity'];// Indicating the amount of items the user has in the cart
 <body style="background-image:url(../Images/Background.jpg) ; width: fit-content; margin:auto;">
     <h2 id="title"> <img src="../Images/favicon.png" alt="Image of CPU" id="animation"> <Strong> Bit's Hardwares </Strong> </h2>
 
-    <header>
+    <header style=" margin:auto;">
 
         <nav id="nav">
             <ul>
@@ -52,7 +52,7 @@ $_SESSION['Quantity'];// Indicating the amount of items the user has in the cart
                                         <td> <button type="submit" id="Se" class="glowEffect">&#128269;</button> </td>
                                     </tr> 
                                 </table> 
-                                </form>
+                            </form>
                         </div>
                 </div>
             </ul>
