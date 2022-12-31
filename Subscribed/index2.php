@@ -36,13 +36,13 @@ $_SESSION['Quantity'];// Indicating the amount of items the user has in the cart
 
                 <li>
                     <div class="dropdown">
-                        <a href="javascript:void(0)" onMouseOver="this.style.color='#818181'" onMouseOut="this.style.color='whitesmoke'"> Search </a>
-                        <div class="dropdown-content" id="table1">
-                            <form action="" id="Form2" name="Search1" onsubmit="return Validation2()">
+                        <a href="javascript:void(0)"> Search </a>
+                        <div id="dropdown-content" id="TableSearch">
+                            <form action="" id="FormSearch" name="Search">
                                 <table>
                                     <tr>
-                                        <td> <input type="text" id="in" placeholder="Search.." name="search" style="height: 45px; width: 210px; border-radius: 15px; text-align: center;"> </td>
-                                        <td> <button type="submit" id="Se" class="glowEffect">&#128269;</button> </td>
+                                        <td> <input type="text" id="SearchField" placeholder="Search.." name="search" > </td>
+                                        <td> <button type="submit" id="SearcButton">&#128269;</button> </td>
                                     </tr> 
                                 </table> 
                             </form>
@@ -59,7 +59,7 @@ $_SESSION['Quantity'];// Indicating the amount of items the user has in the cart
                     <a href="About.php" > about </a> 
                 </li>
 
-                
+
             </ul>
         </nav>
 
