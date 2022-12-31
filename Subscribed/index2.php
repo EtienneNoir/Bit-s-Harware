@@ -22,7 +22,7 @@ $_SESSION['Quantity'];// Indicating the amount of items the user has in the cart
 <body style="background-image:url(../Images/Background.jpg) ; width: fit-content; margin:auto;">
     <h2 id="title"> <img src="../Images/favicon.png" alt="Image of CPU" id="animation"> <Strong> Bit's Hardwares </Strong> </h2>
 
-    <header style=" margin:auto;">
+    <header>
 
         <nav id="nav">
             <ul>
@@ -42,8 +42,9 @@ $_SESSION['Quantity'];// Indicating the amount of items the user has in the cart
                     <a href="Cart.php"> Cart <div id="quantity"> <?php echo $_SESSION['Quantity']; ?></div>  </a> 
                 </li>
 
-                <div class="dropdown">
-                       <li><a href="javascript:void(0)" onMouseOver="this.style.color='#818181'" onMouseOut="this.style.color='whitesmoke'"> Search </a></li>
+                <li>
+                    <div class="dropdown">
+                        <a href="javascript:void(0)" onMouseOver="this.style.color='#818181'" onMouseOut="this.style.color='whitesmoke'"> Search </a>
                         <div class="dropdown-content" id="table1">
                             <form action="" id="Form2" name="Search1" onsubmit="return Validation2()">
                                 <table>
@@ -54,7 +55,8 @@ $_SESSION['Quantity'];// Indicating the amount of items the user has in the cart
                                 </table> 
                             </form>
                         </div>
-                </div>
+                    </div> 
+                </li>
             </ul>
         </nav>
 
