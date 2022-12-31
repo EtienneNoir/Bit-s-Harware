@@ -42,9 +42,19 @@ $_SESSION['Quantity'];// Indicating the amount of items the user has in the cart
                     <a href="Cart.php"> Cart <div id="quantity"> <?php echo $_SESSION['Quantity']; ?></div>  </a> 
                 </li>
 
-                <li>
-                    <a href="Order.php"  > Invoices</a> 
-                </li>
+                <div class="dropdown">
+                       <li><a href="javascript:void(0)" onMouseOver="this.style.color='#818181'" onMouseOut="this.style.color='whitesmoke'"> Search </a></li>
+                        <div class="dropdown-content" id="table1">
+                            <form action="" id="Form2" name="Search1" onsubmit="return Validation2()">
+                                <table>
+                                    <tr>
+                                        <td> <input type="text" id="in" placeholder="Search.." name="search" style="height: 45px; width: 210px; border-radius: 15px; text-align: center;"> </td>
+                                        <td> <button type="submit" id="Se" class="glowEffect">&#128269;</button> </td>
+                                    </tr> 
+                                </table> 
+                                </form>
+                        </div>
+                </div>
             </ul>
         </nav>
 
