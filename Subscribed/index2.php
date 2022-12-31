@@ -37,7 +37,7 @@ $_SESSION['Quantity'];// Indicating the amount of items the user has in the cart
                 <li>
                     <div id="dropdown">
                         <a href="javascript:void(0)"> Search </a>
-                            <div class="dropdown-content" id="table1">
+                            <div id="dropdown-content">
                                 <form action="" id="Form2" name="Search1" onsubmit="return Validation2()">
                                     <table>
                                         <tr>
