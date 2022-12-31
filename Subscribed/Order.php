@@ -45,12 +45,12 @@ session_start();
         </nav>
 
     </header>
-    <div style="border-style:solid; border-color: green; height: 600px; overflow-y:scroll; ">
+    <div style=" height: 600px; overflow-y:scroll; ">
 
         <div  style=" background-color: black; opacity: 0.8; box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); transition: 0.3s;
   width: 70%; height: 30%; margin:auto; color: whitesmoke;">
             
-            <table  style="margin: auto; margin-top:50%;">
+            <table  style="margin: auto; margin-top:10%;">
  
             <tr style="padding-bottom: 40px;">
                 <td>Delivery Address : </td>
