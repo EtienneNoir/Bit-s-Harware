@@ -35,14 +35,6 @@ $_SESSION['Quantity'];// Indicating the amount of items the user has in the cart
                 </li>
 
                 <li>
-                    <a href="About.php" > about </a> 
-                </li>
-
-                <li>
-                    <a href="Cart.php"> Cart <div id="quantity"> <?php echo $_SESSION['Quantity']; ?></div>  </a> 
-                </li>
-
-                <li>
                     <div class="dropdown">
                         <a href="javascript:void(0)" onMouseOver="this.style.color='#818181'" onMouseOut="this.style.color='whitesmoke'"> Search </a>
                         <div class="dropdown-content" id="table1">
@@ -57,6 +49,17 @@ $_SESSION['Quantity'];// Indicating the amount of items the user has in the cart
                         </div>
                     </div> 
                 </li>
+
+                <li>
+                    <a href="Cart.php"> Cart <div id="quantity"> <?php echo $_SESSION['Quantity']; ?></div>  </a> 
+                </li>
+
+
+                <li>
+                    <a href="About.php" > about </a> 
+                </li>
+
+                
             </ul>
         </nav>
 
