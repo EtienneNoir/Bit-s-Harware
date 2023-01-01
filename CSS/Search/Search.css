@@ -24,17 +24,12 @@
     zoom: 90%;
 
 
-    width:fit-content;
+    width:80px;
     
     /* To hide the element until it is selected */
 
 
-
-
- 
-
-
-
+   
     top: 10vh;
     left: calc(50% - 15rem); /* This is to make sure that it is always in the middle */
 
