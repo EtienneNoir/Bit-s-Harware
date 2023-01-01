@@ -14,7 +14,7 @@ $_SESSION['Quantity'];// Indicating the amount of items the user has in the cart
     <link rel="stylesheet" href="../CSS/Animation.css">
     <link rel="icon" type="png" href="../Images/favicon.png">
     <link rel="stylesheet" href="../CSS/Cart/Quantity.css">
-    <link rel="stylesheet" href="../CSS/Search/Search.css">
+    <link rel="stylesheet" href="../CSS/Laptops/Backdrop.css">
     <title>Bit's Hardwares</title>
 
 </head>
@@ -107,32 +107,47 @@ $_SESSION['Quantity'];// Indicating the amount of items the user has in the cart
             $name = $Search_Info['Product_Name'];
             $product_id = $Search_Info["Product_Id"];
 
-            echo "<li>";
+            echo "<li id=\"items\">";
 
-            echo "<div id=\"Cart\">
-            
-            <div id=\"Search\"> 
+            echo"<div id=\"popMessage\"> 
         
-                <div id=\"image\"> 
 
-                    <img id=\"images\" src=\"../$image\" alt=\"\"  width=\"450\" height=\"380\" title=\"$name\"/>
-
-                </div>
-
-                <div id=\"content\">
-
+            <div id=\"close\"> x </div> 
+            
+            <div id=\"image\"> 
+    
+                <img id=\"images\" src=\"../$image\" width=\"450\" height=\"380\"/>
+    
+            </div>
+    
+    
+            <div id=\"content\">
+    
                 <h3 id=\"h3\"> $name </h3> 
     
                 <h4> Key Features: </h4>
-                <p id=\"about\"> $about</p>
+                <p id=\"about\">  $about </p>
     
             
                 <h4 id=\"price\"> $price </h4>
     
             </div>
-
-
-            </div>";
+    
+    
+            <div>
+                
+                
+                <!-- Create a form that will hold just the id of the product , Php will then be used to store or put the product in the -->
+                <form action=\"Search.php\" method=\"post\">
+                    <input type=\"hidden\" name=\"P_id\" value=\"$product_id\" id=\"ids\">
+                    <input type=\"hidden\" name=\"Price\" value=\"$price\" id=\"Prices\">
+                    <input type=\"submit\" value=\"Add Item to Cart\" id=\"btn\" name=\"Cart\">
+                </form>
+            </div>
+    
+    
+        </div>";
+        
 
             echo "</li>";
 

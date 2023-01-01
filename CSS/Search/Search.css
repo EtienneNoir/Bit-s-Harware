@@ -43,8 +43,48 @@
 
     opacity: 0.8;
 
+}
 
 
+#items {
+
+    list-style: none; /* Getting rid of the list item */
+
+}
+
+#CartMain {
+
+    margin: auto;
+    width: 800px;
+    overflow-x: hidden;
+    height: 70vh;
+
+}
+
+#remove{
+    
+    cursor: pointer;
+    font-weight:normal;
+    height:25px;
+}
 
 
+#buy{
+
+    border: none;
+    padding: 15px 32px;
+    font-size: large;
+    background-color:#fc8129; 
+    border-radius: 15px;
+
+}
+
+#Purchase_form{
+
+    margin-left: 300px;
+}
+
+#buy{
+    
+    cursor: pointer;
 }
