@@ -26,6 +26,28 @@ $_SESSION['Quantity'];// Indicating the amount of items the user has in the cart
 
     <header>
 
+        <?php 
+
+            if (isset($_REQUEST["Cart"])) { // insert item to cart once the user submits the add item to cart form
+
+                $Customer_id = $_SESSION["id"];
+
+                $ProDuct_id = $_POST['P_id'];
+
+                $Price = $_POST['Price'];
+
+                $CartQuery = "INSERT INTO Cart_Item(Customer_id, Product_id, Price) VALUES ('$Customer_id' ,  '$ProDuct_id' ,  '$Price')"; // Storing the Product id and the Customer id, thus the item and who bought it
+
+                $AddToCartResult = mysqli_query($connect , $CartQuery) or die("Unable to retrieve dataw!");// Execute query using specified connection);
+
+                $_SESSION['Quantity'] = $_SESSION['Quantity'] + 1; // Used to indicate how many items the user has in the cart        
+
+            }
+
+            $quantity = $_SESSION['Quantity'];
+
+        ?>
+
         <nav id="nav">
             <ul>
                 <li>
