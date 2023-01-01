@@ -15,6 +15,7 @@ $_SESSION['Quantity'];// Indicating the amount of items the user has in the cart
     <link rel="icon" type="png" href="../Images/favicon.png">
     <link rel="stylesheet" href="../CSS/Cart/Quantity.css">
     <link rel="stylesheet" href="../CSS/Search/Search.css">
+    <link rel="stylesheet" href="../CSS/Cart/Cart.css">
     <title>Bit's Hardwares</title>
 
 </head>
