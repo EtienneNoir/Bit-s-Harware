@@ -24,31 +24,29 @@ $_SESSION['Quantity'];// Indicating the amount of items the user has in the cart
 
     <header>
 
-        <nav id="nav">Log out
+        <nav id="nav">
             <ul>
                 <li>
                     <a href="javascript:void(0)" > Home </a> 
                 </li>
 
+                
                 <li>
-                    <a href="Edit.php" > <?php echo $_SESSION["User_Name"]; ?> <img src="../Images/user.png" alt="Image of User"  class="Icons"> </a> 
-                </li>
-
-                <li>
-
-                    <div class="dropdown2" >
-                            <a id="a" href="javascript:void(0)" onMouseOver="this.style.color='#818181'" onMouseOut="this.style.color='whitesmoke'" style="margin-right:120px;"> <img src="../Images/user.png" alt="Image of User"  class="Icons"> <?php echo $_SESSION["User_Name"]; ?> </a></li>
-                            <div class="dropdown-content2" id="table2">
-                                    <div id="Log" style="padding-bottom:10px;">
-                                        <button class="glowEffect" > <a href="Edit.php" style="color:whitesmoke ;text-decoration: none;">Account Settings</a></button>
-                                    </div>
-
-                                    <div id="Log">
-                                        <button class="glowEffect" ><a href="../index.php" style="color:whitesmoke ;text-decoration: none;">Log out</a></button>
-                                    </div>
+                    <div id="dropdown">
+                        <a href="Edit.php"> <?php echo $_SESSION["User_Name"]; ?> <img src="../Images/user.png" alt="Image of User"  class="Icons"> </a>
+                            <div class="dropdown-content" id="table1">
+                                <form action="" id="Form2" name="Search1" onsubmit="return Validation2()">
+                                    <table>
+                                        <tr>
+                                        <div id="Log" style="padding-bottom:10px;">
+                                            <button class="glowEffect" > <a href="Edit.php?id=$userName" style="color:whitesmoke ;text-decoration: none;">Account Settings</a></button>
+                                        </div>
+                                       
+                                        </tr> 
+                                    </table> 
+                                </form>
                             </div>
                     </div>
-
                 </li>
 
 
