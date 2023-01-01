@@ -99,7 +99,7 @@ $_SESSION['Quantity'];// Indicating the amount of items the user has in the cart
 
             echo "<div id=\"CartMain\">";
 
-                echo "<ul style=\"list-style: none; \">";
+                echo "<ul style=\"list-style: none; overflow-x:auto; \">";
 
                 while ($Search_Info = mysqli_fetch_array($Searchresults)) {
 
@@ -114,7 +114,7 @@ $_SESSION['Quantity'];// Indicating the amount of items the user has in the cart
                 
 
                     echo "<li>";
-                    echo"<div id=\"popMessage\"; top-margin: 50px;> 
+                    echo"<div id=\"popMessage\";> 
                 
 
                     <div id=\"close\"> x </div> 
@@ -156,11 +156,6 @@ $_SESSION['Quantity'];// Indicating the amount of items the user has in the cart
 
                     echo "</li>";
 
-                    echo "<form action=\"Search.php?id=$product_id\" method=\"post\">
-
-                        <input type=\"hidden\" name=\"Price\" value=\"$price\" id=\"Prices\">
-                        <input type=\"submit\" value=\"Add Item to Cart\" id=\"btn\" name=\"Cart\">
-                    </form>";
 
                     echo "</div><br>";
 
