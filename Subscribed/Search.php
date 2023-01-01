@@ -97,9 +97,9 @@ $_SESSION['Quantity'];// Indicating the amount of items the user has in the cart
 
             $Searchresults = mysqli_query($connect, $Searchquery) or die("Unable to retrieve data!");// Execute query using specified connection 
 
-            echo "<div id=\"CartMain\" style=\"overflow-x:auto;height: 70vh;\">";
+            echo "<div id=\"CartMain\">";
 
-                echo "<ul style=\"list-style: none;\">";
+                echo "<ul id=\"items\">";
 
                 while ($Search_Info = mysqli_fetch_array($Searchresults)) {
 
