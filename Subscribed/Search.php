@@ -114,16 +114,10 @@ $_SESSION['Quantity'];// Indicating the amount of items the user has in the cart
 
     </header>";
 
-    CloseConnection($connect); // Closing the connection 
 
 
-    ?>
-
-    <div id="main">
-        <?php
-            include '../config.php'; // importing config page, to use its properties
-
-            $connect = OpenConnection(); // calling the function to connect to the database and storing its return value
+    echo"<div id=\"main\">";
+ 
 
             $search = $_REQUEST["search"];
 
