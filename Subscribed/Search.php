@@ -26,67 +26,102 @@ $_SESSION['Quantity'];// Indicating the amount of items the user has in the cart
 
     <header>
 
-        <nav id="nav">
-            <ul>
-                <li>
-                    <a href="javascript:void(0)" > Home </a> 
-                </li>
+    <?php
 
-                
-                <li>
-                    <div id="dropdown">
-                        <a href="javascript:void(0)"> <?php echo $_SESSION["User_Name"]; ?> <img src="../Images/user.png" alt="Image of User"  class="Icons"> </a>
-                            <div class="dropdown-content" id="table1">
-                                <form action="" id="Form2">
-                                    <table>
-                                        <tr>
-                                            <div id="Log" style="padding-bottom:10px;">
-                                                <button class="glowEffect" > <a href="Edit.php" >Account Settings</a></button>
-                                            </div>
-                                       
-                                            <div id="Log">
-                                                <button class="glowEffect" ><a href="../index.php" >Log out</a></button>
-                                            </div>
-                                        </tr> 
-                                    </table> 
-                                </form>
-                            </div>
-                    </div>
-                </li>
+$user_Name = $_SESSION["User_Name"];
+
+include '../config.php'; // importing config page, to use its properties
+
+$connect = OpenConnection(); // calling the function to connect to the database and storing its return value
 
 
-                <li>
-                    <div id="dropdown">
-                        <a href="javascript:void(0)"> Search </a>
-                            <div class="dropdown-content" id="tabl2">
-                                <form action="Search.php" id="Form2" name="Search1" onsubmit="return Validation2()">
-                                    <table>
-                                        <tr>
-                                            <td> <input type="text" id="in" placeholder="Search.." name="search" style="height: 45px; width: 210px; border-radius: 15px; text-align: center;"> </td>
-                                            <td> <button type="submit" id="Se" class="glowEffect">&#128269;</button> </td>
-                                        </tr> 
-                                    </table> 
-                                </form>
-                            </div>
-                    </div>
-                </li>
+if (isset($_REQUEST["Cart"])) { // insert item to cart once the user submits the add item to cart form
 
-                <li>
-                    <a href="Cart.php"> Cart <div id="quantity"> <?php echo $_SESSION['Quantity']; ?></div>  </a> 
-                </li>
+    
+
+    $Customer_id = $_SESSION["id"];
+
+    $ProDuct_id = $_POST['P_id'];
+
+    $Price = $_POST['Price'];
+
+    $CartQuery = "INSERT INTO Cart_Item(Customer_id, Product_id, Price) VALUES ('$Customer_id' ,  '$ProDuct_id' ,  '$Price')"; // Storing the Product id and the Customer id, thus the item and who bought it
+
+    $AddToCartResult = mysqli_query($connect , $CartQuery) or die("Unable to retrieve dataw!");// Execute query using specified connection);
+
+    $_SESSION['Quantity'] = $_SESSION['Quantity'] + 1; // Used to indicate how many items the user has in the cart        
+
+}
+
+$quantity = $_SESSION['Quantity'];
+
+echo"
+<header> 
+<nav id=\"nav\">
+<ul>
+
+    <li>
+        <a href=\"javascript:void(0)\" onclick=\"openSide()\" > &#9776;Filter </a> 
+    </li>
 
 
-                <li>
-                    <a href="About.php" > about </a> 
-                </li>
+    <li>
+        <a href=\"index2.php\" > Home </a> 
+    </li>
+
+    <li>
+        <a href=\"Edit.php\" >  $user_Name <img src=\"../Images/user.png\" alt=\"Image of User\"  class=\"Icons\"> </a> 
+    </li>
+
+    <li>
+        <div id=\"dropdown\">
+            <a href=\"javascript:void(0)\"> $quantity <img src=\"../Images/user.png\" alt=\"Image of User\"  class=\"Icons\"> </a>
+                <div class=\"dropdown-content\" id=\"table1\">
+                    <form action=\"\" id=\"Form2\">
+                        <table>
+                            <tr>
+                                <div id=\"Log\" style=\"padding-bottom:10px;\">
+                                    <button class=\"glowEffect\" > <a href=\"Edit.php\" >Account Settings</a></button>
+                                </div>
+                           
+                                <div id=\"Log\">
+                                    <button class=\"glowEffect\" ><a href=\"../index.php\" >Log out</a></button>
+                                </div>
+                            </tr> 
+                        </table> 
+                    </form>
+                </div>
+        </div>
+    </li>
 
 
-            </ul>
-        </nav>
+    <li>
+        <div id=\"dropdown\">
+            <a href=\"javascript:void(0)\"> Search </a>
+                <div class=\"dropdown-content\" id=\"tabl2\">
+                    <form action=\"Search.php\" id=\"Form2\" name=\"Search1\" onsubmit=\"return Validation2()\">
+                        <table>
+                            <tr>
+                                <td> <input type=\"text\" id=\"in\" placeholder=\"Search..\" name=\"search\" style=\"height: 45px; width: 210px; border-radius: 15px; text-align: center;\"> </td>
+                                <td> <button type=\"submit\" id=\"Se\" class=\"glowEffect\">&#128269;</button> </td>
+                            </tr> 
+                        </table> 
+                    </form>
+                </div>
+        </div>
+    </li>
 
-    </header>
+    <li>
+        <a href=\"About.php\" > about </a>
+    </li>
 
-    <div id="main">
+</ul>
+</nav>
+
+</header>";
+
+    echo"<div id=\"main\">";
+?>
         <?php
             include '../config.php'; // importing config page, to use its properties
 
@@ -135,7 +170,7 @@ $_SESSION['Quantity'];// Indicating the amount of items the user has in the cart
                         <p id=\"about\">  $description </p>
             
                     
-                        <h4 id=\"price\"> $price </h4>
+                        <h4 id=\"price\"> R $price </h4>
             
                     </div>
             
@@ -144,7 +179,7 @@ $_SESSION['Quantity'];// Indicating the amount of items the user has in the cart
                         
                         
                         <!-- Create a form that will hold just the id of the product , Php will then be used to store or put the product in the -->
-                        <form action=\"Search.php\" method=\"post\">
+                        <form action=\"Search.php?id=$search\" method=\"post\">
                             <input type=\"hidden\" name=\"P_id\" value=\"$product_id\" id=\"ids\">
                             <input type=\"hidden\" name=\"Price\" value=\"$price\" id=\"Prices\">
                             <input type=\"submit\" value=\"Add Item to Cart\" id=\"btn\" name=\"Cart\">

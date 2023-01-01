@@ -56,7 +56,7 @@ session_start();
                     <div id="dropdown">
                         <a href="javascript:void(0)"> Search </a>
                             <div class="dropdown-content" id="tabl2">
-                                <form action="" id="Form2" name="Search1" onsubmit="return Validation2()">
+                                <form action="Search.php" id="Form2" name="Search1" onsubmit="return Validation2()">
                                     <table>
                                         <tr>
                                             <td> <input type="text" id="in" placeholder="Search.." name="search" style="height: 45px; width: 210px; border-radius: 15px; text-align: center;"> </td>
