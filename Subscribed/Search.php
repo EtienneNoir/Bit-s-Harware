@@ -97,77 +97,83 @@ $_SESSION['Quantity'];// Indicating the amount of items the user has in the cart
 
             $Searchresults = mysqli_query($connect, $Searchquery) or die("Unable to retrieve data!");// Execute query using specified connection 
 
-        while ($Search_Info = mysqli_fetch_array($Searchresults)) {
+            echo "<div id=\"CartMain\">";
 
-            $product_id = $Search_Info["Product_Id"]; // Using global variable Post to access data sent via Post method
-            $image = $Search_Info["Product_Image"];
-            $name = $Search_Info["Product_Name"];
-            $description = $Search_Info["description"];
-            $price = $Search_Info['Price'];
-            $alt = $Search_Info["alt"];
+                echo "<ul style=\"list-style: none; \">";
 
- 
+                while ($Search_Info = mysqli_fetch_array($Searchresults)) {
 
-            echo "<li id=\"items\">";
+                    $product_id = $Search_Info["Product_Id"]; // Using global variable Post to access data sent via Post method
+                    $image = $Search_Info["Product_Image"];
+                    $name = $Search_Info["Product_Name"];
+                    $description = $Search_Info["description"];
+                    $price = $Search_Info['Price'];
+                    $alt = $Search_Info["alt"];
 
-            echo"<div id=\"popMessage\" style=\"display:block\";> 
-        
 
-            <div id=\"close\"> x </div> 
-            
-            <div id=\"image\"> 
-    
-                <img id=\"images\" src=\"../$image\" width=\"450\" height=\"380\"/>
-    
-            </div>
-    
-    
-            <div id=\"content\">
-    
-                <h3 id=\"h3\"> $name </h3> 
-    
-                <h4> Key Features: </h4>
-                <p id=\"about\">  $description </p>
-    
-            
-                <h4 id=\"price\"> $price </h4>
-    
-            </div>
-    
-    
-            <div>
                 
+
+                    echo "<li>";
+                    echo"<div id=\"popMessage\" style=\"display:block\"; top-margin: 50px;> 
                 
-                <!-- Create a form that will hold just the id of the product , Php will then be used to store or put the product in the -->
-                <form action=\"Search.php\" method=\"post\">
-                    <input type=\"hidden\" name=\"P_id\" value=\"$product_id\" id=\"ids\">
-                    <input type=\"hidden\" name=\"Price\" value=\"$price\" id=\"Prices\">
-                    <input type=\"submit\" value=\"Add Item to Cart\" id=\"btn\" name=\"Cart\">
-                </form>
-            </div>
-    
-    
-        </div>";
+
+                    <div id=\"close\"> x </div> 
+                    
+                    <div id=\"image\"> 
+            
+                        <img id=\"images\" src=\"../$image\" width=\"450\" height=\"380\"/>
+            
+                    </div>
+            
+            
+                    <div id=\"content\">
+            
+                        <h3 id=\"h3\"> $name </h3> 
+            
+                        <h4> Key Features: </h4>
+                        <p id=\"about\">  $description </p>
+            
+                    
+                        <h4 id=\"price\"> $price </h4>
+            
+                    </div>
+            
+            
+                    <div>
+                        
+                        
+                        <!-- Create a form that will hold just the id of the product , Php will then be used to store or put the product in the -->
+                        <form action=\"Search.php\" method=\"post\">
+                            <input type=\"hidden\" name=\"P_id\" value=\"$product_id\" id=\"ids\">
+                            <input type=\"hidden\" name=\"Price\" value=\"$price\" id=\"Prices\">
+                            <input type=\"submit\" value=\"Add Item to Cart\" id=\"btn\" name=\"Cart\">
+                        </form>
+                    </div>
+            
+            
+                    </div>";
+                
+
+                    echo "</li>";
+
+                    echo "</ul><br>";
+
+
+                    echo "<form action=\"Search.php?id=$product_id\" method=\"post\">
+
+                        <input type=\"hidden\" name=\"Price\" value=\"$price\" id=\"Prices\">
+                        <input type=\"submit\" value=\"Add Item to Cart\" id=\"btn\" name=\"Cart\">
+                    </form>";
+
+                    echo "</div><br>";
+
+                    echo "</li>";
+                }
+                echo "</ul><br>";
+
+                CloseConnection($connect); // Closing the connection 
         
-
-            echo "</li>";
-
-            echo "</ul><br>";
-
-
-            echo "<form action=\"Search.php?id=$product_id\" method=\"post\">
-
-                <input type=\"hidden\" name=\"Price\" value=\"$price\" id=\"Prices\">
-                <input type=\"submit\" value=\"Add Item to Cart\" id=\"btn\" name=\"Cart\">
-            </form>";
-
-            echo "</div><br>";
-
-
-
-            CloseConnection($connect); // Closing the connection 
-        
-        }
+            echo "</div>"
 
         ?>
         
