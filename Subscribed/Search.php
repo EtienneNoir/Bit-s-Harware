@@ -113,7 +113,7 @@ $_SESSION['Quantity'];// Indicating the amount of items the user has in the cart
 
                 
 
-                    echo "<li style=\"top-margin:20px;\">";
+                    echo "<li>";
                     echo"<div id=\"popMessage\";> 
                 
 
