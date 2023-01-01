@@ -90,86 +90,67 @@ $_SESSION['Quantity'];// Indicating the amount of items the user has in the cart
 
             $connect = OpenConnection(); // calling the function to connect to the database and storing its return value
 
-            $query = "SELECT * FROM Category";
+            $search = $_REQUEST["search"];
 
-            $results = mysqli_query($connect, $query) or die("Unable to retrieve data!");// Execute query using specified connection 
+            $Searchquery = "SELECT * FROM Product WHERE Product_Name LIKE '%{$search}%'"; // Name starts or begins with 
 
-            $results1 = mysqli_query($connect, $query) or die("Unable to retrieve data!");// Another query that stores the same result to be used by another while loop 
+            $Searchresults = mysqli_query($connect, $Searchquery) or die("Unable to retrieve data!");// Execute query using specified connection 
 
-            echo "<table>";
-           
-            echo "<tr>"; // Creating the first row of the table
+        while ($Search_Info = mysqli_fetch_array($Searchresults)) {
 
-            /* 
+
+
+            $image = $Search_Info["Product_Image"];
+            $about = $Search_Info["description"];
+            $price = $Search_Info['Price'];
+            $name = $Search_Info['Product_Name'];
+            $product_id = $Search_Info["Product_Id"];
+
+            echo "<li>";
+
+            echo "<div id=\"Cart\">
             
-                * What the following code does : 
-                * While there are still records or rows in the array execute the inner loop 
-                * In the inner loop execute the code in the if statements only three times and increments the $index variable to ensure of this
-                * This is done to have one row of four items so that another code can be put together to output another row
-            
-            */
-
+            <div id=\"popMessage\"> 
         
-        
-            $index = 0; 
+                <div id=\"image\"> 
 
-            while ($records = mysqli_fetch_array($results)) {
+                    <img id=\"images\" src=\"../$image\" alt=\"\"  width=\"450\" height=\"380\" title=\"$name\"/>
 
-                if ($index <= 3){
+                </div>
 
-                    $id = $records["Category_id"]; // Using global variable Post to access data sent via Post method
-                    $image = $records["Category_Image"];
-                    $name =  $records["Category_Name"];
-                    $description = $records["Category_Description"];
-                    $alt = $records["Alt"];
-                    $href = $records["href"];
-                        
-                    echo "<td>";
-                    echo "<a href=\"ShowProducts2.php?id=$id\" title=\"$description\" class=\"tool\">";
-                    echo "<img src=\"../$image\" alt=\"$alt\" width=\"450\" height=\"380\">";
-                    echo "</a>";
-                    echo "</td>";
+                <div id=\"content\">
 
-                    $index = $index + 1;
-
-                }
-
-            }
-
-            echo "</tr>"; // Creating the first row of the table
-
-
-            echo "<tr>"; // Creating the second row of the table that will hold its four items 
-
-            $count = 0 ; 
-            while ($records = mysqli_fetch_array($results1)) {
-
-                if ($count > 3) { // Thus only print this once $count is bigger than 3 which is an indication that the categories that we dont want to be reprinted have been traversed 
-            
-                    $id = $records["Category_id"]; // Using global variable Post to access data sent via Post method
-                    $image = $records["Category_Image"];
-                    $name = $records["Category_Name"];
-                    $description = $records["Category_Description"];
-                    $alt = $records["Alt"];
-                    $href = $records["href"];
-
-                    echo "<td>";
-                    echo "<a href=\"ShowProducts2.php?id=$id\" title=\"$description\" class=\"tool\">";
-                    echo "<img src=\"../$image\" alt=\"$alt\" width=\"450\" height=\"380\">";
-                    echo "</a>";
-                    echo "</td>";
-
-                }
-                
-                $count = $count + 1; // Everytime we don't execute the code in the if statement this is incremented to make sure we eventually print out everything
-            }
-
-
-            echo "</tr>";
+                <h3 id=\"h3\"> $name </h3> 
     
-            echo "</table>";
+                <h4> Key Features: </h4>
+                <p id=\"about\"> $about</p>
+    
+            
+                <h4 id=\"price\"> $price </h4>
+    
+            </div>
+
+
+            </div>";
+
+            echo "</li>";
+
+            echo "</ul><br>";
+
+
+            echo "<form action=\"Search.php?id=$product_id\" method=\"post\">
+                <input type=\"hidden\" name=\"Price\" value=\"$price\" id=\"Prices\">
+                <input type=\"submit\" value=\"Add Item to Cart\" id=\"btn\" name=\"Cart\">
+            </form>";
+
+            echo "</div><br>";
+
+
 
             CloseConnection($connect); // Closing the connection 
+        
+        }
+
         ?>
         
     </div>
