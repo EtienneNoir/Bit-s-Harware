@@ -99,17 +99,18 @@ $_SESSION['Quantity'];// Indicating the amount of items the user has in the cart
 
         while ($Search_Info = mysqli_fetch_array($Searchresults)) {
 
-
-
+            $product_id = $Search_Info["Product_Id"]; // Using global variable Post to access data sent via Post method
             $image = $Search_Info["Product_Image"];
-            $about = $Search_Info["description"];
+            $name = $Search_Info["Product_Name"];
+            $description = $Search_Info["description"];
             $price = $Search_Info['Price'];
-            $name = $Search_Info['Product_Name'];
-            $product_id = $Search_Info["Product_Id"];
+            $alt = $Search_Info["alt"];
+
+ 
 
             echo "<li id=\"items\">";
 
-            echo"<div id=\"popMessage\"> 
+            echo"<div id=\"popMessage\" style=\"display:block\";> 
         
 
             <div id=\"close\"> x </div> 
@@ -126,7 +127,7 @@ $_SESSION['Quantity'];// Indicating the amount of items the user has in the cart
                 <h3 id=\"h3\"> $name </h3> 
     
                 <h4> Key Features: </h4>
-                <p id=\"about\">  $about </p>
+                <p id=\"about\">  $description </p>
     
             
                 <h4 id=\"price\"> $price </h4>
