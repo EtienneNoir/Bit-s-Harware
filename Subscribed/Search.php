@@ -5,17 +5,15 @@ $_SESSION['Quantity'];// Indicating the amount of items the user has in the cart
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../CSS/Index/Navigation/nav&Title.css">  
+    <link rel="stylesheet" href="../CSS/Index/Navigation/nav&Title.css">
     <link rel="stylesheet" href="../CSS/Index/TableMain.css">
     <link rel="stylesheet" href="../CSS/Index/Footer.css">
     <link rel="stylesheet" href="../CSS/Animation.css">
-    <link rel="stylesheet" href="../CSS/Laptops/Laptop.css">
-    <link rel="stylesheet" href="../CSS/Laptops/Backdrop.css">
-    <link rel="stylesheet" href="../CSS/Cart/Quantity.css">
     <link rel="icon" type="png" href="../Images/favicon.png">
+    <link rel="stylesheet" href="../CSS/Cart/Quantity.css">
     <title>Bit's Hardwares</title>
 
 </head>
@@ -90,35 +88,7 @@ $_SESSION['Quantity'];// Indicating the amount of items the user has in the cart
         <?php
             include '../config.php'; // importing config page, to use its properties
 
-            $user_Name = $_SESSION["User_Name"];
-
-            include '../config.php'; // importing config page, to use its properties
-
             $connect = OpenConnection(); // calling the function to connect to the database and storing its return value
-
-            $_SESSION['Product_id'] = $_REQUEST['id'];
-
-           
-
-            $id = $_SESSION['Product_id']; //  taking the value referenced by id which is found in the url segment
-
-            if (isset($_REQUEST["Cart"])) { // insert item to cart once the user submits the add item to cart form
-
-                $Customer_id = $_SESSION["id"];
-
-                $ProDuct_id = $_POST['P_id'];
-
-                $Price = $_POST['Price'];
-
-                $CartQuery = "INSERT INTO Cart_Item(Customer_id, Product_id, Price) VALUES ('$Customer_id' ,  '$ProDuct_id' ,  '$Price')"; // Storing the Product id and the Customer id, thus the item and who bought it
-
-                $AddToCartResult = mysqli_query($connect , $CartQuery) or die("Unable to retrieve dataw!");// Execute query using specified connection);
-
-                $_SESSION['Quantity'] = $_SESSION['Quantity'] + 1; // Used to indicate how many items the user has in the cart        
-
-            }
-
-            $quantity = $_SESSION['Quantity'];
 
             $search = $_REQUEST["search"];
 
@@ -169,6 +139,7 @@ $_SESSION['Quantity'];// Indicating the amount of items the user has in the cart
 
 
             echo "<form action=\"Search.php?id=$product_id\" method=\"post\">
+
                 <input type=\"hidden\" name=\"Price\" value=\"$price\" id=\"Prices\">
                 <input type=\"submit\" value=\"Add Item to Cart\" id=\"btn\" name=\"Cart\">
             </form>";
