@@ -162,7 +162,9 @@ session_start();
 
             $delResult = mysqli_query($connect, $delQuery) or die("Unable to connect to database!"); // Execute query then return the result
     
-            $_SESSION['Quantity'] = $_SESSION['Quantity'] - 1; // To visually show that an item has been removed
+            $store = $_SESSION['Quantity'] - 1; // To visually show that an item has been removed
+
+            $_SESSION['Quantity'] = max($store, 0); // to make sure that the number never goes below zero 
 
             echo '<script>alert("Item has been Removed from cart")</script>';
 
