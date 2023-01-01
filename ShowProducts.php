@@ -41,9 +41,6 @@
                     <a href="About.html" > about </a> 
                 </li>
 
-                <li>
-                    <a href="Profile.php"  > Your cart </a> 
-                </li>
 
                 <li>
                     <div id="dropdown">
@@ -60,6 +57,11 @@
                             </div>
                     </div>
                 </li>
+
+                <li>
+                    <a href="Profile.php"  > Your cart </a> 
+                </li>
+
             </ul>
         </nav>
 
