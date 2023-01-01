@@ -16,12 +16,7 @@ $_SESSION['Quantity'];// Indicating the amount of items the user has in the cart
     <link rel="stylesheet" href="../CSS/Cart/Quantity.css">
     <link rel="stylesheet" href="../CSS/Search/Search.css">
     <link rel="stylesheet" href="../CSS/Cart/Cart.css">
-    <link rel="stylesheet" href="../CSS/Laptops/Laptop.css">
-    <link rel="stylesheet" href="../CSS/Laptops/Backdrop.css">
-    <link rel="stylesheet" href="../CSS/Cart/Quantity.css">
-    <link rel="icon" type="png" href="../Images/favicon.png">
-
-
+    <title>Bit's Hardwares</title>
 
 </head>
 
@@ -33,52 +28,46 @@ $_SESSION['Quantity'];// Indicating the amount of items the user has in the cart
 
         <?php 
 
-            include '../config.php'; // importing config page, to use its properties
+        if (isset($_REQUEST["Cart"])) { // insert item to cart once the user submits the add item to cart form
 
-            $connect = OpenConnection(); // calling the function to connect to the database and storing its return value
+            $Customer_id = $_SESSION["id"];
 
-            $user_Name = $_SESSION["User_Name"];
+            $ProDuct_id = $_POST['P_id'];
 
-            if (isset($_REQUEST["Cart"])) { // insert item to cart once the user submits the add item to cart form
+            $Price = $_POST['Price'];
 
-                $Customer_id = $_SESSION["id"];
+            $CartQuery = "INSERT INTO Cart_Item(Customer_id, Product_id, Price) VALUES ('$Customer_id' ,  '$ProDuct_id' ,  '$Price')"; // Storing the Product id and the Customer id, thus the item and who bought it
 
-                $ProDuct_id = $_POST['P_id'];
+            $AddToCartResult = mysqli_query($connect , $CartQuery) or die("Unable to retrieve dataw!");// Execute query using specified connection);
 
-                $Price = $_POST['Price'];
+            $_SESSION['Quantity'] = $_SESSION['Quantity'] + 1; // Used to indicate how many items the user has in the cart        
 
-                $CartQuery = "INSERT INTO Cart_Item(Customer_id, Product_id, Price) VALUES ('$Customer_id' ,  '$ProDuct_id' ,  '$Price')"; // Storing the Product id and the Customer id, thus the item and who bought it
+        }
 
-                $AddToCartResult = mysqli_query($connect , $CartQuery) or die("Unable to retrieve dataw!");// Execute query using specified connection);
+        $quantity = $_SESSION['Quantity'];
 
-                $_SESSION['Quantity'] = $_SESSION['Quantity'] + 1; // Used to indicate how many items the user has in the cart        
+        ?>
 
-            }
-
-            $quantity = $_SESSION['Quantity'];
-
- 
-
-        echo"<nav id=\"nav\">
+        <nav id="nav">
             <ul>
                 <li>
-                    <a href=\"javascript:void(0)\" > Home </a> 
+                    <a href="javascript:void(0)" > Home </a> 
                 </li>
 
                 
                 <li>
-                    <div id=\"dropdown\">
-                        <a href=\"javascript:void(0)\">  $user_Name <img src=\"../Images/user.png\" alt=\"Image of User\"  class=\"Icons\"> </a>
-                            <div class=\"dropdown-content\" id=\"table1\">
-                                <form action=\"\" id=\"Form2\">
+                    <div id="dropdown">
+                        <a href="javascript:void(0)"> <?php echo $_SESSION["User_Name"]; ?> <img src="../Images/user.png" alt="Image of User"  class="Icons"> </a>
+                            <div class="dropdown-content" id="table1">
+                                <form action="" id="Form2">
                                     <table>
                                         <tr>
-                                            <div id=\"Log\" style=\"padding-bottom:10px;\">
-                                                <button class=\"glowEffect\" > <a href=\"Edit.php\" >Account Settings</a></button>
+                                            <div id="Log" style="padding-bottom:10px;">
+                                                <button class="glowEffect" > <a href="Edit.php" >Account Settings</a></button>
                                             </div>
                                        
-                                            <div id=\"Log\">
-                                                <button class=\"glowEffect\" ><a href=\"../index.php\" >Log out</a></button>
+                                            <div id="Log">
+                                                <button class="glowEffect" ><a href="../index.php" >Log out</a></button>
                                             </div>
                                         </tr> 
                                     </table> 
@@ -89,14 +78,14 @@ $_SESSION['Quantity'];// Indicating the amount of items the user has in the cart
 
 
                 <li>
-                    <div id=\"dropdown\">
-                        <a href=\"javascript:void(0)\"> Search </a>
-                            <div class=\"dropdown-content\" id=\"tabl2\">
-                                <form action=\"Search.php\" id=\"Form2\" name=\"Search1\" onsubmit=\"return Validation2()\">
+                    <div id="dropdown">
+                        <a href="javascript:void(0)"> Search </a>
+                            <div class="dropdown-content" id="tabl2">
+                                <form action="Search.php" id="Form2" name="Search1" onsubmit="return Validation2()">
                                     <table>
                                         <tr>
-                                            <td> <input type=\"text\" id=\"in\" placeholder=\"Search..\" name=\"search\" style=\"height: 45px; width: 210px; border-radius: 15px; text-align: center;\"> </td>
-                                            <td> <button type=\"submit\" id=\"Se\" class=\"glowEffect\">&#128269;</button> </td>
+                                            <td> <input type="text" id="in" placeholder="Search.." name="search" style="height: 45px; width: 210px; border-radius: 15px; text-align: center;"> </td>
+                                            <td> <button type="submit" id="Se" class="glowEffect">&#128269;</button> </td>
                                         </tr> 
                                     </table> 
                                 </form>
@@ -105,19 +94,18 @@ $_SESSION['Quantity'];// Indicating the amount of items the user has in the cart
                 </li>
 
                 <li>
-                    <a href=\"Cart.php\"> Cart <div id=\"quantity\">$quantity</div>  </a> 
+                    <a href="Cart.php"> Cart <div id="quantity"> <?php echo $_SESSION['Quantity']; ?></div>  </a> 
                 </li>
 
 
                 <li>
-                    <a href=\"About.php\" > about </a> 
+                    <a href="About.php" > about </a> 
                 </li>
 
 
             </ul>
-        </nav>";
-        CloseConnection($connect); // Closing the connection 
-    ?>
+        </nav>
+
     </header>
 
     <div id="main">
@@ -150,6 +138,9 @@ $_SESSION['Quantity'];// Indicating the amount of items the user has in the cart
 
                     echo "<li>";
                     echo"<div id=\"popMessage\";> 
+                
+
+                    <div id=\"close\"> x </div> 
                     
                     <div id=\"image\"> 
             
