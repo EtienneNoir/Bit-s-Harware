@@ -57,7 +57,7 @@ $_SESSION['Quantity'];// Indicating the amount of items the user has in the cart
         echo"<nav id=\"nav\">
             <ul>
                 <li>
-                    <a href=\"javascript:void(0)\" > Home </a> 
+                    <a href=\"index2.php\" > Home </a> 
                 </li>
 
                 
