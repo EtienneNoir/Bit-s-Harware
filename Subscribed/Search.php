@@ -161,8 +161,9 @@ $_SESSION['Quantity'];// Indicating the amount of items the user has in the cart
                 echo "</ul><br>";
 
                 CloseConnection($connect); // Closing the connection 
-        
-            echo "</div>"
+
+        echo "</div>";
+        echo "<br><br>";
 
         ?>
         
