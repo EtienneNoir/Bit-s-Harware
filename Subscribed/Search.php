@@ -92,7 +92,7 @@ $_SESSION['Quantity'];// Indicating the amount of items the user has in the cart
 
             $search = $_REQUEST["search"];
 
-            $Searchquery = "SELECT * FROM Product WHERE Product_Name LIKE '%{$search}%'"; // Name starts or begins with 
+            $Searchquery = "SELECT * FROM Product WHERE Product_Name LIKE '$search%'"; // Name starts with 
 
             $Searchresults = mysqli_query($connect, $Searchquery) or die("Unable to retrieve data!");// Execute query using specified connection 
 
