@@ -24,7 +24,7 @@ $_SESSION['Quantity'];// Indicating the amount of items the user has in the cart
 
     <header>
 
-        <nav id="nav">
+        <nav id="nav">Log out
             <ul>
                 <li>
                     <a href="javascript:void(0)" > Home </a> 
@@ -33,6 +33,24 @@ $_SESSION['Quantity'];// Indicating the amount of items the user has in the cart
                 <li>
                     <a href="Edit.php" > <?php echo $_SESSION["User_Name"]; ?> <img src="../Images/user.png" alt="Image of User"  class="Icons"> </a> 
                 </li>
+
+                <li>
+
+                    <div class="dropdown2" >
+                            <a id="a" href="javascript:void(0)" onMouseOver="this.style.color='#818181'" onMouseOut="this.style.color='whitesmoke'" style="margin-right:120px;"> <img src="../Images/user.png" alt="Image of User"  class="Icons"> <?php echo $_SESSION["User_Name"]; ?> </a></li>
+                            <div class="dropdown-content2" id="table2">
+                                    <div id="Log" style="padding-bottom:10px;">
+                                        <button class="glowEffect" > <a href="Edit.php" style="color:whitesmoke ;text-decoration: none;">Account Settings</a></button>
+                                    </div>
+
+                                    <div id="Log">
+                                        <button class="glowEffect" ><a href="../index.php" style="color:whitesmoke ;text-decoration: none;">Log out</a></button>
+                                    </div>
+                            </div>
+                    </div>
+
+                </li>
+
 
                 <li>
                     <div id="dropdown">
