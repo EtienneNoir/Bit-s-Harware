@@ -39,11 +39,11 @@ $_SESSION['Quantity'];// Indicating the amount of items the user has in the cart
                                     <table>
                                         <tr>
                                             <div id="Log" style="padding-bottom:10px;">
-                                                <button class="glowEffect" > <a href="Edit.php" style="color:whitesmoke ;text-decoration: none;">Account Settings</a></button>
+                                                <button class="glowEffect" > <a href="Edit.php" >Account Settings</a></button>
                                             </div>
                                        
                                             <div id="Log">
-                                                <button class="glowEffect" ><a href="index2.html" style="color:whitesmoke ;text-decoration: none;">Log out</a></button>
+                                                <button class="glowEffect" ><a href="index2.html" >Log out</a></button>
                                             </div>
                                         </tr> 
                                     </table> 
