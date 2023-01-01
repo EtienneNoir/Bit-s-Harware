@@ -1,0 +1,50 @@
+
+#Search{
+
+    
+    color:whitesmoke;
+    border-style: solid;
+
+    text-align: center;
+    
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    background-color:black;
+    border-style: solid;
+    border-color: rgb(1, 41, 64);
+
+    border-width: thin;
+
+
+    /* The code below is to center the element at the page */
+
+
+    height: fit-content;
+
+    zoom: 90%;
+
+
+    width:fit-content;
+    
+    /* To hide the element until it is selected */
+
+
+    display: none; /* The element is completely removed */
+
+    z-index: 10;
+
+
+
+    position: fixed; /* Where should an element be on the screen even when you scroll in the browser */
+    top: 10vh;
+    left: calc(50% - 15rem); /* This is to make sure that it is always in the middle */
+
+
+
+    opacity: 0.8;
+
+
+
+
+
+}

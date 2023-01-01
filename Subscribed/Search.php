@@ -110,7 +110,7 @@ $_SESSION['Quantity'];// Indicating the amount of items the user has in the cart
 
             echo "<div id=\"Cart\">
             
-            <div id=\"popMessage\"> 
+            <div id=\"Search\"> 
         
                 <div id=\"image\"> 
 
