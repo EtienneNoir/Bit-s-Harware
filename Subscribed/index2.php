@@ -35,7 +35,7 @@ $_SESSION['Quantity'];// Indicating the amount of items the user has in the cart
                     <div id="dropdown">
                         <a href="javascript:void(0)"> <?php echo $_SESSION["User_Name"]; ?> <img src="../Images/user.png" alt="Image of User"  class="Icons"> </a>
                             <div class="dropdown-content" id="table1">
-                                <form action="" id="Form2" name="Search1" onsubmit="return Validation2()">
+                                <form action="" id="Form2">
                                     <table>
                                         <tr>
                                             <div id="Log" style="padding-bottom:10px;">
@@ -43,7 +43,7 @@ $_SESSION['Quantity'];// Indicating the amount of items the user has in the cart
                                             </div>
                                        
                                             <div id="Log">
-                                                <button class="glowEffect" ><a href="index2.html" >Log out</a></button>
+                                                <button class="glowEffect" ><a href="../index.php" >Log out</a></button>
                                             </div>
                                         </tr> 
                                     </table> 
@@ -56,7 +56,7 @@ $_SESSION['Quantity'];// Indicating the amount of items the user has in the cart
                 <li>
                     <div id="dropdown">
                         <a href="javascript:void(0)"> Search </a>
-                            <div class="dropdown-content" id="table1">
+                            <div class="dropdown-content" id="tabl2">
                                 <form action="" id="Form2" name="Search1" onsubmit="return Validation2()">
                                     <table>
                                         <tr>
