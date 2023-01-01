@@ -33,15 +33,18 @@ $_SESSION['Quantity'];// Indicating the amount of items the user has in the cart
                 
                 <li>
                     <div id="dropdown">
-                        <a href="Edit.php"> <?php echo $_SESSION["User_Name"]; ?> <img src="../Images/user.png" alt="Image of User"  class="Icons"> </a>
+                        <a href="javascript:void(0)"> <?php echo $_SESSION["User_Name"]; ?> <img src="../Images/user.png" alt="Image of User"  class="Icons"> </a>
                             <div class="dropdown-content" id="table1">
                                 <form action="" id="Form2" name="Search1" onsubmit="return Validation2()">
                                     <table>
                                         <tr>
-                                        <div id="Log" style="padding-bottom:10px;">
-                                            <button class="glowEffect" > <a href="Edit.php?id=$userName" style="color:whitesmoke ;text-decoration: none;">Account Settings</a></button>
-                                        </div>
+                                            <div id="Log" style="padding-bottom:10px;">
+                                                <button class="glowEffect" > <a href="Edit.php" style="color:whitesmoke ;text-decoration: none;">Account Settings</a></button>
+                                            </div>
                                        
+                                            <div id="Log">
+                                                <button class="glowEffect" ><a href="index2.html" style="color:whitesmoke ;text-decoration: none;">Log out</a></button>
+                                            </div>
                                         </tr> 
                                     </table> 
                                 </form>
