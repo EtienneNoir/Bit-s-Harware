@@ -104,11 +104,12 @@
     z-index: 1;
 }
 
-
 .dropdown2:hover .dropdown-content2 {
     display: block;
     text-align: center;
 }
+
+
 
 .Log{
     padding-top: 10px;
