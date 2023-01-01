@@ -1,5 +1,5 @@
 
-#Search{
+#popMessage{
 
     
     color:whitesmoke;
@@ -31,7 +31,7 @@
 
     display: none; /* The element is completely removed */
 
-    z-index: 10;
+ 
 
 
 
@@ -43,48 +43,78 @@
 
     opacity: 0.8;
 
-}
 
 
-#items {
 
-    list-style: none; /* Getting rid of the list item */
 
 }
 
-#CartMain {
-
-    margin: auto;
-    width: 800px;
-    overflow-x: hidden;
-    height: 70vh;
-
-}
-
-#remove{
+#close{
     
+    text-align: right;
+    margin-right: 10px;
     cursor: pointer;
-    font-weight:normal;
-    height:25px;
-}
+    font-weight: bold;
 
-
-#buy{
-
-    border: none;
-    padding: 15px 32px;
-    font-size: large;
-    background-color:#fc8129; 
-    border-radius: 15px;
 
 }
 
-#Purchase_form{
-
-    margin-left: 300px;
+#backdrop {
+    position: fixed; /* Thus this element always stays in the same place even if the page is scrolled */
+    z-index: 1; /* This element has a greater stack number thus will always be infront of an element with a lower stack order */
+    background-color: rgba(0, 0, 0, 0.85);
+    width: 100%;
+    height: 100%;  /* vh is the maximum possible viewport height */
+    top: 0; /* Distance from the margin */
+    left: 0; /* Distance from the left */
+    cursor: pointer;
+    display: none;
+ 
 }
 
-#buy{
+#btn {
+
+    font: inherit; /* In other words inherit the value for this attribute from its parent element */
+    padding : 0.5rem 1.5rem; /* Height and Width */
+    cursor: pointer;
+    border-radius: 4px;
+    background-color:blueviolet;
+    color: white; /* Text color */
+    border: 1 px solid blueviolet;
     
-    cursor: pointer;
+
+}
+
+#btn:hover{
+    background-color: rgb(157, 61, 247);
+    
+    }
+/* Styling the card*/
+
+
+#content {
+    text-align: center;
+    padding: 1rem;
+}
+
+.content h3 {
+    font-size: 1.25rem;
+    color: #2c292b;
+}
+
+#image {
+
+    border-radius: 6px;
+    border-style: solid;
+    border-bottom-color: rgb(1, 41, 64);
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-width: thin;
+}
+
+#id{ /* Making the hidden field as small as possible to prevent it from taking too much space */
+
+    height:0px; 
+    width: 0px;
 }
