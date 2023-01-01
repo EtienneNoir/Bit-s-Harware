@@ -154,10 +154,6 @@ $_SESSION['Quantity'];// Indicating the amount of items the user has in the cart
                     </div>";
                 
 
-                    echo "</li>";
-
-
-                    echo "</div><br>";
 
                     echo "</li><br>";
                 }
