@@ -156,9 +156,6 @@ $_SESSION['Quantity'];// Indicating the amount of items the user has in the cart
 
                     echo "</li>";
 
-                    echo "</ul><br>";
-
-
                     echo "<form action=\"Search.php?id=$product_id\" method=\"post\">
 
                         <input type=\"hidden\" name=\"Price\" value=\"$price\" id=\"Prices\">
@@ -167,7 +164,7 @@ $_SESSION['Quantity'];// Indicating the amount of items the user has in the cart
 
                     echo "</div><br>";
 
-                    echo "</li>";
+                    echo "</li><br>";
                 }
                 echo "</ul><br>";
 
