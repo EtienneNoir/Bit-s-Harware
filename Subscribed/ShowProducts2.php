@@ -106,9 +106,13 @@ session_start();
                 </div>
             </li>
 
-                <li>
-                    <a href=\"About.php\" > about </a>
-                </li>
+            <li>
+                    <a href=\"Cart.php\"> Cart <div id=\"quantity\"> $quantity</div>  </a> 
+            </li>
+
+            <li>
+                <a href=\"About.php\" > about </a>
+            </li>
 
             </ul>
         </nav>
