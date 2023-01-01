@@ -28,6 +28,9 @@ $_SESSION['Quantity'];// Indicating the amount of items the user has in the cart
 
         <?php 
 
+        include '../config.php'; // importing config page, to use its properties
+
+        $connect = OpenConnection(); // calling the function to connect to the database and storing its return value
 
         $user_Name = $_SESSION["User_Name"];
 
@@ -110,6 +113,9 @@ $_SESSION['Quantity'];// Indicating the amount of items the user has in the cart
         </nav>
 
     </header>";
+
+    CloseConnection($connect); // Closing the connection 
+
 
     ?>
 
