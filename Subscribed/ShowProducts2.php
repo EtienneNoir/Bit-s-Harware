@@ -107,7 +107,7 @@ session_start();
             </li>
 
             <li>
-                    <a href=\"Cart.php\"> Cart <div id=\"quantity\"> $quantity</div>  </a> 
+                    <a href=\"Cart.php\"> Your Cart <div id=\"quantity\"> $quantity</div>  </a> 
             </li>
 
             <li>

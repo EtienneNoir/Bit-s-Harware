@@ -100,7 +100,7 @@ $_SESSION['Quantity'];// Indicating the amount of items the user has in the cart
                 </li>
 
                 <li>
-                    <a href=\"Cart.php\"> Cart <div id=\"quantity\"> $quantity</div>  </a> 
+                    <a href=\"Cart.php\"> Your Cart <div id=\"quantity\"> $quantity</div>  </a> 
                 </li>
 
 

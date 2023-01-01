@@ -73,7 +73,7 @@ session_start();
                 </li>
 
                 <li>
-                    <a href="Cart.php"> Cart <div id="quantity"> <?php echo $_SESSION['Quantity']; ?></div>   </a> 
+                    <a href="Cart.php"> Your Cart <div id="quantity"> <?php echo $_SESSION['Quantity']; ?></div>   </a> 
                 </li>
 
                
