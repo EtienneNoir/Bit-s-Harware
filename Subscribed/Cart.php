@@ -30,16 +30,47 @@ session_start();
                 </li>
 
                 <li>
-                    <a href="Edit.php" > <?php echo $_SESSION["User_Name"]; ?> <img src="../Images/user.png" alt="Image of User"  class="Icons"> </a> 
+                    <div id="dropdown">
+                        <a href="javascript:void(0)"> <?php echo $_SESSION["User_Name"]; ?> <img src="../Images/user.png" alt="Image of User"  class="Icons"> </a>
+                            <div class="dropdown-content" id="table1">
+                                <form action="" id="Form2">
+                                    <table>
+                                        <tr>
+                                            <div id="Log" style="padding-bottom:10px;">
+                                                <button class="glowEffect" > <a href="Edit.php" >Account Settings</a></button>
+                                            </div>
+                                       
+                                            <div id="Log">
+                                                <button class="glowEffect" ><a href="../index.php" >Log out</a></button>
+                                            </div>
+                                        </tr> 
+                                    </table> 
+                                </form>
+                            </div>
+                    </div>
                 </li>
 
+
+                <li>
+                    <div id="dropdown">
+                        <a href="javascript:void(0)"> Search </a>
+                            <div class="dropdown-content" id="tabl2">
+                                <form action="" id="Form2" name="Search1" onsubmit="return Validation2()">
+                                    <table>
+                                        <tr>
+                                            <td> <input type="text" id="in" placeholder="Search.." name="search" style="height: 45px; width: 210px; border-radius: 15px; text-align: center;"> </td>
+                                            <td> <button type="submit" id="Se" class="glowEffect">&#128269;</button> </td>
+                                        </tr> 
+                                    </table> 
+                                </form>
+                            </div>
+                    </div>
+                </li>
                 <li>
                     <a href="About.php" > about </a> 
                 </li>
 
-                <li>
-                    <a href="Order.php"  > Invoices</a> 
-                </li>
+            
             </ul>
         </nav>
 
