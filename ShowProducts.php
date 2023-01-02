@@ -71,13 +71,13 @@
 
     <div id="sideContent" >
         <ul><a id="a" class="f" href="javascript:void(0)" onclick="closeSide()" ><img src="Images/close.png" alt="Image of Close Sign" class="animationClose" width="100" height="100"> </a><br><br><br><br><br><br>
-            <a id="a" href="#"> <img src="Images/Ram1.png"  class="animationClose" alt="Image of Ram" width="100" height="100"> </a><br><br><br>
-            <a id="a" href="#"> <img src="Images/Towers1.png"  class="animationClose" alt="Image of a Tower" width="100" height="100"> </a><br><br><br>
-            <a id="a" href="#"> <img src="Images/Periph1.png"  class="animationClose" alt="Peripherals" width="100" height="100">  </a><br><br><br><br><br>
-            <a id="a" href="#"> <img src="Images/Speaker1.png"  class="animationClose" alt="Image of a Speaker" width="100" height="100"> </a><br><br><br>
-            <a id="a" href="#"> <img src="Images/GPU1.png"  class="animationClose" alt="Image of a GPU" width="100" height="100"> </a><br><br><br><br>
-            <a id="a" href="#"> <img src="Images/Monitor1.png"  class="animationClose" alt="Image of a Monitors" width="100" height="100"></a><br><br><br>
-            <a id="a" href="#"> <img src="Images/CPU1.png"  class="animationClose" alt="Image of CPU" width="100" height="100"> </a>
+            <a id="a" href="ShowProducts.php?id=15"> <img src="Images/Ram1.png"  class="animationClose" alt="Image of Ram" width="100" height="100"> </a><br><br><br>
+            <a id="a" href="ShowProducts.php?id=10"> <img src="Images/Towers1.png"  class="animationClose" alt="Image of a Tower" width="100" height="100"> </a><br><br><br>
+            <a id="a" href="ShowProducts.php?id=12"> <img src="Images/Periph1.png"  class="animationClose" alt="Peripherals" width="100" height="100">  </a><br><br><br><br><br>
+            <a id="a" href="ShowProducts.php?id=11"> <img src="Images/Speaker1.png"  class="animationClose" alt="Image of a Speaker" width="100" height="100"> </a><br><br><br>
+            <a id="a" href="ShowProducts.php?id=14"> <img src="Images/GPU1.png"  class="animationClose" alt="Image of a GPU" width="100" height="100"> </a><br><br><br><br>
+            <a id="a" href="ShowProducts.php?id=13"> <img src="Images/Monitor1.png"  class="animationClose" alt="Image of a Monitors" width="100" height="100"></a><br><br><br>
+            <a id="a" href="ShowProducts.php?id=9"> <img src="Images/CPU1.png"  class="animationClose" alt="Image of CPU" width="100" height="100"> </a>
         </ul>
     </div>
 
