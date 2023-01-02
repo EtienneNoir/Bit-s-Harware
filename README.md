@@ -2,7 +2,7 @@
 
 # It is important to take note that the images used are taken from various sources on the internet thus credit should be given to the appropriate providers
 
-# This is a Mock Ecommerce Website with various functionalities: 
+# This is a Mock Ecommerce Website with various functionalities that were made using CSS, HTML and JavaScript: 
 
 The following features can be found on the website: 
 
