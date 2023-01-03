@@ -42,7 +42,7 @@
                     <div id="dropdown">
                         <a href="javascript:void(0)"> Search </a>
                             <div class="dropdown-content" id="tabl2">
-                                <form action="" id="Form2" name="Search1" onsubmit="return Validation()">
+                                <form action="Profile.php" id="Form2" name="Search1">
                                     <table>
                                         <tr>
                                             <td> <input type="text" id="in" placeholder="Search.." name="search" style="height: 45px; width: 210px; border-radius: 15px; text-align: center;"> </td>
@@ -311,20 +311,7 @@
     </footer>
 
     
-    <script type="text/javascript" src="JavaScript/Profile/Sign.js">
-
-        function Validation(){
-            let search = document.forms["Search1"]["search"].value;
-            if(search == ""){
-                alert("Please Fill All Required Fields");
-            }
-            else{
-
-                window.location.href="Profile.php"; // Implication that you have to be logged in to add a product to the cart
-            }
-        }
-
-    </script>
+    <script type="text/javascript" src="JavaScript/Profile/Sign.js"> </script>
 
 </body>
 </html>
