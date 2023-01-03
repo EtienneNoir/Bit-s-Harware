@@ -15,6 +15,16 @@ $_SESSION['Quantity'];// Indicating the amount of items the user has in the cart
     <link rel="icon" type="png" href="../Images/favicon.png">
     <link rel="stylesheet" href="../CSS/Cart/Quantity.css">
     <title>Bit's Hardwares</title>
+    <style> 
+
+        @media screen and (max-width:  1900px) {  /* On screens that are  1900 wide or less, zoom out to 67 % */
+            body {
+            background-color: blue;
+            zoom : 67%;
+            color: white;
+            }
+        }
+    </style>
 
 </head>
 
