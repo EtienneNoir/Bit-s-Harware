@@ -18,9 +18,7 @@ session_start();
 
         @media screen and (max-width:  1900px) {  /* On screens that are  1900 wide or less, zoom out to 67 % */
             body {
-            background-color: blue;
             zoom : 67%;
-            color: white;
             }
         }
     </style>
