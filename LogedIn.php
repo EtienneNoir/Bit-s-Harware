@@ -33,10 +33,6 @@
                 </li>
 
                 <li>
-                    <a href="About.html" > About </a> 
-                </li>
-
-                <li>
                     <div id="dropdown">
                         <a href="javascript:void(0)"> Search </a>
                             <div class="dropdown-content" id="tabl2">
@@ -55,6 +51,10 @@
 
                 <li>
                     <a href="Profile.php"  > Your cart </a> 
+                </li>
+
+                <li>
+                    <a href="About.html" > About </a> 
                 </li>
             </ul>
         </nav>

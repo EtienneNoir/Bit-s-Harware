@@ -39,10 +39,6 @@ session_start();
                 </li>
 
                 <li>
-                    <a href="About.php" > About </a> 
-                </li>
-
-                <li>
                     <div id="dropdown">
                         <a href="javascript:void(0)"> <b> <?php echo $_SESSION["User_Name"]; ?> </b><img src="../Images/user.png" alt="Image of User"  class="Icons"> </a>
                             <div class="dropdown-content" id="table1">
@@ -68,7 +64,7 @@ session_start();
                     <div id="dropdown">
                         <a href="javascript:void(0)"> Search </a>
                             <div class="dropdown-content" id="tabl2">
-                                <form action="Search.php" id="Form2" name="Search1" onsubmit="return Validation2()">
+                                <form action="Search.php" id="Form2" name="Search1">
                                     <table>
                                         <tr>
                                             <td> <input type="text" id="in" placeholder="Search.." name="search" style="height: 45px; width: 210px; border-radius: 15px; text-align: center;"> </td>
@@ -84,6 +80,9 @@ session_start();
                     <a href="Cart.php"> Your Cart <div id="quantity"> <?php echo $_SESSION['Quantity']; ?></div>   </a> 
                 </li>
 
+                <li>
+                    <a href="About.php" > About </a> 
+                </li>
                
             </ul>
         </nav>
