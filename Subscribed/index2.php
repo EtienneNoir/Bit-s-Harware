@@ -40,7 +40,7 @@ $_SESSION['Quantity'];// Indicating the amount of items the user has in the cart
 
                 <li>
                     <div id="dropdown">
-                        <a href="javascript:void(0)"> <?php echo $_SESSION["User_Name"]; ?> <img src="../Images/user.png" alt="Image of User"  class="Icons"> </a>
+                        <a href="javascript:void(0)"> <b> <?php echo $_SESSION["User_Name"]; ?> </b> <img src="../Images/user.png" alt="Image of User"  class="Icons"> </a>
                             <div class="dropdown-content" id="table1">
                                 <form action="" id="Form2">
                                     <table>
@@ -64,7 +64,7 @@ $_SESSION['Quantity'];// Indicating the amount of items the user has in the cart
                     <div id="dropdown">
                         <a href="javascript:void(0)"> Search </a>
                             <div class="dropdown-content" id="tabl2">
-                                <form action="Search.php" id="Form2" name="Search1" onsubmit="return Validation2()">
+                                <form action="" id="Form2" name="Search1" onsubmit="return Validation()">
                                     <table>
                                         <tr>
                                             <td> <input type="text" id="in" placeholder="Search.." name="search" style="height: 45px; width: 210px; border-radius: 15px; text-align: center;"> </td>
@@ -82,7 +82,7 @@ $_SESSION['Quantity'];// Indicating the amount of items the user has in the cart
 
 
                 <li>
-                    <a href="About.php" > about </a> 
+                    <a href="About.php" > About </a> 
                 </li>
 
 
@@ -187,7 +187,18 @@ $_SESSION['Quantity'];// Indicating the amount of items the user has in the cart
         <p > for more information click the following link: <a href="information.html" onMouseOver="this.style.color='#818181'" onMouseOut="this.style.color='#fc8129'" style="color: #fc8129;font-family: Monospace">click</a></p>
     </footer>
 
-    
+    <script>
+        function Validation(){
+            let search = document.forms["Search1"]["search"].value;
+            if(search == ""){
+                alert("Please Fill All Required Fields");
+            }
+            else{
+
+                window.location.href="Search.php"; // Implication that you have to be logged in to add a product to the cart
+            }
+        }
+    </script>
 
 </body>
 </html>

@@ -44,7 +44,7 @@ session_start();
 
                 <li>
                     <div id="dropdown">
-                        <a href="javascript:void(0)"> <?php echo $_SESSION["User_Name"]; ?> <img src="../Images/user.png" alt="Image of User"  class="Icons"> </a>
+                        <a href="javascript:void(0)"> <b> <?php echo $_SESSION["User_Name"]; ?> </b><img src="../Images/user.png" alt="Image of User"  class="Icons"> </a>
                             <div class="dropdown-content" id="table1">
                                 <form action="" id="Form2">
                                     <table>
