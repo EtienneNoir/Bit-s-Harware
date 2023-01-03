@@ -1,20 +1,11 @@
-.About{ /* Defining a div for the about content */
+#about{
 
-    border-style: solid;
-    border-color: rgb(5, 68, 104);
-    border-width: thin;
-    background: black;
-    opacity: 0.9;
-    width: 60vh;
-    margin: auto;
-    color: white;
-    overflow: hidden;/* To prevent the items from overflowing */
- 
-    
-
-    
+    border-style:solid;
+    border-color: rgb(1, 41, 64); 
+    border-width: thin; 
+    background-color: black; 
+    opacity: 0.8;
 }
-
 #fit {
 
     border-style: solid;
@@ -49,6 +40,9 @@
     * This is the outer container , it will remain unchanged on the screen, think of it as position: fixed.
     */
     background: #eee;/* Colour of background */
+    margin:auto ; 
+    color:white;
+    
 
 }
 /* Ticker 
@@ -129,11 +123,18 @@ container
 
 }
 
-#main { /* To give the image that black border after the blue */
+#mains{
 
-    overflow: hidden;
-    width: fit-content;
     margin: auto;
-    margin-bottom: 50px;
+    width: 800px;
+    
+    height: 60vh;
+    color:whitesmoke;
+    
+
 }
 
+footer{
+
+    margin-top: 400px;
+}
