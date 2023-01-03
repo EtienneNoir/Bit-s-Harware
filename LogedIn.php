@@ -15,7 +15,7 @@
 
         @media screen and (max-width:  1900px) {  /* On screens that are  1900 wide or less, zoom out to 67 % */
             body {
-            zoom : 68%;
+            zoom : 67%;
             }
         }
     </style>
