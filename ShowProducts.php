@@ -43,7 +43,7 @@
                 </li>
 
                 <li>
-                    <a href="About.html" > about </a> 
+                    <a href="About.html" > About </a> 
                 </li>
 
 
@@ -231,7 +231,14 @@
         <p > for more information click the following link: <a href="information.html" onMouseOver="this.style.color='#818181'" onMouseOut="this.style.color='#fc8129'" style="color: #fc8129;font-family: Monospace">click</a></p>
     </footer>
 
-    <script type="text/javascript" src="JavaScript/ShowProduct/ShowProduct.js"></script>
+    <script type="text/javascript" src="JavaScript/ShowProduct/ShowProduct.js">
+        function Validation2(){
+            let search = document.forms["Search1"]["search"].value;
+            if(search == ""){
+            alert("Please Fill All Required Fields");
+            }
+        }
+    </script>
 
 </body>
 </html>

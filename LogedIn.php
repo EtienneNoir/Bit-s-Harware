@@ -183,7 +183,17 @@
     </footer>
 
     
-    <script type="text/javascript" src="JavaScript/Profile/Sign.js"></script>
+    <script type="text/javascript" src="JavaScript/Profile/Sign.js">
+
+
+        function Validation2(){
+            let search = document.forms["Search1"]["search"].value;
+            if(search == ""){
+            alert("Please Fill All Required Fields");
+            }
+        }
+  
+    </script>
 
 </body>
 </html>
