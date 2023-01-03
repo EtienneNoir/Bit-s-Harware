@@ -85,8 +85,8 @@ session_start();
 
     </header>
 
-    <div id="main">
-        <div class="About"  >
+    <div id="mains">
+        <div id="about"  >
 
        
     
