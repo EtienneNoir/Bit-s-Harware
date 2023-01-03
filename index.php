@@ -10,6 +10,16 @@
     <link rel="stylesheet" href="CSS/Animation.css">
     <link rel="icon" type="png" href="Images/favicon.png">
     <title>Bit's Hardwares</title>
+    <style> 
+
+        @media screen and (max-width:  1900px) {  /* On screens that are  1900 wide or less, zoom out to 67 % */
+            body {
+            background-color: blue;
+            zoom : 67%;
+            color: white;
+            }
+        }
+    </style>
 
 </head>
 

@@ -5,9 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/Index/Navigation/nav&Title.css">
-
-
-    
     <link rel="stylesheet" href="CSS/Index/TableMain.css">
     <link rel="stylesheet" href="CSS/Index/Footer.css">
     <link rel="stylesheet" href="CSS/Animation.css">
@@ -15,6 +12,16 @@
     <link rel="stylesheet" href="CSS/Laptops/Backdrop.css">
     <link rel="icon" type="png" href="Images/favicon.png">
     <title>Document</title>
+    <style> 
+
+        @media screen and (max-width:  1900px) {  /* On screens that are  1900 wide or less, zoom out to 67 % */
+            body {
+            background-color: blue;
+            zoom : 67%;
+            color: white;
+            }
+        }
+    </style>
 </head> <!-- The fit-content is to get rid of any overlap or extra spaces that body might allow, which as a result can allow the elements within the body to move around -->
 <body style="background-image:url(Images/Background.jpg); width: fit-content; margin:auto"> <!-- Added the margin : Auto to keep the body and its content in the middle -->
     <h2 id="title"> <img src="Images/favicon.png" alt="Image of CPU" id="animation"> <Strong> Bit's Hardwares </Strong> </h2>
