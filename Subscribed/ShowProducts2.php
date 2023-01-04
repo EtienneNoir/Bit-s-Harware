@@ -289,7 +289,6 @@ session_start();
     <footer style="background-image:url(../Images/Background.jpg) ;">
         <h4 style="font-family:Serif; " > &copy;  Copyright <strong> Bit's Hardwares</strong> </h4>
         <p > <h5>All Rights Reserved </h5></p>
-        <p > for more information click the following link: <a href="information.html" onMouseOver="this.style.color='#818181'" onMouseOut="this.style.color='#fc8129'" style="color: #fc8129;font-family: Monospace">click</a></p>
     </footer>
 
     <script type="text/javascript" src="../JavaScript/ShowProduct/ShowProduct.js"></script>
